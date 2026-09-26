@@ -1,0 +1,6690 @@
+{
+  "schema_version": 2,
+  "generated_utc": "2026-09-26T20:38:42+00:00",
+  "before": {
+    "label": "До",
+    "run": "before-final-03",
+    "status": "passed",
+    "input_status": "read",
+    "process_status": "read",
+    "baseline_sha256": "c30aa7a17c93bf2dcfea6a2a03693528fbbc5a6c7988fc6d3d602982f3c5eae5",
+    "process_sha256": "94e731ffbe05b942beea5e993a3abe7ef9a82fa6d075ae9512b8e827cdc9e28a",
+    "version": "0.15.1",
+    "with_mods": true,
+    "exit_code": 0,
+    "metrics": {
+      "harness_ready_engine_ms": 2122.078,
+      "world_creation_ms": 7222.16,
+      "first_world_frame_engine_ms": 11256.24,
+      "fps": 30.0097127781357,
+      "frame_mean_ms": 33.3225448504983,
+      "frame_p50_ms": 33.333,
+      "frame_p95_ms": 33.412,
+      "frame_p99_ms": 33.516,
+      "duration_s": 10.030086,
+      "frames": 301,
+      "nodes": 1709.0,
+      "native_save": 15.89,
+      "native_storage_read": 8.782,
+      "fresh_main_load_and_world_ready": 1635.098,
+      "first_observed_time_step": 1125.382,
+      "time_progression_and_pause_check": 3538.95,
+      "peak_working_set_mib": 1266.67578125,
+      "observed_process_cpu_seconds": 19.9375,
+      "cpu_observation_wall_seconds": 32.3312679,
+      "logical_processors": 12,
+      "observed_process_cpu_percent": 5.138859194981751
+    },
+    "frame_ms": [
+      30.235,
+      33.266,
+      33.364,
+      33.34,
+      33.341,
+      33.266,
+      33.388,
+      33.317,
+      33.35,
+      33.329,
+      33.429,
+      33.253,
+      33.276,
+      33.374,
+      33.298,
+      33.376,
+      33.315,
+      33.348,
+      33.331,
+      33.347,
+      33.319,
+      33.331,
+      33.338,
+      33.394,
+      33.249,
+      33.341,
+      33.339,
+      33.328,
+      33.382,
+      33.292,
+      33.432,
+      33.24,
+      33.295,
+      33.393,
+      33.328,
+      33.312,
+      33.323,
+      33.346,
+      33.334,
+      33.316,
+      33.342,
+      33.376,
+      33.516,
+      33.07,
+      33.322,
+      33.373,
+      33.335,
+      33.351,
+      33.291,
+      33.373,
+      33.33,
+      33.315,
+      33.342,
+      33.338,
+      33.341,
+      33.357,
+      33.288,
+      33.356,
+      33.292,
+      33.367,
+      33.341,
+      33.312,
+      33.401,
+      33.237,
+      33.376,
+      33.324,
+      33.294,
+      33.375,
+      33.327,
+      33.34,
+      33.338,
+      33.323,
+      33.335,
+      33.339,
+      33.328,
+      33.329,
+      33.302,
+      33.37,
+      33.339,
+      33.324,
+      33.346,
+      33.348,
+      33.32,
+      33.325,
+      33.281,
+      33.391,
+      33.296,
+      33.355,
+      33.287,
+      33.345,
+      33.406,
+      33.298,
+      33.326,
+      33.352,
+      33.289,
+      33.345,
+      33.309,
+      33.329,
+      33.389,
+      33.335,
+      33.293,
+      33.326,
+      33.348,
+      33.471,
+      33.168,
+      33.432,
+      33.289,
+      33.291,
+      33.319,
+      33.428,
+      33.296,
+      33.275,
+      33.339,
+      33.598,
+      33.068,
+      33.326,
+      33.408,
+      33.282,
+      33.379,
+      33.353,
+      33.303,
+      33.329,
+      33.356,
+      33.266,
+      33.375,
+      33.304,
+      33.318,
+      33.377,
+      33.329,
+      33.291,
+      33.379,
+      33.328,
+      33.298,
+      33.333,
+      33.46,
+      33.249,
+      33.327,
+      33.328,
+      33.33,
+      33.337,
+      33.343,
+      33.332,
+      33.319,
+      33.36,
+      33.292,
+      33.349,
+      33.34,
+      33.332,
+      33.333,
+      33.332,
+      33.323,
+      33.333,
+      33.566,
+      33.127,
+      33.329,
+      33.34,
+      33.311,
+      33.302,
+      33.461,
+      33.243,
+      33.324,
+      33.352,
+      33.341,
+      33.306,
+      33.335,
+      33.29,
+      33.387,
+      33.324,
+      33.329,
+      33.348,
+      33.324,
+      33.373,
+      33.286,
+      33.338,
+      33.334,
+      33.33,
+      33.34,
+      33.405,
+      33.218,
+      33.372,
+      33.339,
+      33.288,
+      33.354,
+      33.339,
+      33.349,
+      33.277,
+      33.418,
+      33.282,
+      33.3,
+      33.384,
+      33.338,
+      33.343,
+      33.311,
+      33.375,
+      33.287,
+      33.295,
+      33.449,
+      33.281,
+      33.399,
+      33.258,
+      33.331,
+      33.371,
+      33.278,
+      33.352,
+      33.355,
+      33.337,
+      33.304,
+      33.291,
+      33.371,
+      33.343,
+      33.346,
+      33.34,
+      33.302,
+      33.287,
+      33.334,
+      33.386,
+      33.337,
+      33.335,
+      33.315,
+      33.298,
+      33.388,
+      33.311,
+      33.299,
+      33.368,
+      33.303,
+      33.476,
+      33.366,
+      33.203,
+      33.292,
+      33.373,
+      33.325,
+      33.348,
+      33.307,
+      33.344,
+      33.345,
+      33.324,
+      33.292,
+      33.36,
+      33.332,
+      33.351,
+      33.376,
+      33.292,
+      33.335,
+      33.301,
+      33.335,
+      33.347,
+      33.328,
+      33.351,
+      33.327,
+      33.3,
+      33.326,
+      33.389,
+      33.328,
+      33.352,
+      33.293,
+      33.365,
+      33.297,
+      33.346,
+      33.321,
+      33.336,
+      33.356,
+      33.328,
+      33.317,
+      33.329,
+      33.345,
+      33.335,
+      33.315,
+      33.351,
+      33.554,
+      33.111,
+      33.34,
+      33.33,
+      33.325,
+      33.293,
+      33.342,
+      33.393,
+      33.302,
+      33.334,
+      33.337,
+      33.333,
+      33.335,
+      33.301,
+      33.422,
+      33.24,
+      33.371,
+      33.317,
+      33.346,
+      33.34,
+      33.323,
+      33.37,
+      33.297,
+      33.332,
+      33.412,
+      33.258,
+      33.324,
+      33.337,
+      33.296,
+      33.382,
+      33.265,
+      33.35,
+      33.362
+    ],
+    "process_samples": [
+      {
+        "wall_ms": 548.1392,
+        "cpu_seconds": 0.421875,
+        "working_set_bytes": 355442688,
+        "private_bytes": 372486144
+      },
+      {
+        "wall_ms": 1072.0154,
+        "cpu_seconds": 0.78125,
+        "working_set_bytes": 440610816,
+        "private_bytes": 569282560
+      },
+      {
+        "wall_ms": 1581.1734,
+        "cpu_seconds": 1.328125,
+        "working_set_bytes": 617467904,
+        "private_bytes": 730550272
+      },
+      {
+        "wall_ms": 2091.7665,
+        "cpu_seconds": 1.796875,
+        "working_set_bytes": 887545856,
+        "private_bytes": 1265967104
+      },
+      {
+        "wall_ms": 2606.0693,
+        "cpu_seconds": 2.15625,
+        "working_set_bytes": 909856768,
+        "private_bytes": 1330540544
+      },
+      {
+        "wall_ms": 3114.3747,
+        "cpu_seconds": 2.296875,
+        "working_set_bytes": 912334848,
+        "private_bytes": 1332912128
+      },
+      {
+        "wall_ms": 3625.9124,
+        "cpu_seconds": 2.71875,
+        "working_set_bytes": 979750912,
+        "private_bytes": 1408647168
+      },
+      {
+        "wall_ms": 4139.2988,
+        "cpu_seconds": 3.21875,
+        "working_set_bytes": 1025130496,
+        "private_bytes": 1447665664
+      },
+      {
+        "wall_ms": 4652.758,
+        "cpu_seconds": 3.6875,
+        "working_set_bytes": 1089499136,
+        "private_bytes": 1513291776
+      },
+      {
+        "wall_ms": 5165.8996,
+        "cpu_seconds": 4.203125,
+        "working_set_bytes": 1127821312,
+        "private_bytes": 1552130048
+      },
+      {
+        "wall_ms": 5680.1487,
+        "cpu_seconds": 4.71875,
+        "working_set_bytes": 1008308224,
+        "private_bytes": 1428647936
+      },
+      {
+        "wall_ms": 6194.932,
+        "cpu_seconds": 5.1875,
+        "working_set_bytes": 1030725632,
+        "private_bytes": 1719599104
+      },
+      {
+        "wall_ms": 6706.5475,
+        "cpu_seconds": 5.640625,
+        "working_set_bytes": 1231433728,
+        "private_bytes": 1976156160
+      },
+      {
+        "wall_ms": 7218.9317,
+        "cpu_seconds": 6.203125,
+        "working_set_bytes": 1171513344,
+        "private_bytes": 1974497280
+      },
+      {
+        "wall_ms": 7734.2512,
+        "cpu_seconds": 6.671875,
+        "working_set_bytes": 1041141760,
+        "private_bytes": 2003447808
+      },
+      {
+        "wall_ms": 8251.8656,
+        "cpu_seconds": 7.234375,
+        "working_set_bytes": 1055309824,
+        "private_bytes": 2043453440
+      },
+      {
+        "wall_ms": 8764.5417,
+        "cpu_seconds": 7.6875,
+        "working_set_bytes": 1043890176,
+        "private_bytes": 2304933888
+      },
+      {
+        "wall_ms": 9279.6668,
+        "cpu_seconds": 8.140625,
+        "working_set_bytes": 1060376576,
+        "private_bytes": 2286469120
+      },
+      {
+        "wall_ms": 9790.0499,
+        "cpu_seconds": 8.5,
+        "working_set_bytes": 1117749248,
+        "private_bytes": 2344103936
+      },
+      {
+        "wall_ms": 10303.1972,
+        "cpu_seconds": 9.0625,
+        "working_set_bytes": 1143341056,
+        "private_bytes": 2370052096
+      },
+      {
+        "wall_ms": 10816.6379,
+        "cpu_seconds": 9.578125,
+        "working_set_bytes": 1161543680,
+        "private_bytes": 2393911296
+      },
+      {
+        "wall_ms": 11328.7144,
+        "cpu_seconds": 10.03125,
+        "working_set_bytes": 1247281152,
+        "private_bytes": 2748833792
+      },
+      {
+        "wall_ms": 11839.0657,
+        "cpu_seconds": 10.203125,
+        "working_set_bytes": 1247772672,
+        "private_bytes": 2749124608
+      },
+      {
+        "wall_ms": 12345.9294,
+        "cpu_seconds": 10.34375,
+        "working_set_bytes": 1247789056,
+        "private_bytes": 2749124608
+      },
+      {
+        "wall_ms": 12854.5279,
+        "cpu_seconds": 10.484375,
+        "working_set_bytes": 1247789056,
+        "private_bytes": 2749124608
+      },
+      {
+        "wall_ms": 13368.8679,
+        "cpu_seconds": 10.640625,
+        "working_set_bytes": 1247793152,
+        "private_bytes": 2749124608
+      },
+      {
+        "wall_ms": 13882.3609,
+        "cpu_seconds": 10.796875,
+        "working_set_bytes": 1247797248,
+        "private_bytes": 2749124608
+      },
+      {
+        "wall_ms": 14392.5469,
+        "cpu_seconds": 10.96875,
+        "working_set_bytes": 1246654464,
+        "private_bytes": 2739793920
+      },
+      {
+        "wall_ms": 14901.8988,
+        "cpu_seconds": 11.09375,
+        "working_set_bytes": 1246658560,
+        "private_bytes": 2739466240
+      },
+      {
+        "wall_ms": 15413.0304,
+        "cpu_seconds": 11.25,
+        "working_set_bytes": 1246658560,
+        "private_bytes": 2739466240
+      },
+      {
+        "wall_ms": 15922.1288,
+        "cpu_seconds": 11.390625,
+        "working_set_bytes": 1246662656,
+        "private_bytes": 2739466240
+      },
+      {
+        "wall_ms": 16432.948,
+        "cpu_seconds": 11.53125,
+        "working_set_bytes": 1253675008,
+        "private_bytes": 2746421248
+      },
+      {
+        "wall_ms": 16945.8446,
+        "cpu_seconds": 11.734375,
+        "working_set_bytes": 1254154240,
+        "private_bytes": 2746892288
+      },
+      {
+        "wall_ms": 17459.0405,
+        "cpu_seconds": 11.890625,
+        "working_set_bytes": 1252716544,
+        "private_bytes": 2745475072
+      },
+      {
+        "wall_ms": 17971.7946,
+        "cpu_seconds": 12.0625,
+        "working_set_bytes": 1252904960,
+        "private_bytes": 2745540608
+      },
+      {
+        "wall_ms": 18483.6879,
+        "cpu_seconds": 12.203125,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 18995.2256,
+        "cpu_seconds": 12.34375,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 19508.4455,
+        "cpu_seconds": 12.484375,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 20022.3586,
+        "cpu_seconds": 12.65625,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 20531.836,
+        "cpu_seconds": 12.796875,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 21044.0998,
+        "cpu_seconds": 12.921875,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 21561.0774,
+        "cpu_seconds": 13.109375,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 22073.0305,
+        "cpu_seconds": 13.25,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 22586.6176,
+        "cpu_seconds": 13.421875,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 23101.0324,
+        "cpu_seconds": 13.546875,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 23614.5067,
+        "cpu_seconds": 13.765625,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 24124.8698,
+        "cpu_seconds": 14.0,
+        "working_set_bytes": 1253175296,
+        "private_bytes": 2745823232
+      },
+      {
+        "wall_ms": 24637.4962,
+        "cpu_seconds": 14.375,
+        "working_set_bytes": 1260560384,
+        "private_bytes": 2759176192
+      },
+      {
+        "wall_ms": 25152.5609,
+        "cpu_seconds": 14.921875,
+        "working_set_bytes": 1277779968,
+        "private_bytes": 2770976768
+      },
+      {
+        "wall_ms": 25663.4098,
+        "cpu_seconds": 15.359375,
+        "working_set_bytes": 1294131200,
+        "private_bytes": 2787672064
+      },
+      {
+        "wall_ms": 26175.3788,
+        "cpu_seconds": 15.484375,
+        "working_set_bytes": 1294266368,
+        "private_bytes": 2787819520
+      },
+      {
+        "wall_ms": 26687.5587,
+        "cpu_seconds": 15.734375,
+        "working_set_bytes": 1306562560,
+        "private_bytes": 2800021504
+      },
+      {
+        "wall_ms": 27196.4244,
+        "cpu_seconds": 16.015625,
+        "working_set_bytes": 1311207424,
+        "private_bytes": 2804641792
+      },
+      {
+        "wall_ms": 27710.3943,
+        "cpu_seconds": 16.21875,
+        "working_set_bytes": 1311207424,
+        "private_bytes": 2804641792
+      },
+      {
+        "wall_ms": 28223.5976,
+        "cpu_seconds": 16.4375,
+        "working_set_bytes": 1311215616,
+        "private_bytes": 2804641792
+      },
+      {
+        "wall_ms": 28732.3147,
+        "cpu_seconds": 16.765625,
+        "working_set_bytes": 1314996224,
+        "private_bytes": 2808582144
+      },
+      {
+        "wall_ms": 29244.4438,
+        "cpu_seconds": 17.015625,
+        "working_set_bytes": 1317892096,
+        "private_bytes": 2810580992
+      },
+      {
+        "wall_ms": 29763.156,
+        "cpu_seconds": 17.53125,
+        "working_set_bytes": 1258164224,
+        "private_bytes": 2750832640
+      },
+      {
+        "wall_ms": 30275.956,
+        "cpu_seconds": 17.96875,
+        "working_set_bytes": 1303490560,
+        "private_bytes": 2792820736
+      },
+      {
+        "wall_ms": 30787.2065,
+        "cpu_seconds": 18.515625,
+        "working_set_bytes": 1310236672,
+        "private_bytes": 2797752320
+      },
+      {
+        "wall_ms": 31301.036,
+        "cpu_seconds": 19.078125,
+        "working_set_bytes": 1327325184,
+        "private_bytes": 2821021696
+      },
+      {
+        "wall_ms": 31814.8196,
+        "cpu_seconds": 19.59375,
+        "working_set_bytes": 1328205824,
+        "private_bytes": 2821021696
+      },
+      {
+        "wall_ms": 32331.2679,
+        "cpu_seconds": 19.9375,
+        "working_set_bytes": 315408384,
+        "private_bytes": 372572160
+      }
+    ],
+    "rendering": {
+      "max_fps": 30,
+      "vsync": 1,
+      "viewport": "(1920, 1080)",
+      "driver": "forward_plus"
+    },
+    "checks": {
+      "status": "passed",
+      "passed": 5,
+      "total": 5,
+      "checks": {
+        "mechanics": true,
+        "memory_component": true,
+        "mods_validator": true,
+        "screenshot": true,
+        "world_created": true
+      },
+      "failures": [],
+      "skipped": [
+        "unspecified_skip"
+      ]
+    },
+    "groups": {
+      "mechanics": {
+        "status": "passed",
+        "passed": 39,
+        "total": 39,
+        "checks": {
+          "character_created": true,
+          "character_lookup": true,
+          "chronicle_entry_added": true,
+          "diplomacy_controls_exist": true,
+          "earth_present": true,
+          "faction_names_present": true,
+          "factions_present": true,
+          "fresh_main_has_load_method": true,
+          "isolated_profile": true,
+          "native_loaded_signal": true,
+          "native_saving_signal": true,
+          "role_restored": true,
+          "role_организация_кнопка_державы": true,
+          "role_организация_кнопка_добычи": true,
+          "role_организация_кнопка_законов": true,
+          "role_страна_кнопка_державы": true,
+          "role_страна_кнопка_добычи": true,
+          "role_страна_кнопка_законов": true,
+          "role_человек_кнопка_державы": true,
+          "role_человек_кнопка_добычи": true,
+          "role_человек_кнопка_законов": true,
+          "save_created": true,
+          "save_restores_body_names": true,
+          "save_restores_character": true,
+          "save_restores_date": true,
+          "save_restores_day": true,
+          "save_restores_faction_names": true,
+          "save_restores_role": true,
+          "save_storage_readable": true,
+          "saved_world_attaches_to_new_main": true,
+          "time_advances": true,
+          "time_pauses": true,
+          "time_pipeline_idle": true,
+          "time_signal_emitted": true,
+          "window_кнопка_добычи_closes": true,
+          "window_кнопка_добычи_opens": true,
+          "window_кнопка_законов_closes": true,
+          "window_кнопка_законов_opens": true,
+          "world_available": true
+        },
+        "failures": [],
+        "skipped": [
+          "external_ai",
+          "long_campaign",
+          "war_and_peace_actions"
+        ]
+      },
+      "memory_component": {
+        "status": "passed",
+        "passed": 52,
+        "total": 52,
+        "checks": {
+          "add_record": true,
+          "all_entities_required_not_union": true,
+          "bounded_record_count": true,
+          "commands_remain_in_journal": true,
+          "conflicting_fact_import_rejected_atomically": true,
+          "corrupted_import_rejected_atomically": true,
+          "duplicate_import_rejected_atomically": true,
+          "entity_names_are_exact": true,
+          "evicted_record_removed_from_indexes": true,
+          "evidence_quoted_one_line": true,
+          "explain_selection": true,
+          "explicit_fact_supersession": true,
+          "explicit_id_collision_rejected": true,
+          "explicit_legacy_migration": true,
+          "export_is_deep_copy": true,
+          "fact_keys_scoped_by_entities": true,
+          "fractional_day_rejected": true,
+          "future_evidence_excluded": true,
+          "input_is_not_aliased": true,
+          "legacy_requires_opt_in": true,
+          "negative_budget_empty": true,
+          "new_observation_updates_freshness_without_copy": true,
+          "new_world_does_not_share_old_dedup": true,
+          "newer_duplicate_protects_fact_watermark": true,
+          "newest_record_kept": true,
+          "nonfinite_import_rejected_atomically": true,
+          "nonfinite_weight_rejected": true,
+          "nonstring_entity_rejected": true,
+          "normalized_dedup": true,
+          "older_fact_rejected": true,
+          "orders_never_become_facts": true,
+          "query_terms_match_without_entities": true,
+          "record_text_bounded_in_unicode_characters": true,
+          "restored_fact_index_rejects_stale": true,
+          "source_and_confidence_in_evidence": true,
+          "superseded_fact_not_retrievable": true,
+          "tag_index_used": true,
+          "token_estimate_explicit_not_exact": true,
+          "too_small_budget_never_truncates_fact": true,
+          "unchanged_duplicate_keeps_revision": true,
+          "unicode_context_budget": true,
+          "unknown_entity_returns_empty": true,
+          "unknown_version_rejected_atomically": true,
+          "unrelated_query_does_not_inject_random_facts": true,
+          "untrusted_claim_does_not_replace_game_fact": true,
+          "verified_duplicate_raises_confidence": true,
+          "verified_duplicate_removes_conflicting_previous_fact": true,
+          "version_one_round_trip": true,
+          "world_clear_advances_revision": true,
+          "world_clear_removes_records_and_indexes": true,
+          "zero_budget_empty": true,
+          "zero_limit_empty": true
+        },
+        "failures": [],
+        "skipped": []
+      },
+      "memory_adapter": {
+        "status": "not_verified",
+        "passed": 0,
+        "total": 0,
+        "checks": {},
+        "failures": [],
+        "skipped": []
+      }
+    },
+    "storage": {
+      "measured": true,
+      "file_count": 7,
+      "total_bytes": 526099,
+      "world_json_bytes": 522592,
+      "skipped_links": 0,
+      "unreadable": 0
+    },
+    "memory_roundtrip": {},
+    "time": {
+      "from_day": 0,
+      "to_day": 1,
+      "signals": 1,
+      "reported_days": 1,
+      "requested_speed": 1,
+      "safe_to_reload": true
+    },
+    "cache_benchmark": null
+  },
+  "after": {
+    "label": "После",
+    "run": "after-final-02",
+    "status": "passed",
+    "input_status": "read",
+    "process_status": "read",
+    "baseline_sha256": "551141de95b3a586f1107a71b9efc8d227bdc1f85379769bb0da344d6c69866c",
+    "process_sha256": "96c7749993dbf6ad4a036738f20ef97785ed1750441261d7806d97758f255fcd",
+    "version": "0.15.1",
+    "with_mods": true,
+    "exit_code": 0,
+    "metrics": {
+      "harness_ready_engine_ms": 2950.643,
+      "world_creation_ms": 7869.525,
+      "first_world_frame_engine_ms": 12900.12,
+      "fps": 30.0112118298015,
+      "frame_mean_ms": 33.3208803986711,
+      "frame_p50_ms": 33.332,
+      "frame_p95_ms": 33.398,
+      "frame_p99_ms": 33.507,
+      "duration_s": 10.029585,
+      "frames": 301,
+      "nodes": 1710.0,
+      "native_save": 20.572,
+      "native_storage_read": 9.374,
+      "fresh_main_load_and_world_ready": 1757.789,
+      "first_observed_time_step": 1156.664,
+      "time_progression_and_pause_check": 3630.949,
+      "peak_working_set_mib": 1276.55078125,
+      "observed_process_cpu_seconds": 21.4375,
+      "cpu_observation_wall_seconds": 35.0120561,
+      "logical_processors": 12,
+      "observed_process_cpu_percent": 5.102409090831238
+    },
+    "frame_ms": [
+      29.739,
+      33.299,
+      33.315,
+      33.37,
+      33.346,
+      33.32,
+      33.345,
+      33.349,
+      33.32,
+      33.291,
+      33.373,
+      33.325,
+      33.337,
+      33.352,
+      33.292,
+      33.31,
+      33.375,
+      33.32,
+      33.499,
+      33.347,
+      33.17,
+      33.34,
+      33.328,
+      33.338,
+      33.331,
+      33.333,
+      33.318,
+      33.349,
+      33.315,
+      33.355,
+      33.339,
+      33.316,
+      33.332,
+      33.333,
+      33.33,
+      33.344,
+      33.322,
+      33.319,
+      33.353,
+      33.327,
+      33.401,
+      33.258,
+      33.341,
+      33.324,
+      33.357,
+      33.281,
+      33.397,
+      33.328,
+      33.746,
+      32.894,
+      33.338,
+      33.332,
+      33.303,
+      33.372,
+      33.318,
+      33.343,
+      33.331,
+      33.34,
+      33.31,
+      33.342,
+      33.338,
+      33.344,
+      33.363,
+      33.292,
+      33.323,
+      33.344,
+      33.336,
+      33.322,
+      33.328,
+      33.341,
+      33.324,
+      33.355,
+      33.28,
+      33.376,
+      33.328,
+      33.339,
+      33.323,
+      33.337,
+      33.389,
+      33.374,
+      33.245,
+      33.33,
+      33.319,
+      33.351,
+      33.32,
+      33.303,
+      33.385,
+      33.288,
+      33.373,
+      33.317,
+      33.303,
+      33.381,
+      33.336,
+      33.28,
+      33.368,
+      33.309,
+      33.36,
+      33.292,
+      33.42,
+      33.312,
+      33.281,
+      33.507,
+      33.218,
+      33.311,
+      33.323,
+      33.289,
+      33.35,
+      33.349,
+      33.3,
+      33.365,
+      33.365,
+      33.29,
+      33.324,
+      33.343,
+      33.328,
+      33.328,
+      33.385,
+      33.313,
+      33.347,
+      33.331,
+      33.335,
+      33.323,
+      33.351,
+      33.337,
+      33.305,
+      33.346,
+      33.319,
+      33.338,
+      33.339,
+      33.335,
+      33.327,
+      33.341,
+      33.328,
+      33.641,
+      33.018,
+      33.329,
+      33.382,
+      33.293,
+      33.297,
+      33.357,
+      33.349,
+      33.322,
+      33.327,
+      33.341,
+      33.337,
+      33.333,
+      33.331,
+      33.332,
+      33.325,
+      33.341,
+      33.479,
+      33.145,
+      33.507,
+      33.199,
+      33.294,
+      33.378,
+      33.368,
+      33.266,
+      33.359,
+      33.32,
+      33.348,
+      33.333,
+      33.338,
+      33.289,
+      33.376,
+      33.329,
+      33.326,
+      33.345,
+      33.338,
+      33.283,
+      33.368,
+      33.345,
+      33.318,
+      33.356,
+      33.331,
+      33.31,
+      33.342,
+      33.343,
+      33.326,
+      33.334,
+      33.336,
+      33.312,
+      33.349,
+      33.342,
+      33.311,
+      33.357,
+      33.329,
+      33.317,
+      33.329,
+      33.341,
+      33.392,
+      33.284,
+      33.339,
+      33.408,
+      33.25,
+      33.336,
+      33.321,
+      33.344,
+      33.316,
+      33.338,
+      33.354,
+      33.322,
+      33.327,
+      33.344,
+      33.343,
+      33.325,
+      33.324,
+      33.325,
+      33.332,
+      33.341,
+      33.338,
+      33.334,
+      33.331,
+      33.335,
+      33.327,
+      33.323,
+      33.36,
+      33.318,
+      33.331,
+      33.409,
+      33.253,
+      33.336,
+      33.326,
+      33.295,
+      33.39,
+      33.338,
+      33.314,
+      33.331,
+      33.341,
+      33.335,
+      33.329,
+      33.313,
+      33.345,
+      33.326,
+      33.346,
+      33.331,
+      33.341,
+      33.32,
+      33.329,
+      33.309,
+      33.366,
+      33.328,
+      33.296,
+      33.475,
+      33.203,
+      33.328,
+      33.331,
+      33.476,
+      33.217,
+      33.344,
+      33.342,
+      33.326,
+      33.322,
+      33.35,
+      33.279,
+      33.342,
+      33.325,
+      33.38,
+      33.335,
+      33.284,
+      33.338,
+      33.335,
+      33.34,
+      33.326,
+      33.379,
+      33.283,
+      33.382,
+      33.317,
+      33.447,
+      33.228,
+      33.333,
+      33.28,
+      33.569,
+      33.162,
+      33.323,
+      33.324,
+      33.349,
+      33.326,
+      33.287,
+      33.382,
+      33.33,
+      33.338,
+      33.328,
+      33.333,
+      33.302,
+      33.37,
+      33.393,
+      33.277,
+      33.328,
+      33.335,
+      33.422,
+      33.235,
+      33.305,
+      33.367,
+      33.295,
+      33.398,
+      33.268,
+      33.333,
+      33.366,
+      33.339,
+      33.283
+    ],
+    "process_samples": [
+      {
+        "wall_ms": 564.4073,
+        "cpu_seconds": 0.328125,
+        "working_set_bytes": 71200768,
+        "private_bytes": 35971072
+      },
+      {
+        "wall_ms": 1089.7724,
+        "cpu_seconds": 0.625,
+        "working_set_bytes": 373452800,
+        "private_bytes": 460689408
+      },
+      {
+        "wall_ms": 1603.3652,
+        "cpu_seconds": 1.0,
+        "working_set_bytes": 451317760,
+        "private_bytes": 584851456
+      },
+      {
+        "wall_ms": 2120.4336,
+        "cpu_seconds": 1.34375,
+        "working_set_bytes": 577122304,
+        "private_bytes": 692203520
+      },
+      {
+        "wall_ms": 2633.8324,
+        "cpu_seconds": 1.8125,
+        "working_set_bytes": 651304960,
+        "private_bytes": 966336512
+      },
+      {
+        "wall_ms": 3147.2924,
+        "cpu_seconds": 2.28125,
+        "working_set_bytes": 903233536,
+        "private_bytes": 1281757184
+      },
+      {
+        "wall_ms": 3661.4478,
+        "cpu_seconds": 2.609375,
+        "working_set_bytes": 915697664,
+        "private_bytes": 1339854848
+      },
+      {
+        "wall_ms": 4173.576,
+        "cpu_seconds": 2.765625,
+        "working_set_bytes": 918884352,
+        "private_bytes": 1342771200
+      },
+      {
+        "wall_ms": 4690.2907,
+        "cpu_seconds": 3.21875,
+        "working_set_bytes": 1013829632,
+        "private_bytes": 1447510016
+      },
+      {
+        "wall_ms": 5204.1817,
+        "cpu_seconds": 3.734375,
+        "working_set_bytes": 1032470528,
+        "private_bytes": 1458290688
+      },
+      {
+        "wall_ms": 5716.6213,
+        "cpu_seconds": 4.265625,
+        "working_set_bytes": 1088884736,
+        "private_bytes": 1515720704
+      },
+      {
+        "wall_ms": 6232.0818,
+        "cpu_seconds": 4.78125,
+        "working_set_bytes": 1136271360,
+        "private_bytes": 1563758592
+      },
+      {
+        "wall_ms": 6751.5176,
+        "cpu_seconds": 5.28125,
+        "working_set_bytes": 993075200,
+        "private_bytes": 1416130560
+      },
+      {
+        "wall_ms": 7266.6928,
+        "cpu_seconds": 5.78125,
+        "working_set_bytes": 1259118592,
+        "private_bytes": 1679724544
+      },
+      {
+        "wall_ms": 7780.5734,
+        "cpu_seconds": 6.0625,
+        "working_set_bytes": 1144754176,
+        "private_bytes": 1985675264
+      },
+      {
+        "wall_ms": 8296.2118,
+        "cpu_seconds": 6.515625,
+        "working_set_bytes": 1054728192,
+        "private_bytes": 1745670144
+      },
+      {
+        "wall_ms": 8809.6029,
+        "cpu_seconds": 7.03125,
+        "working_set_bytes": 1248894976,
+        "private_bytes": 1984016384
+      },
+      {
+        "wall_ms": 9323.5128,
+        "cpu_seconds": 7.421875,
+        "working_set_bytes": 1037549568,
+        "private_bytes": 2005467136
+      },
+      {
+        "wall_ms": 9840.271,
+        "cpu_seconds": 7.90625,
+        "working_set_bytes": 1060311040,
+        "private_bytes": 2043219968
+      },
+      {
+        "wall_ms": 10354.3187,
+        "cpu_seconds": 8.28125,
+        "working_set_bytes": 1077030912,
+        "private_bytes": 2303942656
+      },
+      {
+        "wall_ms": 10867.9337,
+        "cpu_seconds": 8.734375,
+        "working_set_bytes": 1063198720,
+        "private_bytes": 2290196480
+      },
+      {
+        "wall_ms": 11393.7416,
+        "cpu_seconds": 9.078125,
+        "working_set_bytes": 1117220864,
+        "private_bytes": 2344783872
+      },
+      {
+        "wall_ms": 11906.5591,
+        "cpu_seconds": 9.609375,
+        "working_set_bytes": 1144672256,
+        "private_bytes": 2372878336
+      },
+      {
+        "wall_ms": 12418.2668,
+        "cpu_seconds": 10.15625,
+        "working_set_bytes": 1162727424,
+        "private_bytes": 2396213248
+      },
+      {
+        "wall_ms": 12931.6948,
+        "cpu_seconds": 10.515625,
+        "working_set_bytes": 1218449408,
+        "private_bytes": 2733797376
+      },
+      {
+        "wall_ms": 13442.7848,
+        "cpu_seconds": 10.75,
+        "working_set_bytes": 1255170048,
+        "private_bytes": 2752901120
+      },
+      {
+        "wall_ms": 13957.355,
+        "cpu_seconds": 10.875,
+        "working_set_bytes": 1255280640,
+        "private_bytes": 2752991232
+      },
+      {
+        "wall_ms": 14467.6506,
+        "cpu_seconds": 11.03125,
+        "working_set_bytes": 1255280640,
+        "private_bytes": 2752991232
+      },
+      {
+        "wall_ms": 14981.3682,
+        "cpu_seconds": 11.171875,
+        "working_set_bytes": 1255292928,
+        "private_bytes": 2752991232
+      },
+      {
+        "wall_ms": 15494.3017,
+        "cpu_seconds": 11.34375,
+        "working_set_bytes": 1255292928,
+        "private_bytes": 2752991232
+      },
+      {
+        "wall_ms": 16006.2151,
+        "cpu_seconds": 11.484375,
+        "working_set_bytes": 1255227392,
+        "private_bytes": 2751090688
+      },
+      {
+        "wall_ms": 16519.2367,
+        "cpu_seconds": 11.625,
+        "working_set_bytes": 1262669824,
+        "private_bytes": 2758270976
+      },
+      {
+        "wall_ms": 17031.6393,
+        "cpu_seconds": 11.828125,
+        "working_set_bytes": 1262669824,
+        "private_bytes": 2758270976
+      },
+      {
+        "wall_ms": 17546.7433,
+        "cpu_seconds": 11.984375,
+        "working_set_bytes": 1262669824,
+        "private_bytes": 2758270976
+      },
+      {
+        "wall_ms": 18061.7373,
+        "cpu_seconds": 12.1875,
+        "working_set_bytes": 1262669824,
+        "private_bytes": 2758270976
+      },
+      {
+        "wall_ms": 18577.7437,
+        "cpu_seconds": 12.359375,
+        "working_set_bytes": 1262669824,
+        "private_bytes": 2758270976
+      },
+      {
+        "wall_ms": 19093.7097,
+        "cpu_seconds": 12.53125,
+        "working_set_bytes": 1258823680,
+        "private_bytes": 2754269184
+      },
+      {
+        "wall_ms": 19607.885,
+        "cpu_seconds": 12.65625,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 20120.5544,
+        "cpu_seconds": 12.8125,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 20637.6553,
+        "cpu_seconds": 12.9375,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 21148.8366,
+        "cpu_seconds": 13.09375,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 21663.5756,
+        "cpu_seconds": 13.234375,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 22174.947,
+        "cpu_seconds": 13.375,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 22690.0036,
+        "cpu_seconds": 13.546875,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 23205.7731,
+        "cpu_seconds": 13.71875,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 23721.7286,
+        "cpu_seconds": 13.828125,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 24235.5043,
+        "cpu_seconds": 13.96875,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 24748.9451,
+        "cpu_seconds": 14.0625,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 25259.4343,
+        "cpu_seconds": 14.1875,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 25770.4039,
+        "cpu_seconds": 14.3125,
+        "working_set_bytes": 1257299968,
+        "private_bytes": 2752638976
+      },
+      {
+        "wall_ms": 26281.0669,
+        "cpu_seconds": 14.65625,
+        "working_set_bytes": 1264320512,
+        "private_bytes": 2765996032
+      },
+      {
+        "wall_ms": 26794.6627,
+        "cpu_seconds": 15.203125,
+        "working_set_bytes": 1267630080,
+        "private_bytes": 2763145216
+      },
+      {
+        "wall_ms": 27308.9562,
+        "cpu_seconds": 15.734375,
+        "working_set_bytes": 1274503168,
+        "private_bytes": 2770165760
+      },
+      {
+        "wall_ms": 27823.1992,
+        "cpu_seconds": 16.234375,
+        "working_set_bytes": 1297338368,
+        "private_bytes": 2793484288
+      },
+      {
+        "wall_ms": 28335.3447,
+        "cpu_seconds": 16.421875,
+        "working_set_bytes": 1300561920,
+        "private_bytes": 2796707840
+      },
+      {
+        "wall_ms": 28847.0234,
+        "cpu_seconds": 16.578125,
+        "working_set_bytes": 1300566016,
+        "private_bytes": 2796707840
+      },
+      {
+        "wall_ms": 29361.9679,
+        "cpu_seconds": 17.109375,
+        "working_set_bytes": 1319112704,
+        "private_bytes": 2815225856
+      },
+      {
+        "wall_ms": 29876.2003,
+        "cpu_seconds": 17.34375,
+        "working_set_bytes": 1319112704,
+        "private_bytes": 2815225856
+      },
+      {
+        "wall_ms": 30390.3447,
+        "cpu_seconds": 17.515625,
+        "working_set_bytes": 1319116800,
+        "private_bytes": 2815225856
+      },
+      {
+        "wall_ms": 30904.6235,
+        "cpu_seconds": 17.734375,
+        "working_set_bytes": 1319104512,
+        "private_bytes": 2815180800
+      },
+      {
+        "wall_ms": 31416.143,
+        "cpu_seconds": 18.03125,
+        "working_set_bytes": 1321738240,
+        "private_bytes": 2817994752
+      },
+      {
+        "wall_ms": 31926.5893,
+        "cpu_seconds": 18.46875,
+        "working_set_bytes": 1324908544,
+        "private_bytes": 2820313088
+      },
+      {
+        "wall_ms": 32440.9994,
+        "cpu_seconds": 18.953125,
+        "working_set_bytes": 1279729664,
+        "private_bytes": 2770911232
+      },
+      {
+        "wall_ms": 32955.6085,
+        "cpu_seconds": 19.421875,
+        "working_set_bytes": 1312739328,
+        "private_bytes": 2803441664
+      },
+      {
+        "wall_ms": 33470.8291,
+        "cpu_seconds": 19.9375,
+        "working_set_bytes": 1323536384,
+        "private_bytes": 2814472192
+      },
+      {
+        "wall_ms": 33985.5484,
+        "cpu_seconds": 20.515625,
+        "working_set_bytes": 1337737216,
+        "private_bytes": 2833924096
+      },
+      {
+        "wall_ms": 34498.042,
+        "cpu_seconds": 21.015625,
+        "working_set_bytes": 1338560512,
+        "private_bytes": 2833924096
+      },
+      {
+        "wall_ms": 35012.0561,
+        "cpu_seconds": 21.4375,
+        "working_set_bytes": 310423552,
+        "private_bytes": 381358080
+      }
+    ],
+    "rendering": {
+      "max_fps": 30,
+      "vsync": 1,
+      "viewport": "(1920, 1080)",
+      "driver": "forward_plus"
+    },
+    "checks": {
+      "status": "passed",
+      "passed": 6,
+      "total": 6,
+      "checks": {
+        "mechanics": true,
+        "memory_adapter": true,
+        "memory_component": true,
+        "mods_validator": true,
+        "screenshot": true,
+        "world_created": true
+      },
+      "failures": [],
+      "skipped": [
+        "unspecified_skip"
+      ]
+    },
+    "groups": {
+      "mechanics": {
+        "status": "passed",
+        "passed": 48,
+        "total": 48,
+        "checks": {
+          "character_created": true,
+          "character_lookup": true,
+          "chronicle_entry_added": true,
+          "diplomacy_controls_exist": true,
+          "earth_present": true,
+          "faction_names_present": true,
+          "factions_present": true,
+          "fresh_main_has_load_method": true,
+          "isolated_profile": true,
+          "memory_adapter_after_load": true,
+          "memory_adapter_available": true,
+          "memory_fixture_exported_before_save": true,
+          "memory_fixture_restores_exact_record": true,
+          "memory_fixture_retrievable_after_load": true,
+          "memory_fixture_retrievable_before_save": true,
+          "memory_fixture_written_in_native_save": true,
+          "memory_roundtrip_fixture_added": true,
+          "memory_world_evidence_present": true,
+          "native_loaded_signal": true,
+          "native_saving_signal": true,
+          "role_restored": true,
+          "role_организация_кнопка_державы": true,
+          "role_организация_кнопка_добычи": true,
+          "role_организация_кнопка_законов": true,
+          "role_страна_кнопка_державы": true,
+          "role_страна_кнопка_добычи": true,
+          "role_страна_кнопка_законов": true,
+          "role_человек_кнопка_державы": true,
+          "role_человек_кнопка_добычи": true,
+          "role_человек_кнопка_законов": true,
+          "save_created": true,
+          "save_restores_body_names": true,
+          "save_restores_character": true,
+          "save_restores_date": true,
+          "save_restores_day": true,
+          "save_restores_faction_names": true,
+          "save_restores_role": true,
+          "save_storage_readable": true,
+          "saved_world_attaches_to_new_main": true,
+          "time_advances": true,
+          "time_pauses": true,
+          "time_pipeline_idle": true,
+          "time_signal_emitted": true,
+          "window_кнопка_добычи_closes": true,
+          "window_кнопка_добычи_opens": true,
+          "window_кнопка_законов_closes": true,
+          "window_кнопка_законов_opens": true,
+          "world_available": true
+        },
+        "failures": [],
+        "skipped": [
+          "external_ai",
+          "long_campaign",
+          "war_and_peace_actions"
+        ]
+      },
+      "memory_component": {
+        "status": "passed",
+        "passed": 52,
+        "total": 52,
+        "checks": {
+          "add_record": true,
+          "all_entities_required_not_union": true,
+          "bounded_record_count": true,
+          "commands_remain_in_journal": true,
+          "conflicting_fact_import_rejected_atomically": true,
+          "corrupted_import_rejected_atomically": true,
+          "duplicate_import_rejected_atomically": true,
+          "entity_names_are_exact": true,
+          "evicted_record_removed_from_indexes": true,
+          "evidence_quoted_one_line": true,
+          "explain_selection": true,
+          "explicit_fact_supersession": true,
+          "explicit_id_collision_rejected": true,
+          "explicit_legacy_migration": true,
+          "export_is_deep_copy": true,
+          "fact_keys_scoped_by_entities": true,
+          "fractional_day_rejected": true,
+          "future_evidence_excluded": true,
+          "input_is_not_aliased": true,
+          "legacy_requires_opt_in": true,
+          "negative_budget_empty": true,
+          "new_observation_updates_freshness_without_copy": true,
+          "new_world_does_not_share_old_dedup": true,
+          "newer_duplicate_protects_fact_watermark": true,
+          "newest_record_kept": true,
+          "nonfinite_import_rejected_atomically": true,
+          "nonfinite_weight_rejected": true,
+          "nonstring_entity_rejected": true,
+          "normalized_dedup": true,
+          "older_fact_rejected": true,
+          "orders_never_become_facts": true,
+          "query_terms_match_without_entities": true,
+          "record_text_bounded_in_unicode_characters": true,
+          "restored_fact_index_rejects_stale": true,
+          "source_and_confidence_in_evidence": true,
+          "superseded_fact_not_retrievable": true,
+          "tag_index_used": true,
+          "token_estimate_explicit_not_exact": true,
+          "too_small_budget_never_truncates_fact": true,
+          "unchanged_duplicate_keeps_revision": true,
+          "unicode_context_budget": true,
+          "unknown_entity_returns_empty": true,
+          "unknown_version_rejected_atomically": true,
+          "unrelated_query_does_not_inject_random_facts": true,
+          "untrusted_claim_does_not_replace_game_fact": true,
+          "verified_duplicate_raises_confidence": true,
+          "verified_duplicate_removes_conflicting_previous_fact": true,
+          "version_one_round_trip": true,
+          "world_clear_advances_revision": true,
+          "world_clear_removes_records_and_indexes": true,
+          "zero_budget_empty": true,
+          "zero_limit_empty": true
+        },
+        "failures": [],
+        "skipped": []
+      },
+      "memory_adapter": {
+        "status": "passed",
+        "passed": 18,
+        "total": 18,
+        "checks": {
+          "active_mod_restored_after_checks": true,
+          "cached_results_are_deep_copies": true,
+          "complete_context_suffix_bounded": true,
+          "damaged_known_version_retained_verbatim": true,
+          "detach_does_not_overwrite_another_owner": true,
+          "detach_restores_native_and_removes_owned_signals": true,
+          "different_main_does_not_adopt_pending_memory": true,
+          "distinct_wrappers_for_same_main_keep_loaded_memory": true,
+          "future_save_round_trip_without_mutation_or_injection": true,
+          "identical_context_uses_cache": true,
+          "loaded_memory_mod": true,
+          "microbenchmark_paths_preserve_context_and_ids": true,
+          "mutation_invalidates_context_cache": true,
+          "native_callback_delegated_once_and_preserved": true,
+          "new_state_clears_old_records_and_cached_context": true,
+          "private_dialogue_and_orders_not_globally_observed": true,
+          "reattach_same_world_restores_wrapper_once": true,
+          "signal_argument_shape_checked_before_connect": true
+        },
+        "failures": [],
+        "skipped": []
+      }
+    },
+    "storage": {
+      "measured": true,
+      "file_count": 7,
+      "total_bytes": 526709,
+      "world_json_bytes": 523306,
+      "skipped_links": 0,
+      "unreadable": 0
+    },
+    "memory_roundtrip": {
+      "records_before_save": 2,
+      "records_after_load": 2
+    },
+    "time": {
+      "from_day": 0,
+      "to_day": 1,
+      "signals": 1,
+      "reported_days": 1,
+      "requested_speed": 1,
+      "safe_to_reload": true
+    },
+    "cache_benchmark": {
+      "records": 2048,
+      "matching_scope_records": 48,
+      "selected_records": 8,
+      "batches": [
+        {
+          "batch": 1,
+          "operations_per_path": 200,
+          "cached_us": 3457,
+          "uncached_us": 155606,
+          "cached_us_per_operation": 17.285,
+          "uncached_us_per_operation": 778.03,
+          "cached_cache_hits": 200,
+          "uncached_cache_hits": 0,
+          "cached_results_identical": true,
+          "uncached_results_identical": true
+        },
+        {
+          "batch": 2,
+          "operations_per_path": 200,
+          "cached_us": 6707,
+          "uncached_us": 150719,
+          "cached_us_per_operation": 33.535,
+          "uncached_us_per_operation": 753.595,
+          "cached_cache_hits": 200,
+          "uncached_cache_hits": 0,
+          "cached_results_identical": true,
+          "uncached_results_identical": true
+        },
+        {
+          "batch": 3,
+          "operations_per_path": 200,
+          "cached_us": 4057,
+          "uncached_us": 151961,
+          "cached_us_per_operation": 20.285,
+          "uncached_us_per_operation": 759.805,
+          "cached_cache_hits": 200,
+          "uncached_cache_hits": 0,
+          "cached_results_identical": true,
+          "uncached_results_identical": true
+        }
+      ],
+      "results_identical": true,
+      "cache_hits_verified": true,
+      "unit": "microseconds"
+    }
+  },
+  "audit": {
+    "inventory_status": "read",
+    "audit_status": "read",
+    "count": 415,
+    "bytes": 1126741789.0,
+    "independent_copy": true,
+    "scripts_inspected": 131,
+    "source_text_available": 0
+  },
+  "repeat_performance": {
+    "before": [
+      {
+        "label": "До",
+        "run": "perf-before-02",
+        "status": "passed",
+        "input_status": "read",
+        "process_status": "read",
+        "baseline_sha256": "0a832874f51b877737a5a5cdffb4ee84343eaaf9c1761295506d5f057705b996",
+        "process_sha256": "8b973f921321419542076f0c3c816e7c12eebdea5be7a3da69dc19db8c71677a",
+        "version": "0.15.1",
+        "with_mods": true,
+        "exit_code": 0,
+        "metrics": {
+          "harness_ready_engine_ms": 2908.551,
+          "world_creation_ms": 8314.86,
+          "first_world_frame_engine_ms": 13207.177,
+          "fps": 30.0113195518562,
+          "frame_mean_ms": 33.3207607973422,
+          "frame_p50_ms": 33.332,
+          "frame_p95_ms": 33.432,
+          "frame_p99_ms": 33.536,
+          "duration_s": 10.029549,
+          "frames": 301,
+          "nodes": 1713.0,
+          "peak_working_set_mib": 1317.59375,
+          "observed_process_cpu_seconds": 16.015625,
+          "cpu_observation_wall_seconds": 27.310171399999998,
+          "logical_processors": 12,
+          "observed_process_cpu_percent": 4.886953644921712
+        },
+        "frame_ms": [
+          29.72,
+          33.305,
+          33.338,
+          33.322,
+          33.319,
+          33.355,
+          33.495,
+          33.178,
+          33.276,
+          33.397,
+          33.332,
+          33.44,
+          33.227,
+          33.348,
+          33.308,
+          33.341,
+          33.317,
+          33.303,
+          33.374,
+          33.341,
+          33.279,
+          33.325,
+          33.378,
+          33.339,
+          33.356,
+          33.31,
+          33.456,
+          33.212,
+          33.289,
+          33.36,
+          33.901,
+          32.772,
+          33.34,
+          33.353,
+          33.334,
+          33.316,
+          33.324,
+          33.341,
+          33.333,
+          33.387,
+          33.291,
+          33.317,
+          33.345,
+          33.267,
+          33.388,
+          33.35,
+          33.328,
+          33.338,
+          33.327,
+          33.331,
+          33.315,
+          33.319,
+          33.351,
+          33.343,
+          33.362,
+          33.31,
+          33.282,
+          33.627,
+          33.086,
+          33.323,
+          33.336,
+          33.376,
+          33.303,
+          33.316,
+          33.33,
+          33.344,
+          33.378,
+          33.239,
+          33.375,
+          33.341,
+          33.34,
+          33.311,
+          33.345,
+          33.363,
+          33.325,
+          33.324,
+          33.315,
+          33.34,
+          33.458,
+          33.195,
+          33.345,
+          33.32,
+          33.323,
+          33.313,
+          33.374,
+          33.362,
+          33.267,
+          33.331,
+          33.512,
+          33.14,
+          33.338,
+          33.355,
+          33.354,
+          33.309,
+          33.432,
+          33.251,
+          33.363,
+          33.282,
+          33.324,
+          33.506,
+          33.149,
+          33.345,
+          33.437,
+          33.308,
+          33.241,
+          33.358,
+          33.337,
+          33.323,
+          33.367,
+          33.317,
+          33.314,
+          33.334,
+          33.337,
+          33.318,
+          33.354,
+          33.361,
+          33.285,
+          33.334,
+          33.341,
+          33.335,
+          33.386,
+          33.267,
+          33.341,
+          33.349,
+          33.442,
+          33.21,
+          33.33,
+          33.379,
+          33.29,
+          33.326,
+          33.342,
+          33.33,
+          33.343,
+          33.324,
+          33.321,
+          33.321,
+          33.536,
+          33.15,
+          33.317,
+          33.337,
+          33.387,
+          33.325,
+          33.339,
+          33.455,
+          33.164,
+          33.377,
+          33.342,
+          33.318,
+          33.35,
+          33.324,
+          33.333,
+          33.327,
+          33.325,
+          33.342,
+          33.34,
+          33.289,
+          33.385,
+          33.329,
+          33.33,
+          33.335,
+          33.285,
+          33.344,
+          33.373,
+          33.313,
+          33.349,
+          33.333,
+          33.327,
+          33.28,
+          33.394,
+          33.32,
+          33.334,
+          33.336,
+          33.427,
+          33.246,
+          33.316,
+          33.296,
+          33.325,
+          33.339,
+          33.386,
+          33.314,
+          33.359,
+          33.27,
+          33.384,
+          33.34,
+          33.324,
+          33.306,
+          33.395,
+          33.29,
+          33.473,
+          33.296,
+          33.248,
+          33.333,
+          33.323,
+          33.322,
+          33.361,
+          33.323,
+          33.366,
+          33.316,
+          33.312,
+          33.336,
+          33.302,
+          33.367,
+          33.314,
+          33.317,
+          33.374,
+          33.315,
+          33.353,
+          33.291,
+          33.355,
+          33.331,
+          33.345,
+          33.323,
+          33.417,
+          33.257,
+          33.321,
+          33.293,
+          33.425,
+          33.292,
+          33.357,
+          33.301,
+          33.335,
+          33.308,
+          33.373,
+          33.323,
+          33.318,
+          33.347,
+          33.33,
+          33.334,
+          33.346,
+          33.33,
+          33.332,
+          33.337,
+          33.327,
+          33.337,
+          33.326,
+          33.332,
+          33.383,
+          33.303,
+          33.282,
+          33.362,
+          33.338,
+          33.34,
+          33.321,
+          33.323,
+          33.335,
+          33.343,
+          33.346,
+          33.333,
+          33.317,
+          33.378,
+          33.277,
+          33.346,
+          33.344,
+          33.335,
+          33.325,
+          33.329,
+          33.329,
+          33.339,
+          33.32,
+          33.337,
+          33.29,
+          33.374,
+          33.35,
+          33.322,
+          33.373,
+          33.257,
+          33.384,
+          33.329,
+          33.286,
+          33.323,
+          33.384,
+          33.338,
+          33.337,
+          33.322,
+          33.439,
+          33.234,
+          33.33,
+          33.345,
+          33.344,
+          33.315,
+          33.319,
+          33.342,
+          33.327,
+          33.286,
+          33.398,
+          33.34,
+          33.317,
+          33.324,
+          33.339,
+          33.305,
+          33.539,
+          33.153,
+          33.332,
+          33.329,
+          33.343,
+          33.328,
+          33.339,
+          33.361,
+          33.262,
+          33.339,
+          33.319
+        ],
+        "process_samples": [
+          {
+            "wall_ms": 557.9523,
+            "cpu_seconds": 0.265625,
+            "working_set_bytes": 67891200,
+            "private_bytes": 33939456
+          },
+          {
+            "wall_ms": 1082.2638,
+            "cpu_seconds": 0.609375,
+            "working_set_bytes": 376508416,
+            "private_bytes": 464068608
+          },
+          {
+            "wall_ms": 1594.1803,
+            "cpu_seconds": 1.046875,
+            "working_set_bytes": 454000640,
+            "private_bytes": 586719232
+          },
+          {
+            "wall_ms": 2105.8471,
+            "cpu_seconds": 1.421875,
+            "working_set_bytes": 588587008,
+            "private_bytes": 705032192
+          },
+          {
+            "wall_ms": 2618.513,
+            "cpu_seconds": 1.953125,
+            "working_set_bytes": 676126720,
+            "private_bytes": 964997120
+          },
+          {
+            "wall_ms": 3132.0213,
+            "cpu_seconds": 2.421875,
+            "working_set_bytes": 903131136,
+            "private_bytes": 1282732032
+          },
+          {
+            "wall_ms": 3644.626,
+            "cpu_seconds": 2.765625,
+            "working_set_bytes": 910073856,
+            "private_bytes": 1334464512
+          },
+          {
+            "wall_ms": 4158.1802,
+            "cpu_seconds": 2.890625,
+            "working_set_bytes": 912359424,
+            "private_bytes": 1336745984
+          },
+          {
+            "wall_ms": 4677.5468,
+            "cpu_seconds": 3.390625,
+            "working_set_bytes": 915587072,
+            "private_bytes": 1339842560
+          },
+          {
+            "wall_ms": 5191.5366,
+            "cpu_seconds": 3.9375,
+            "working_set_bytes": 946327552,
+            "private_bytes": 1379139584
+          },
+          {
+            "wall_ms": 5709.8285,
+            "cpu_seconds": 4.40625,
+            "working_set_bytes": 1089429504,
+            "private_bytes": 1516908544
+          },
+          {
+            "wall_ms": 6225.7745,
+            "cpu_seconds": 4.921875,
+            "working_set_bytes": 1125384192,
+            "private_bytes": 1553371136
+          },
+          {
+            "wall_ms": 6742.1248,
+            "cpu_seconds": 5.4375,
+            "working_set_bytes": 978042880,
+            "private_bytes": 1408655360
+          },
+          {
+            "wall_ms": 7255.7823,
+            "cpu_seconds": 5.96875,
+            "working_set_bytes": 1178812416,
+            "private_bytes": 1690861568
+          },
+          {
+            "wall_ms": 7771.7439,
+            "cpu_seconds": 6.3125,
+            "working_set_bytes": 1127755776,
+            "private_bytes": 1981452288
+          },
+          {
+            "wall_ms": 8287.8417,
+            "cpu_seconds": 6.859375,
+            "working_set_bytes": 1252835328,
+            "private_bytes": 1946570752
+          },
+          {
+            "wall_ms": 8800.0628,
+            "cpu_seconds": 7.296875,
+            "working_set_bytes": 1219706880,
+            "private_bytes": 1980837888
+          },
+          {
+            "wall_ms": 9316.7163,
+            "cpu_seconds": 7.703125,
+            "working_set_bytes": 1039380480,
+            "private_bytes": 1999896576
+          },
+          {
+            "wall_ms": 9835.2143,
+            "cpu_seconds": 8.25,
+            "working_set_bytes": 1076387840,
+            "private_bytes": 2043367424
+          },
+          {
+            "wall_ms": 10346.2064,
+            "cpu_seconds": 8.609375,
+            "working_set_bytes": 1077182464,
+            "private_bytes": 2310660096
+          },
+          {
+            "wall_ms": 10860.7912,
+            "cpu_seconds": 9.03125,
+            "working_set_bytes": 1030627328,
+            "private_bytes": 2260094976
+          },
+          {
+            "wall_ms": 11375.6091,
+            "cpu_seconds": 9.5,
+            "working_set_bytes": 1381597184,
+            "private_bytes": 2611453952
+          },
+          {
+            "wall_ms": 11890.4032,
+            "cpu_seconds": 9.859375,
+            "working_set_bytes": 1129463808,
+            "private_bytes": 2359017472
+          },
+          {
+            "wall_ms": 12409.2591,
+            "cpu_seconds": 10.390625,
+            "working_set_bytes": 1147199488,
+            "private_bytes": 2377162752
+          },
+          {
+            "wall_ms": 12924.8269,
+            "cpu_seconds": 10.890625,
+            "working_set_bytes": 1161277440,
+            "private_bytes": 2396512256
+          },
+          {
+            "wall_ms": 13439.158,
+            "cpu_seconds": 11.359375,
+            "working_set_bytes": 1247109120,
+            "private_bytes": 2753978368
+          },
+          {
+            "wall_ms": 13950.1957,
+            "cpu_seconds": 11.515625,
+            "working_set_bytes": 1247412224,
+            "private_bytes": 2754121728
+          },
+          {
+            "wall_ms": 14464.6318,
+            "cpu_seconds": 11.71875,
+            "working_set_bytes": 1247412224,
+            "private_bytes": 2754121728
+          },
+          {
+            "wall_ms": 14977.5533,
+            "cpu_seconds": 11.84375,
+            "working_set_bytes": 1247412224,
+            "private_bytes": 2754121728
+          },
+          {
+            "wall_ms": 15490.6532,
+            "cpu_seconds": 11.96875,
+            "working_set_bytes": 1247412224,
+            "private_bytes": 2754121728
+          },
+          {
+            "wall_ms": 16012.1323,
+            "cpu_seconds": 12.0625,
+            "working_set_bytes": 1247412224,
+            "private_bytes": 2754121728
+          },
+          {
+            "wall_ms": 16526.5685,
+            "cpu_seconds": 12.25,
+            "working_set_bytes": 1253908480,
+            "private_bytes": 2752155648
+          },
+          {
+            "wall_ms": 17039.4374,
+            "cpu_seconds": 12.390625,
+            "working_set_bytes": 1253908480,
+            "private_bytes": 2752155648
+          },
+          {
+            "wall_ms": 17547.669,
+            "cpu_seconds": 12.515625,
+            "working_set_bytes": 1253912576,
+            "private_bytes": 2752155648
+          },
+          {
+            "wall_ms": 18060.4624,
+            "cpu_seconds": 12.65625,
+            "working_set_bytes": 1253912576,
+            "private_bytes": 2752155648
+          },
+          {
+            "wall_ms": 18573.4341,
+            "cpu_seconds": 12.8125,
+            "working_set_bytes": 1253912576,
+            "private_bytes": 2752155648
+          },
+          {
+            "wall_ms": 19086.6806,
+            "cpu_seconds": 12.953125,
+            "working_set_bytes": 1255239680,
+            "private_bytes": 2753490944
+          },
+          {
+            "wall_ms": 19600.4641,
+            "cpu_seconds": 13.046875,
+            "working_set_bytes": 1253437440,
+            "private_bytes": 2751602688
+          },
+          {
+            "wall_ms": 20114.4165,
+            "cpu_seconds": 13.1875,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 20627.6306,
+            "cpu_seconds": 13.3125,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 21141.5757,
+            "cpu_seconds": 13.453125,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 21655.3027,
+            "cpu_seconds": 13.640625,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 22169.3937,
+            "cpu_seconds": 13.765625,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 22682.3596,
+            "cpu_seconds": 13.953125,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 23195.764,
+            "cpu_seconds": 14.140625,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 23707.6293,
+            "cpu_seconds": 14.296875,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 24221.5187,
+            "cpu_seconds": 14.4375,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 24735.6757,
+            "cpu_seconds": 14.625,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 25251.5215,
+            "cpu_seconds": 14.78125,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 25765.1371,
+            "cpu_seconds": 14.921875,
+            "working_set_bytes": 1253621760,
+            "private_bytes": 2751668224
+          },
+          {
+            "wall_ms": 26279.362,
+            "cpu_seconds": 15.0625,
+            "working_set_bytes": 1253810176,
+            "private_bytes": 2751836160
+          },
+          {
+            "wall_ms": 26795.7409,
+            "cpu_seconds": 15.515625,
+            "working_set_bytes": 1261588480,
+            "private_bytes": 2765328384
+          },
+          {
+            "wall_ms": 27310.1714,
+            "cpu_seconds": 16.015625,
+            "working_set_bytes": 1030979584,
+            "private_bytes": 2522001408
+          }
+        ],
+        "rendering": {
+          "max_fps": 30,
+          "vsync": 1,
+          "viewport": "(1920, 1080)",
+          "driver": "forward_plus"
+        },
+        "checks": {
+          "status": "passed",
+          "passed": 4,
+          "total": 4,
+          "checks": {
+            "memory_component": true,
+            "mods_validator": true,
+            "screenshot": true,
+            "world_created": true
+          },
+          "failures": [],
+          "skipped": [
+            "unspecified_skip",
+            "unspecified_skip"
+          ]
+        },
+        "groups": {
+          "mechanics": {
+            "status": "not_verified",
+            "passed": 0,
+            "total": 0,
+            "checks": {},
+            "failures": [],
+            "skipped": []
+          },
+          "memory_component": {
+            "status": "passed",
+            "passed": 52,
+            "total": 52,
+            "checks": {
+              "add_record": true,
+              "all_entities_required_not_union": true,
+              "bounded_record_count": true,
+              "commands_remain_in_journal": true,
+              "conflicting_fact_import_rejected_atomically": true,
+              "corrupted_import_rejected_atomically": true,
+              "duplicate_import_rejected_atomically": true,
+              "entity_names_are_exact": true,
+              "evicted_record_removed_from_indexes": true,
+              "evidence_quoted_one_line": true,
+              "explain_selection": true,
+              "explicit_fact_supersession": true,
+              "explicit_id_collision_rejected": true,
+              "explicit_legacy_migration": true,
+              "export_is_deep_copy": true,
+              "fact_keys_scoped_by_entities": true,
+              "fractional_day_rejected": true,
+              "future_evidence_excluded": true,
+              "input_is_not_aliased": true,
+              "legacy_requires_opt_in": true,
+              "negative_budget_empty": true,
+              "new_observation_updates_freshness_without_copy": true,
+              "new_world_does_not_share_old_dedup": true,
+              "newer_duplicate_protects_fact_watermark": true,
+              "newest_record_kept": true,
+              "nonfinite_import_rejected_atomically": true,
+              "nonfinite_weight_rejected": true,
+              "nonstring_entity_rejected": true,
+              "normalized_dedup": true,
+              "older_fact_rejected": true,
+              "orders_never_become_facts": true,
+              "query_terms_match_without_entities": true,
+              "record_text_bounded_in_unicode_characters": true,
+              "restored_fact_index_rejects_stale": true,
+              "source_and_confidence_in_evidence": true,
+              "superseded_fact_not_retrievable": true,
+              "tag_index_used": true,
+              "token_estimate_explicit_not_exact": true,
+              "too_small_budget_never_truncates_fact": true,
+              "unchanged_duplicate_keeps_revision": true,
+              "unicode_context_budget": true,
+              "unknown_entity_returns_empty": true,
+              "unknown_version_rejected_atomically": true,
+              "unrelated_query_does_not_inject_random_facts": true,
+              "untrusted_claim_does_not_replace_game_fact": true,
+              "verified_duplicate_raises_confidence": true,
+              "verified_duplicate_removes_conflicting_previous_fact": true,
+              "version_one_round_trip": true,
+              "world_clear_advances_revision": true,
+              "world_clear_removes_records_and_indexes": true,
+              "zero_budget_empty": true,
+              "zero_limit_empty": true
+            },
+            "failures": [],
+            "skipped": []
+          },
+          "memory_adapter": {
+            "status": "not_verified",
+            "passed": 0,
+            "total": 0,
+            "checks": {},
+            "failures": [],
+            "skipped": []
+          }
+        },
+        "storage": {
+          "measured": false
+        },
+        "memory_roundtrip": {},
+        "time": {
+          "safe_to_reload": false
+        },
+        "cache_benchmark": null
+      },
+      {
+        "label": "До",
+        "run": "perf-before-03",
+        "status": "passed",
+        "input_status": "read",
+        "process_status": "read",
+        "baseline_sha256": "3c093b266c1391808f96f49316be144a92cbe5675af57c328bad73f2fc894d3d",
+        "process_sha256": "b2a2a34a905624c2668b4495664294b0471d1c5bef22ea0ebe7ee9dac0abe41a",
+        "version": "0.15.1",
+        "with_mods": true,
+        "exit_code": 0,
+        "metrics": {
+          "harness_ready_engine_ms": 2205.104,
+          "world_creation_ms": 7724.08,
+          "first_world_frame_engine_ms": 11858.954,
+          "fps": 30.0069095644582,
+          "frame_mean_ms": 33.325657807309,
+          "frame_p50_ms": 33.334,
+          "frame_p95_ms": 33.42,
+          "frame_p99_ms": 33.511,
+          "duration_s": 10.031023,
+          "frames": 301,
+          "nodes": 1709.0,
+          "peak_working_set_mib": 1199.0,
+          "observed_process_cpu_seconds": 14.75,
+          "cpu_observation_wall_seconds": 25.670938500000002,
+          "logical_processors": 12,
+          "observed_process_cpu_percent": 4.788164120554714
+        },
+        "frame_ms": [
+          31.113,
+          33.381,
+          33.295,
+          33.368,
+          33.28,
+          33.403,
+          33.28,
+          33.369,
+          33.305,
+          33.327,
+          33.358,
+          33.311,
+          33.327,
+          33.325,
+          33.371,
+          33.305,
+          33.322,
+          33.33,
+          33.355,
+          33.367,
+          33.277,
+          33.393,
+          33.294,
+          33.31,
+          33.39,
+          33.281,
+          33.33,
+          33.392,
+          33.289,
+          33.325,
+          33.341,
+          33.372,
+          33.325,
+          33.328,
+          33.328,
+          33.364,
+          33.309,
+          33.349,
+          33.316,
+          33.457,
+          33.175,
+          33.335,
+          33.404,
+          33.252,
+          33.353,
+          33.371,
+          33.275,
+          33.346,
+          33.344,
+          33.318,
+          33.363,
+          33.34,
+          33.298,
+          33.367,
+          33.306,
+          33.354,
+          33.296,
+          33.511,
+          33.168,
+          33.359,
+          33.305,
+          33.459,
+          33.242,
+          33.321,
+          33.315,
+          33.319,
+          33.39,
+          33.312,
+          33.348,
+          33.347,
+          33.281,
+          33.371,
+          33.297,
+          33.31,
+          33.384,
+          33.42,
+          33.205,
+          33.337,
+          33.332,
+          33.332,
+          33.335,
+          33.33,
+          33.325,
+          33.337,
+          33.337,
+          33.337,
+          33.32,
+          33.358,
+          33.32,
+          33.338,
+          33.317,
+          33.336,
+          33.36,
+          33.393,
+          33.266,
+          33.344,
+          33.309,
+          33.35,
+          33.464,
+          33.228,
+          33.316,
+          33.304,
+          33.38,
+          33.278,
+          33.352,
+          33.334,
+          33.319,
+          33.345,
+          33.456,
+          33.22,
+          33.324,
+          33.331,
+          33.337,
+          33.322,
+          33.345,
+          33.318,
+          33.331,
+          33.357,
+          33.309,
+          33.391,
+          33.436,
+          33.2,
+          33.352,
+          33.3,
+          33.419,
+          33.245,
+          33.385,
+          33.284,
+          33.367,
+          33.303,
+          33.328,
+          33.376,
+          33.331,
+          33.275,
+          33.396,
+          33.366,
+          33.235,
+          33.338,
+          33.341,
+          33.374,
+          33.291,
+          33.383,
+          33.326,
+          33.303,
+          33.374,
+          33.315,
+          33.326,
+          33.392,
+          33.243,
+          33.367,
+          33.304,
+          33.317,
+          33.353,
+          33.325,
+          33.331,
+          33.438,
+          33.219,
+          33.345,
+          33.367,
+          33.343,
+          33.289,
+          33.317,
+          33.41,
+          33.261,
+          33.337,
+          33.403,
+          33.315,
+          33.315,
+          33.346,
+          33.297,
+          33.366,
+          33.34,
+          33.287,
+          33.333,
+          33.395,
+          33.324,
+          33.339,
+          33.27,
+          33.329,
+          33.385,
+          33.345,
+          33.271,
+          33.375,
+          33.298,
+          33.337,
+          33.347,
+          33.309,
+          33.339,
+          33.333,
+          33.398,
+          33.261,
+          33.509,
+          33.155,
+          33.345,
+          33.391,
+          33.324,
+          33.277,
+          33.549,
+          33.142,
+          33.307,
+          33.327,
+          33.386,
+          33.541,
+          33.078,
+          33.371,
+          33.289,
+          33.375,
+          33.352,
+          33.297,
+          33.359,
+          33.315,
+          33.331,
+          33.307,
+          33.55,
+          33.125,
+          33.433,
+          33.25,
+          33.304,
+          33.348,
+          33.314,
+          33.347,
+          33.364,
+          33.36,
+          33.261,
+          33.372,
+          33.315,
+          33.36,
+          33.349,
+          33.335,
+          33.315,
+          33.386,
+          33.242,
+          33.33,
+          33.349,
+          33.365,
+          33.281,
+          33.376,
+          33.348,
+          33.272,
+          33.376,
+          33.299,
+          33.384,
+          33.335,
+          33.343,
+          33.271,
+          33.38,
+          33.346,
+          33.281,
+          33.324,
+          33.372,
+          33.295,
+          33.383,
+          33.287,
+          33.316,
+          33.385,
+          33.352,
+          33.271,
+          33.367,
+          33.446,
+          33.188,
+          33.378,
+          33.349,
+          33.308,
+          33.315,
+          33.36,
+          33.303,
+          33.377,
+          33.299,
+          33.317,
+          33.375,
+          33.338,
+          33.277,
+          33.379,
+          33.339,
+          33.275,
+          33.369,
+          33.363,
+          33.282,
+          33.388,
+          33.283,
+          33.312,
+          33.392,
+          33.441,
+          33.166,
+          33.443,
+          33.226,
+          33.368,
+          33.309,
+          33.417,
+          33.251,
+          33.356,
+          33.37,
+          33.258,
+          33.413,
+          33.254,
+          33.377,
+          33.339,
+          33.305,
+          33.318,
+          33.351,
+          33.323
+        ],
+        "process_samples": [
+          {
+            "wall_ms": 531.6778,
+            "cpu_seconds": 0.390625,
+            "working_set_bytes": 355483648,
+            "private_bytes": 372203520
+          },
+          {
+            "wall_ms": 1045.5355,
+            "cpu_seconds": 0.828125,
+            "working_set_bytes": 450465792,
+            "private_bytes": 581427200
+          },
+          {
+            "wall_ms": 1558.7098,
+            "cpu_seconds": 1.3125,
+            "working_set_bytes": 616263680,
+            "private_bytes": 729096192
+          },
+          {
+            "wall_ms": 2076.4433,
+            "cpu_seconds": 1.859375,
+            "working_set_bytes": 870277120,
+            "private_bytes": 1255378944
+          },
+          {
+            "wall_ms": 2590.8337,
+            "cpu_seconds": 2.296875,
+            "working_set_bytes": 913219584,
+            "private_bytes": 1334292480
+          },
+          {
+            "wall_ms": 3102.5905,
+            "cpu_seconds": 2.4375,
+            "working_set_bytes": 915652608,
+            "private_bytes": 1336631296
+          },
+          {
+            "wall_ms": 3614.9189,
+            "cpu_seconds": 2.796875,
+            "working_set_bytes": 967856128,
+            "private_bytes": 1412034560
+          },
+          {
+            "wall_ms": 4127.328,
+            "cpu_seconds": 3.28125,
+            "working_set_bytes": 977027072,
+            "private_bytes": 1399111680
+          },
+          {
+            "wall_ms": 4638.9227,
+            "cpu_seconds": 3.796875,
+            "working_set_bytes": 1066553344,
+            "private_bytes": 1490726912
+          },
+          {
+            "wall_ms": 5152.4024,
+            "cpu_seconds": 4.28125,
+            "working_set_bytes": 1105346560,
+            "private_bytes": 1529647104
+          },
+          {
+            "wall_ms": 5668.3675,
+            "cpu_seconds": 4.8125,
+            "working_set_bytes": 969662464,
+            "private_bytes": 1392771072
+          },
+          {
+            "wall_ms": 6186.2649,
+            "cpu_seconds": 5.40625,
+            "working_set_bytes": 1229742080,
+            "private_bytes": 1684373504
+          },
+          {
+            "wall_ms": 6699.8841,
+            "cpu_seconds": 5.71875,
+            "working_set_bytes": 1108082688,
+            "private_bytes": 1974968320
+          },
+          {
+            "wall_ms": 7210.9258,
+            "cpu_seconds": 6.234375,
+            "working_set_bytes": 1251934208,
+            "private_bytes": 1939042304
+          },
+          {
+            "wall_ms": 7724.8879,
+            "cpu_seconds": 6.65625,
+            "working_set_bytes": 1218613248,
+            "private_bytes": 1973305344
+          },
+          {
+            "wall_ms": 8239.942,
+            "cpu_seconds": 7.109375,
+            "working_set_bytes": 1035993088,
+            "private_bytes": 1995350016
+          },
+          {
+            "wall_ms": 8754.411,
+            "cpu_seconds": 7.640625,
+            "working_set_bytes": 1069654016,
+            "private_bytes": 2025189376
+          },
+          {
+            "wall_ms": 9268.9129,
+            "cpu_seconds": 8.03125,
+            "working_set_bytes": 1039921152,
+            "private_bytes": 2299396096
+          },
+          {
+            "wall_ms": 9783.0863,
+            "cpu_seconds": 8.5,
+            "working_set_bytes": 1056714752,
+            "private_bytes": 2281345024
+          },
+          {
+            "wall_ms": 10295.8233,
+            "cpu_seconds": 8.9375,
+            "working_set_bytes": 1115762688,
+            "private_bytes": 2340487168
+          },
+          {
+            "wall_ms": 10808.7351,
+            "cpu_seconds": 9.46875,
+            "working_set_bytes": 1140989952,
+            "private_bytes": 2366169088
+          },
+          {
+            "wall_ms": 11320.5796,
+            "cpu_seconds": 10.0,
+            "working_set_bytes": 1158078464,
+            "private_bytes": 2388611072
+          },
+          {
+            "wall_ms": 11832.2135,
+            "cpu_seconds": 10.421875,
+            "working_set_bytes": 1239703552,
+            "private_bytes": 2734944256
+          },
+          {
+            "wall_ms": 12346.0416,
+            "cpu_seconds": 10.59375,
+            "working_set_bytes": 1248083968,
+            "private_bytes": 2742558720
+          },
+          {
+            "wall_ms": 12858.9819,
+            "cpu_seconds": 10.734375,
+            "working_set_bytes": 1248358400,
+            "private_bytes": 2742845440
+          },
+          {
+            "wall_ms": 13369.3598,
+            "cpu_seconds": 10.890625,
+            "working_set_bytes": 1248358400,
+            "private_bytes": 2742845440
+          },
+          {
+            "wall_ms": 13882.8674,
+            "cpu_seconds": 11.03125,
+            "working_set_bytes": 1248358400,
+            "private_bytes": 2742845440
+          },
+          {
+            "wall_ms": 14395.3971,
+            "cpu_seconds": 11.140625,
+            "working_set_bytes": 1248358400,
+            "private_bytes": 2742845440
+          },
+          {
+            "wall_ms": 14905.7364,
+            "cpu_seconds": 11.296875,
+            "working_set_bytes": 1248120832,
+            "private_bytes": 2740662272
+          },
+          {
+            "wall_ms": 15418.9138,
+            "cpu_seconds": 11.40625,
+            "working_set_bytes": 1247596544,
+            "private_bytes": 2740137984
+          },
+          {
+            "wall_ms": 15931.7701,
+            "cpu_seconds": 11.546875,
+            "working_set_bytes": 1247596544,
+            "private_bytes": 2740137984
+          },
+          {
+            "wall_ms": 16445.5352,
+            "cpu_seconds": 11.734375,
+            "working_set_bytes": 1254621184,
+            "private_bytes": 2747117568
+          },
+          {
+            "wall_ms": 16957.4195,
+            "cpu_seconds": 11.859375,
+            "working_set_bytes": 1254612992,
+            "private_bytes": 2747117568
+          },
+          {
+            "wall_ms": 17471.0415,
+            "cpu_seconds": 11.96875,
+            "working_set_bytes": 1254612992,
+            "private_bytes": 2747117568
+          },
+          {
+            "wall_ms": 17982.6316,
+            "cpu_seconds": 12.078125,
+            "working_set_bytes": 1249632256,
+            "private_bytes": 2742132736
+          },
+          {
+            "wall_ms": 18495.6402,
+            "cpu_seconds": 12.171875,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 19006.0022,
+            "cpu_seconds": 12.296875,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 19519.5701,
+            "cpu_seconds": 12.421875,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 20033.0146,
+            "cpu_seconds": 12.53125,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 20546.9899,
+            "cpu_seconds": 12.671875,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 21056.8914,
+            "cpu_seconds": 12.828125,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 21568.4211,
+            "cpu_seconds": 12.96875,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 22081.5973,
+            "cpu_seconds": 13.140625,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 22595.4627,
+            "cpu_seconds": 13.234375,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 23108.9181,
+            "cpu_seconds": 13.359375,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 23618.713,
+            "cpu_seconds": 13.484375,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 24131.0639,
+            "cpu_seconds": 13.671875,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 24645.888,
+            "cpu_seconds": 13.828125,
+            "working_set_bytes": 1250066432,
+            "private_bytes": 2742468608
+          },
+          {
+            "wall_ms": 25157.5667,
+            "cpu_seconds": 14.171875,
+            "working_set_bytes": 1257242624,
+            "private_bytes": 2755821568
+          },
+          {
+            "wall_ms": 25670.9385,
+            "cpu_seconds": 14.75,
+            "working_set_bytes": 1254297600,
+            "private_bytes": 2741329920
+          }
+        ],
+        "rendering": {
+          "max_fps": 30,
+          "vsync": 1,
+          "viewport": "(1920, 1080)",
+          "driver": "forward_plus"
+        },
+        "checks": {
+          "status": "passed",
+          "passed": 4,
+          "total": 4,
+          "checks": {
+            "memory_component": true,
+            "mods_validator": true,
+            "screenshot": true,
+            "world_created": true
+          },
+          "failures": [],
+          "skipped": [
+            "unspecified_skip",
+            "unspecified_skip"
+          ]
+        },
+        "groups": {
+          "mechanics": {
+            "status": "not_verified",
+            "passed": 0,
+            "total": 0,
+            "checks": {},
+            "failures": [],
+            "skipped": []
+          },
+          "memory_component": {
+            "status": "passed",
+            "passed": 52,
+            "total": 52,
+            "checks": {
+              "add_record": true,
+              "all_entities_required_not_union": true,
+              "bounded_record_count": true,
+              "commands_remain_in_journal": true,
+              "conflicting_fact_import_rejected_atomically": true,
+              "corrupted_import_rejected_atomically": true,
+              "duplicate_import_rejected_atomically": true,
+              "entity_names_are_exact": true,
+              "evicted_record_removed_from_indexes": true,
+              "evidence_quoted_one_line": true,
+              "explain_selection": true,
+              "explicit_fact_supersession": true,
+              "explicit_id_collision_rejected": true,
+              "explicit_legacy_migration": true,
+              "export_is_deep_copy": true,
+              "fact_keys_scoped_by_entities": true,
+              "fractional_day_rejected": true,
+              "future_evidence_excluded": true,
+              "input_is_not_aliased": true,
+              "legacy_requires_opt_in": true,
+              "negative_budget_empty": true,
+              "new_observation_updates_freshness_without_copy": true,
+              "new_world_does_not_share_old_dedup": true,
+              "newer_duplicate_protects_fact_watermark": true,
+              "newest_record_kept": true,
+              "nonfinite_import_rejected_atomically": true,
+              "nonfinite_weight_rejected": true,
+              "nonstring_entity_rejected": true,
+              "normalized_dedup": true,
+              "older_fact_rejected": true,
+              "orders_never_become_facts": true,
+              "query_terms_match_without_entities": true,
+              "record_text_bounded_in_unicode_characters": true,
+              "restored_fact_index_rejects_stale": true,
+              "source_and_confidence_in_evidence": true,
+              "superseded_fact_not_retrievable": true,
+              "tag_index_used": true,
+              "token_estimate_explicit_not_exact": true,
+              "too_small_budget_never_truncates_fact": true,
+              "unchanged_duplicate_keeps_revision": true,
+              "unicode_context_budget": true,
+              "unknown_entity_returns_empty": true,
+              "unknown_version_rejected_atomically": true,
+              "unrelated_query_does_not_inject_random_facts": true,
+              "untrusted_claim_does_not_replace_game_fact": true,
+              "verified_duplicate_raises_confidence": true,
+              "verified_duplicate_removes_conflicting_previous_fact": true,
+              "version_one_round_trip": true,
+              "world_clear_advances_revision": true,
+              "world_clear_removes_records_and_indexes": true,
+              "zero_budget_empty": true,
+              "zero_limit_empty": true
+            },
+            "failures": [],
+            "skipped": []
+          },
+          "memory_adapter": {
+            "status": "not_verified",
+            "passed": 0,
+            "total": 0,
+            "checks": {},
+            "failures": [],
+            "skipped": []
+          }
+        },
+        "storage": {
+          "measured": false
+        },
+        "memory_roundtrip": {},
+        "time": {
+          "safe_to_reload": false
+        },
+        "cache_benchmark": null
+      }
+    ],
+    "after": [
+      {
+        "label": "После",
+        "run": "perf-after-02",
+        "status": "passed",
+        "input_status": "read",
+        "process_status": "read",
+        "baseline_sha256": "a19d6ba11b1de377c0385bf42faa5172394d5159c4a3edb5f96b53aa92c4b8a8",
+        "process_sha256": "d08c2b57bf9cbf39be62734b08e8c3ac17784b86877625c272bd2f4648a18e1f",
+        "version": "0.15.1",
+        "with_mods": true,
+        "exit_code": 0,
+        "metrics": {
+          "harness_ready_engine_ms": 2325.997,
+          "world_creation_ms": 7140.348,
+          "first_world_frame_engine_ms": 11466.577,
+          "fps": 30.0122172657195,
+          "frame_mean_ms": 33.3197641196013,
+          "frame_p50_ms": 33.331,
+          "frame_p95_ms": 33.396,
+          "frame_p99_ms": 33.485,
+          "duration_s": 10.029249,
+          "frames": 301,
+          "nodes": 1710.0,
+          "peak_working_set_mib": 1318.55859375,
+          "observed_process_cpu_seconds": 15.234375,
+          "cpu_observation_wall_seconds": 26.176700099999998,
+          "logical_processors": 12,
+          "observed_process_cpu_percent": 4.849852140071698
+        },
+        "frame_ms": [
+          29.379,
+          33.36,
+          33.359,
+          33.254,
+          33.336,
+          33.321,
+          33.389,
+          33.329,
+          33.321,
+          33.354,
+          33.293,
+          33.364,
+          33.289,
+          33.401,
+          33.314,
+          33.338,
+          33.287,
+          33.326,
+          33.343,
+          33.32,
+          33.391,
+          33.32,
+          33.554,
+          33.108,
+          33.307,
+          33.326,
+          33.364,
+          33.298,
+          33.353,
+          33.366,
+          33.307,
+          33.302,
+          33.382,
+          33.337,
+          33.316,
+          33.347,
+          33.366,
+          33.26,
+          33.378,
+          33.316,
+          33.328,
+          33.306,
+          33.373,
+          33.329,
+          33.296,
+          33.359,
+          33.329,
+          33.319,
+          33.32,
+          33.34,
+          33.406,
+          33.265,
+          33.373,
+          33.326,
+          33.334,
+          33.319,
+          33.346,
+          33.288,
+          33.331,
+          33.386,
+          33.27,
+          33.394,
+          33.339,
+          33.327,
+          33.46,
+          33.204,
+          33.297,
+          33.36,
+          33.328,
+          33.347,
+          33.291,
+          33.385,
+          33.317,
+          33.332,
+          33.329,
+          33.3,
+          33.327,
+          33.391,
+          33.277,
+          33.403,
+          33.521,
+          33.112,
+          33.304,
+          33.32,
+          33.347,
+          33.417,
+          33.235,
+          33.36,
+          33.321,
+          33.335,
+          33.316,
+          33.331,
+          33.341,
+          33.371,
+          33.313,
+          33.328,
+          33.312,
+          33.337,
+          33.332,
+          33.333,
+          33.331,
+          33.34,
+          33.329,
+          33.352,
+          33.344,
+          33.301,
+          33.348,
+          33.375,
+          33.297,
+          33.326,
+          33.373,
+          33.283,
+          33.368,
+          33.33,
+          33.322,
+          33.306,
+          33.334,
+          33.336,
+          33.377,
+          33.333,
+          33.348,
+          33.321,
+          33.296,
+          33.356,
+          33.309,
+          33.375,
+          33.338,
+          33.312,
+          33.339,
+          33.331,
+          33.316,
+          33.324,
+          33.331,
+          33.36,
+          33.327,
+          33.314,
+          33.358,
+          33.357,
+          33.272,
+          33.371,
+          33.343,
+          33.29,
+          33.335,
+          33.381,
+          33.325,
+          33.336,
+          33.336,
+          33.316,
+          33.356,
+          33.316,
+          33.298,
+          33.365,
+          33.362,
+          33.307,
+          33.34,
+          33.327,
+          33.294,
+          33.382,
+          33.332,
+          33.32,
+          33.334,
+          33.286,
+          33.379,
+          33.624,
+          33.05,
+          33.315,
+          33.319,
+          33.364,
+          33.333,
+          33.322,
+          33.298,
+          33.341,
+          33.334,
+          33.345,
+          33.348,
+          33.347,
+          33.34,
+          33.326,
+          33.336,
+          33.333,
+          33.361,
+          33.282,
+          33.339,
+          33.334,
+          33.462,
+          33.17,
+          33.336,
+          33.38,
+          33.319,
+          33.344,
+          33.337,
+          33.287,
+          33.363,
+          33.368,
+          33.271,
+          33.313,
+          33.381,
+          33.337,
+          33.288,
+          33.341,
+          33.382,
+          33.312,
+          33.352,
+          33.288,
+          33.328,
+          33.335,
+          33.406,
+          33.305,
+          33.279,
+          33.387,
+          33.29,
+          33.398,
+          33.273,
+          33.323,
+          33.401,
+          33.31,
+          33.301,
+          33.383,
+          33.304,
+          33.485,
+          33.182,
+          33.369,
+          33.309,
+          33.465,
+          33.326,
+          33.201,
+          33.341,
+          33.327,
+          33.309,
+          33.352,
+          33.342,
+          33.323,
+          33.346,
+          33.275,
+          33.344,
+          33.375,
+          33.293,
+          33.365,
+          33.364,
+          33.332,
+          33.295,
+          33.337,
+          33.341,
+          33.295,
+          33.389,
+          33.325,
+          33.274,
+          33.385,
+          33.341,
+          33.321,
+          33.303,
+          33.37,
+          33.287,
+          33.383,
+          33.297,
+          33.353,
+          33.288,
+          33.347,
+          33.365,
+          33.349,
+          33.314,
+          33.304,
+          33.361,
+          33.306,
+          33.371,
+          33.33,
+          33.346,
+          33.276,
+          33.386,
+          33.329,
+          33.362,
+          33.31,
+          33.328,
+          33.288,
+          33.339,
+          33.329,
+          33.374,
+          33.293,
+          33.392,
+          33.313,
+          33.328,
+          33.303,
+          33.379,
+          33.328,
+          33.32,
+          33.331,
+          33.459,
+          33.174,
+          33.345,
+          33.32,
+          33.382,
+          33.291,
+          33.33,
+          33.386,
+          33.281,
+          33.321,
+          33.396,
+          33.273,
+          33.338,
+          33.328,
+          33.338
+        ],
+        "process_samples": [
+          {
+            "wall_ms": 534.682,
+            "cpu_seconds": 0.421875,
+            "working_set_bytes": 199163904,
+            "private_bytes": 195559424
+          },
+          {
+            "wall_ms": 1045.8382,
+            "cpu_seconds": 0.765625,
+            "working_set_bytes": 426262528,
+            "private_bytes": 538165248
+          },
+          {
+            "wall_ms": 1559.9228,
+            "cpu_seconds": 1.234375,
+            "working_set_bytes": 599404544,
+            "private_bytes": 715563008
+          },
+          {
+            "wall_ms": 2074.0472,
+            "cpu_seconds": 1.75,
+            "working_set_bytes": 740282368,
+            "private_bytes": 966680576
+          },
+          {
+            "wall_ms": 2588.7394,
+            "cpu_seconds": 2.203125,
+            "working_set_bytes": 864096256,
+            "private_bytes": 1306976256
+          },
+          {
+            "wall_ms": 3098.4049,
+            "cpu_seconds": 2.375,
+            "working_set_bytes": 916803584,
+            "private_bytes": 1341308928
+          },
+          {
+            "wall_ms": 3612.0725,
+            "cpu_seconds": 2.609375,
+            "working_set_bytes": 942534656,
+            "private_bytes": 1417400320
+          },
+          {
+            "wall_ms": 4125.5164,
+            "cpu_seconds": 3.109375,
+            "working_set_bytes": 922664960,
+            "private_bytes": 1347178496
+          },
+          {
+            "wall_ms": 4640.6358,
+            "cpu_seconds": 3.625,
+            "working_set_bytes": 1018937344,
+            "private_bytes": 1446096896
+          },
+          {
+            "wall_ms": 5151.4673,
+            "cpu_seconds": 4.140625,
+            "working_set_bytes": 1113354240,
+            "private_bytes": 1541132288
+          },
+          {
+            "wall_ms": 5664.674,
+            "cpu_seconds": 4.671875,
+            "working_set_bytes": 974237696,
+            "private_bytes": 1398468608
+          },
+          {
+            "wall_ms": 6178.3481,
+            "cpu_seconds": 5.1875,
+            "working_set_bytes": 1271259136,
+            "private_bytes": 1696669696
+          },
+          {
+            "wall_ms": 6691.7646,
+            "cpu_seconds": 5.53125,
+            "working_set_bytes": 1163755520,
+            "private_bytes": 1986228224
+          },
+          {
+            "wall_ms": 7203.1677,
+            "cpu_seconds": 5.96875,
+            "working_set_bytes": 1087324160,
+            "private_bytes": 1985445888
+          },
+          {
+            "wall_ms": 7716.3853,
+            "cpu_seconds": 6.484375,
+            "working_set_bytes": 1260453888,
+            "private_bytes": 2221195264
+          },
+          {
+            "wall_ms": 8226.9923,
+            "cpu_seconds": 6.90625,
+            "working_set_bytes": 1053978624,
+            "private_bytes": 2050904064
+          },
+          {
+            "wall_ms": 8739.2319,
+            "cpu_seconds": 7.359375,
+            "working_set_bytes": 1053388800,
+            "private_bytes": 2308497408
+          },
+          {
+            "wall_ms": 9251.8265,
+            "cpu_seconds": 7.828125,
+            "working_set_bytes": 1046020096,
+            "private_bytes": 2273824768
+          },
+          {
+            "wall_ms": 9763.0145,
+            "cpu_seconds": 8.28125,
+            "working_set_bytes": 1382608896,
+            "private_bytes": 2611310592
+          },
+          {
+            "wall_ms": 10274.5353,
+            "cpu_seconds": 8.84375,
+            "working_set_bytes": 1134563328,
+            "private_bytes": 2363723776
+          },
+          {
+            "wall_ms": 10787.2513,
+            "cpu_seconds": 9.359375,
+            "working_set_bytes": 1159151616,
+            "private_bytes": 2394165248
+          },
+          {
+            "wall_ms": 11303.5463,
+            "cpu_seconds": 9.8125,
+            "working_set_bytes": 1169489920,
+            "private_bytes": 2693599232
+          },
+          {
+            "wall_ms": 11819.1462,
+            "cpu_seconds": 10.03125,
+            "working_set_bytes": 1251962880,
+            "private_bytes": 2750148608
+          },
+          {
+            "wall_ms": 12329.6364,
+            "cpu_seconds": 10.171875,
+            "working_set_bytes": 1252106240,
+            "private_bytes": 2750291968
+          },
+          {
+            "wall_ms": 12839.691,
+            "cpu_seconds": 10.3125,
+            "working_set_bytes": 1252110336,
+            "private_bytes": 2750291968
+          },
+          {
+            "wall_ms": 13349.319,
+            "cpu_seconds": 10.4375,
+            "working_set_bytes": 1252110336,
+            "private_bytes": 2750291968
+          },
+          {
+            "wall_ms": 13860.828,
+            "cpu_seconds": 10.53125,
+            "working_set_bytes": 1252110336,
+            "private_bytes": 2750291968
+          },
+          {
+            "wall_ms": 14370.4372,
+            "cpu_seconds": 10.703125,
+            "working_set_bytes": 1251999744,
+            "private_bytes": 2749587456
+          },
+          {
+            "wall_ms": 14882.6109,
+            "cpu_seconds": 10.796875,
+            "working_set_bytes": 1251979264,
+            "private_bytes": 2747404288
+          },
+          {
+            "wall_ms": 15396.7875,
+            "cpu_seconds": 11.0,
+            "working_set_bytes": 1251979264,
+            "private_bytes": 2747404288
+          },
+          {
+            "wall_ms": 15907.0882,
+            "cpu_seconds": 11.15625,
+            "working_set_bytes": 1251979264,
+            "private_bytes": 2747404288
+          },
+          {
+            "wall_ms": 16420.5576,
+            "cpu_seconds": 11.296875,
+            "working_set_bytes": 1259569152,
+            "private_bytes": 2754973696
+          },
+          {
+            "wall_ms": 16936.3837,
+            "cpu_seconds": 11.421875,
+            "working_set_bytes": 1259569152,
+            "private_bytes": 2754973696
+          },
+          {
+            "wall_ms": 17449.7703,
+            "cpu_seconds": 11.53125,
+            "working_set_bytes": 1255870464,
+            "private_bytes": 2751168512
+          },
+          {
+            "wall_ms": 17962.5956,
+            "cpu_seconds": 11.6875,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 18471.4069,
+            "cpu_seconds": 11.8125,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 18983.1613,
+            "cpu_seconds": 11.9375,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 19500.1991,
+            "cpu_seconds": 12.1875,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 20012.382,
+            "cpu_seconds": 12.328125,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 20526.6595,
+            "cpu_seconds": 12.4375,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 21040.532,
+            "cpu_seconds": 12.5625,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 21555.1231,
+            "cpu_seconds": 12.6875,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 22065.4459,
+            "cpu_seconds": 12.828125,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 22577.3903,
+            "cpu_seconds": 12.984375,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 23089.1688,
+            "cpu_seconds": 13.140625,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 23602.3765,
+            "cpu_seconds": 13.328125,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 24117.6192,
+            "cpu_seconds": 13.515625,
+            "working_set_bytes": 1253867520,
+            "private_bytes": 2749169664
+          },
+          {
+            "wall_ms": 24632.8124,
+            "cpu_seconds": 13.765625,
+            "working_set_bytes": 1260580864,
+            "private_bytes": 2762518528
+          },
+          {
+            "wall_ms": 25149.0425,
+            "cpu_seconds": 14.25,
+            "working_set_bytes": 1260158976,
+            "private_bytes": 2755543040
+          },
+          {
+            "wall_ms": 25661.7833,
+            "cpu_seconds": 14.765625,
+            "working_set_bytes": 1265135616,
+            "private_bytes": 2760658944
+          },
+          {
+            "wall_ms": 26176.7001,
+            "cpu_seconds": 15.234375,
+            "working_set_bytes": 437903360,
+            "private_bytes": 519282688
+          }
+        ],
+        "rendering": {
+          "max_fps": 30,
+          "vsync": 1,
+          "viewport": "(1920, 1080)",
+          "driver": "forward_plus"
+        },
+        "checks": {
+          "status": "passed",
+          "passed": 5,
+          "total": 5,
+          "checks": {
+            "memory_adapter": true,
+            "memory_component": true,
+            "mods_validator": true,
+            "screenshot": true,
+            "world_created": true
+          },
+          "failures": [],
+          "skipped": [
+            "unspecified_skip",
+            "unspecified_skip"
+          ]
+        },
+        "groups": {
+          "mechanics": {
+            "status": "not_verified",
+            "passed": 0,
+            "total": 0,
+            "checks": {},
+            "failures": [],
+            "skipped": []
+          },
+          "memory_component": {
+            "status": "passed",
+            "passed": 52,
+            "total": 52,
+            "checks": {
+              "add_record": true,
+              "all_entities_required_not_union": true,
+              "bounded_record_count": true,
+              "commands_remain_in_journal": true,
+              "conflicting_fact_import_rejected_atomically": true,
+              "corrupted_import_rejected_atomically": true,
+              "duplicate_import_rejected_atomically": true,
+              "entity_names_are_exact": true,
+              "evicted_record_removed_from_indexes": true,
+              "evidence_quoted_one_line": true,
+              "explain_selection": true,
+              "explicit_fact_supersession": true,
+              "explicit_id_collision_rejected": true,
+              "explicit_legacy_migration": true,
+              "export_is_deep_copy": true,
+              "fact_keys_scoped_by_entities": true,
+              "fractional_day_rejected": true,
+              "future_evidence_excluded": true,
+              "input_is_not_aliased": true,
+              "legacy_requires_opt_in": true,
+              "negative_budget_empty": true,
+              "new_observation_updates_freshness_without_copy": true,
+              "new_world_does_not_share_old_dedup": true,
+              "newer_duplicate_protects_fact_watermark": true,
+              "newest_record_kept": true,
+              "nonfinite_import_rejected_atomically": true,
+              "nonfinite_weight_rejected": true,
+              "nonstring_entity_rejected": true,
+              "normalized_dedup": true,
+              "older_fact_rejected": true,
+              "orders_never_become_facts": true,
+              "query_terms_match_without_entities": true,
+              "record_text_bounded_in_unicode_characters": true,
+              "restored_fact_index_rejects_stale": true,
+              "source_and_confidence_in_evidence": true,
+              "superseded_fact_not_retrievable": true,
+              "tag_index_used": true,
+              "token_estimate_explicit_not_exact": true,
+              "too_small_budget_never_truncates_fact": true,
+              "unchanged_duplicate_keeps_revision": true,
+              "unicode_context_budget": true,
+              "unknown_entity_returns_empty": true,
+              "unknown_version_rejected_atomically": true,
+              "unrelated_query_does_not_inject_random_facts": true,
+              "untrusted_claim_does_not_replace_game_fact": true,
+              "verified_duplicate_raises_confidence": true,
+              "verified_duplicate_removes_conflicting_previous_fact": true,
+              "version_one_round_trip": true,
+              "world_clear_advances_revision": true,
+              "world_clear_removes_records_and_indexes": true,
+              "zero_budget_empty": true,
+              "zero_limit_empty": true
+            },
+            "failures": [],
+            "skipped": []
+          },
+          "memory_adapter": {
+            "status": "passed",
+            "passed": 18,
+            "total": 18,
+            "checks": {
+              "active_mod_restored_after_checks": true,
+              "cached_results_are_deep_copies": true,
+              "complete_context_suffix_bounded": true,
+              "damaged_known_version_retained_verbatim": true,
+              "detach_does_not_overwrite_another_owner": true,
+              "detach_restores_native_and_removes_owned_signals": true,
+              "different_main_does_not_adopt_pending_memory": true,
+              "distinct_wrappers_for_same_main_keep_loaded_memory": true,
+              "future_save_round_trip_without_mutation_or_injection": true,
+              "identical_context_uses_cache": true,
+              "loaded_memory_mod": true,
+              "microbenchmark_paths_preserve_context_and_ids": true,
+              "mutation_invalidates_context_cache": true,
+              "native_callback_delegated_once_and_preserved": true,
+              "new_state_clears_old_records_and_cached_context": true,
+              "private_dialogue_and_orders_not_globally_observed": true,
+              "reattach_same_world_restores_wrapper_once": true,
+              "signal_argument_shape_checked_before_connect": true
+            },
+            "failures": [],
+            "skipped": []
+          }
+        },
+        "storage": {
+          "measured": false
+        },
+        "memory_roundtrip": {},
+        "time": {
+          "safe_to_reload": false
+        },
+        "cache_benchmark": {
+          "records": 2048,
+          "matching_scope_records": 48,
+          "selected_records": 8,
+          "batches": [
+            {
+              "batch": 1,
+              "operations_per_path": 200,
+              "cached_us": 3825,
+              "uncached_us": 147588,
+              "cached_us_per_operation": 19.125,
+              "uncached_us_per_operation": 737.94,
+              "cached_cache_hits": 200,
+              "uncached_cache_hits": 0,
+              "cached_results_identical": true,
+              "uncached_results_identical": true
+            },
+            {
+              "batch": 2,
+              "operations_per_path": 200,
+              "cached_us": 5806,
+              "uncached_us": 150801,
+              "cached_us_per_operation": 29.03,
+              "uncached_us_per_operation": 754.005,
+              "cached_cache_hits": 200,
+              "uncached_cache_hits": 0,
+              "cached_results_identical": true,
+              "uncached_results_identical": true
+            },
+            {
+              "batch": 3,
+              "operations_per_path": 200,
+              "cached_us": 3204,
+              "uncached_us": 154197,
+              "cached_us_per_operation": 16.02,
+              "uncached_us_per_operation": 770.985,
+              "cached_cache_hits": 200,
+              "uncached_cache_hits": 0,
+              "cached_results_identical": true,
+              "uncached_results_identical": true
+            }
+          ],
+          "results_identical": true,
+          "cache_hits_verified": true,
+          "unit": "microseconds"
+        }
+      },
+      {
+        "label": "После",
+        "run": "perf-after-03",
+        "status": "passed",
+        "input_status": "read",
+        "process_status": "read",
+        "baseline_sha256": "469591b4dfd8e715e076ffd3be6bf4f53877a6f69b6ea1a2f7076f9af4808b57",
+        "process_sha256": "53454cad202e7835842e5a50e70a012759bf56ffb332214b9347fda78c6f41bb",
+        "version": "0.15.1",
+        "with_mods": true,
+        "exit_code": 0,
+        "metrics": {
+          "harness_ready_engine_ms": 2143.308,
+          "world_creation_ms": 7643.234,
+          "first_world_frame_engine_ms": 11752.483,
+          "fps": 30.0121753712112,
+          "frame_mean_ms": 33.3198106312292,
+          "frame_p50_ms": 33.332,
+          "frame_p95_ms": 33.398,
+          "frame_p99_ms": 33.464,
+          "duration_s": 10.029263,
+          "frames": 301,
+          "nodes": 1710.0,
+          "peak_working_set_mib": 1207.6953125,
+          "observed_process_cpu_seconds": 15.75,
+          "cpu_observation_wall_seconds": 26.664939699999998,
+          "logical_processors": 12,
+          "observed_process_cpu_percent": 4.922193767421121
+        },
+        "frame_ms": [
+          29.406,
+          33.299,
+          33.416,
+          33.308,
+          33.32,
+          33.28,
+          33.442,
+          33.269,
+          33.311,
+          33.371,
+          33.325,
+          33.326,
+          33.337,
+          33.282,
+          33.389,
+          33.295,
+          33.376,
+          33.3,
+          33.355,
+          33.296,
+          33.328,
+          33.332,
+          33.379,
+          33.332,
+          33.292,
+          33.369,
+          33.337,
+          33.322,
+          33.347,
+          33.335,
+          33.338,
+          33.324,
+          33.332,
+          33.342,
+          33.285,
+          33.435,
+          33.362,
+          33.23,
+          33.358,
+          33.318,
+          33.344,
+          33.339,
+          33.323,
+          33.33,
+          33.328,
+          33.34,
+          33.328,
+          33.293,
+          33.369,
+          33.336,
+          33.301,
+          33.388,
+          33.306,
+          33.352,
+          33.311,
+          33.295,
+          33.368,
+          33.338,
+          33.346,
+          33.287,
+          33.36,
+          33.341,
+          33.345,
+          33.317,
+          33.345,
+          33.347,
+          33.287,
+          33.362,
+          33.345,
+          33.313,
+          33.337,
+          33.332,
+          33.288,
+          33.334,
+          33.342,
+          33.342,
+          33.363,
+          33.294,
+          33.471,
+          33.2,
+          33.336,
+          33.324,
+          33.327,
+          33.381,
+          33.464,
+          33.164,
+          33.319,
+          33.359,
+          33.309,
+          33.35,
+          33.322,
+          33.337,
+          33.333,
+          33.336,
+          33.338,
+          33.331,
+          33.314,
+          33.337,
+          33.366,
+          33.313,
+          33.326,
+          33.328,
+          33.338,
+          33.345,
+          33.317,
+          33.332,
+          33.413,
+          33.275,
+          33.304,
+          33.393,
+          33.277,
+          33.348,
+          33.366,
+          33.302,
+          33.334,
+          33.328,
+          33.333,
+          33.324,
+          33.453,
+          33.214,
+          33.337,
+          33.381,
+          33.329,
+          33.652,
+          33.01,
+          33.395,
+          33.247,
+          33.348,
+          33.35,
+          33.286,
+          33.376,
+          33.33,
+          33.435,
+          33.189,
+          33.373,
+          33.284,
+          33.371,
+          33.339,
+          33.339,
+          33.334,
+          33.322,
+          33.331,
+          33.347,
+          33.351,
+          33.328,
+          33.278,
+          33.374,
+          33.296,
+          33.333,
+          33.367,
+          33.334,
+          33.341,
+          33.34,
+          33.31,
+          33.354,
+          33.323,
+          33.331,
+          33.351,
+          33.315,
+          33.292,
+          33.364,
+          33.325,
+          33.345,
+          33.342,
+          33.328,
+          33.342,
+          33.359,
+          33.3,
+          33.294,
+          33.371,
+          33.323,
+          33.304,
+          33.375,
+          33.329,
+          33.374,
+          33.296,
+          33.336,
+          33.318,
+          33.352,
+          33.317,
+          33.285,
+          33.39,
+          33.322,
+          33.307,
+          33.366,
+          33.356,
+          33.312,
+          33.29,
+          33.344,
+          33.443,
+          33.253,
+          33.333,
+          33.336,
+          33.319,
+          33.351,
+          33.273,
+          33.398,
+          33.327,
+          33.337,
+          33.353,
+          33.305,
+          33.28,
+          33.397,
+          33.271,
+          33.344,
+          33.382,
+          33.333,
+          33.278,
+          33.364,
+          33.306,
+          33.415,
+          33.262,
+          33.358,
+          33.331,
+          33.291,
+          33.39,
+          33.34,
+          33.387,
+          33.287,
+          33.269,
+          33.383,
+          33.327,
+          33.387,
+          33.285,
+          33.367,
+          33.243,
+          33.382,
+          33.33,
+          33.319,
+          33.604,
+          33.093,
+          33.304,
+          33.349,
+          33.288,
+          33.403,
+          33.272,
+          33.372,
+          33.29,
+          33.371,
+          33.32,
+          33.352,
+          33.278,
+          33.384,
+          33.331,
+          33.324,
+          33.348,
+          33.332,
+          33.338,
+          33.32,
+          33.329,
+          33.342,
+          33.324,
+          33.338,
+          33.299,
+          33.367,
+          33.329,
+          33.328,
+          33.451,
+          33.308,
+          33.221,
+          33.362,
+          33.335,
+          33.33,
+          33.325,
+          33.301,
+          33.37,
+          33.343,
+          33.32,
+          33.303,
+          33.379,
+          33.315,
+          33.328,
+          33.327,
+          33.335,
+          33.339,
+          33.305,
+          33.33,
+          33.382,
+          33.298,
+          33.357,
+          33.323,
+          33.426,
+          33.247,
+          33.355,
+          33.323,
+          33.319,
+          33.327,
+          33.349,
+          33.322,
+          33.329,
+          33.342,
+          33.382,
+          33.281,
+          33.332,
+          33.335,
+          33.311,
+          33.356,
+          33.297,
+          33.337,
+          33.381,
+          33.274
+        ],
+        "process_samples": [
+          {
+            "wall_ms": 529.1927,
+            "cpu_seconds": 0.484375,
+            "working_set_bytes": 355545088,
+            "private_bytes": 371843072
+          },
+          {
+            "wall_ms": 1041.3574,
+            "cpu_seconds": 0.953125,
+            "working_set_bytes": 435318784,
+            "private_bytes": 558153728
+          },
+          {
+            "wall_ms": 1552.7609,
+            "cpu_seconds": 1.4375,
+            "working_set_bytes": 616370176,
+            "private_bytes": 730161152
+          },
+          {
+            "wall_ms": 2062.3649,
+            "cpu_seconds": 1.890625,
+            "working_set_bytes": 873156608,
+            "private_bytes": 1252802560
+          },
+          {
+            "wall_ms": 2574.661,
+            "cpu_seconds": 2.28125,
+            "working_set_bytes": 915324928,
+            "private_bytes": 1337352192
+          },
+          {
+            "wall_ms": 3085.1843,
+            "cpu_seconds": 2.4375,
+            "working_set_bytes": 917704704,
+            "private_bytes": 1339633664
+          },
+          {
+            "wall_ms": 3596.7873,
+            "cpu_seconds": 2.796875,
+            "working_set_bytes": 978034688,
+            "private_bytes": 1415843840
+          },
+          {
+            "wall_ms": 4109.4055,
+            "cpu_seconds": 3.3125,
+            "working_set_bytes": 980914176,
+            "private_bytes": 1403793408
+          },
+          {
+            "wall_ms": 4626.8001,
+            "cpu_seconds": 3.84375,
+            "working_set_bytes": 1072332800,
+            "private_bytes": 1497112576
+          },
+          {
+            "wall_ms": 5139.1823,
+            "cpu_seconds": 4.375,
+            "working_set_bytes": 1117093888,
+            "private_bytes": 1542377472
+          },
+          {
+            "wall_ms": 5652.8601,
+            "cpu_seconds": 4.90625,
+            "working_set_bytes": 983724032,
+            "private_bytes": 1408860160
+          },
+          {
+            "wall_ms": 6164.193,
+            "cpu_seconds": 5.421875,
+            "working_set_bytes": 1266159616,
+            "private_bytes": 1694404608
+          },
+          {
+            "wall_ms": 6680.2051,
+            "cpu_seconds": 5.796875,
+            "working_set_bytes": 1167486976,
+            "private_bytes": 1983954944
+          },
+          {
+            "wall_ms": 7193.21,
+            "cpu_seconds": 6.265625,
+            "working_set_bytes": 1068695552,
+            "private_bytes": 1982296064
+          },
+          {
+            "wall_ms": 7708.7975,
+            "cpu_seconds": 6.796875,
+            "working_set_bytes": 1260322816,
+            "private_bytes": 1982296064
+          },
+          {
+            "wall_ms": 8222.1531,
+            "cpu_seconds": 7.203125,
+            "working_set_bytes": 1046835200,
+            "private_bytes": 2003841024
+          },
+          {
+            "wall_ms": 8735.6101,
+            "cpu_seconds": 7.703125,
+            "working_set_bytes": 1079136256,
+            "private_bytes": 2042630144
+          },
+          {
+            "wall_ms": 9250.9851,
+            "cpu_seconds": 8.109375,
+            "working_set_bytes": 1050275840,
+            "private_bytes": 2307588096
+          },
+          {
+            "wall_ms": 9763.7259,
+            "cpu_seconds": 8.546875,
+            "working_set_bytes": 1099239424,
+            "private_bytes": 2325172224
+          },
+          {
+            "wall_ms": 10275.6334,
+            "cpu_seconds": 8.9375,
+            "working_set_bytes": 1129037824,
+            "private_bytes": 2354835456
+          },
+          {
+            "wall_ms": 10789.4845,
+            "cpu_seconds": 9.453125,
+            "working_set_bytes": 1149059072,
+            "private_bytes": 2375368704
+          },
+          {
+            "wall_ms": 11301.0291,
+            "cpu_seconds": 9.9375,
+            "working_set_bytes": 1164021760,
+            "private_bytes": 2395811840
+          },
+          {
+            "wall_ms": 11815.7095,
+            "cpu_seconds": 10.53125,
+            "working_set_bytes": 1253699584,
+            "private_bytes": 2750914560
+          },
+          {
+            "wall_ms": 12334.2489,
+            "cpu_seconds": 10.625,
+            "working_set_bytes": 1253937152,
+            "private_bytes": 2751115264
+          },
+          {
+            "wall_ms": 12843.3252,
+            "cpu_seconds": 10.765625,
+            "working_set_bytes": 1253937152,
+            "private_bytes": 2751115264
+          },
+          {
+            "wall_ms": 13355.395,
+            "cpu_seconds": 10.90625,
+            "working_set_bytes": 1253937152,
+            "private_bytes": 2751115264
+          },
+          {
+            "wall_ms": 13868.1208,
+            "cpu_seconds": 11.0625,
+            "working_set_bytes": 1253937152,
+            "private_bytes": 2751115264
+          },
+          {
+            "wall_ms": 14380.3271,
+            "cpu_seconds": 11.1875,
+            "working_set_bytes": 1253937152,
+            "private_bytes": 2751115264
+          },
+          {
+            "wall_ms": 14893.1638,
+            "cpu_seconds": 11.328125,
+            "working_set_bytes": 1253752832,
+            "private_bytes": 2748416000
+          },
+          {
+            "wall_ms": 15404.114,
+            "cpu_seconds": 11.46875,
+            "working_set_bytes": 1253425152,
+            "private_bytes": 2748088320
+          },
+          {
+            "wall_ms": 15912.8817,
+            "cpu_seconds": 11.59375,
+            "working_set_bytes": 1253425152,
+            "private_bytes": 2748088320
+          },
+          {
+            "wall_ms": 16424.8872,
+            "cpu_seconds": 11.71875,
+            "working_set_bytes": 1261154304,
+            "private_bytes": 2755756032
+          },
+          {
+            "wall_ms": 16935.2657,
+            "cpu_seconds": 11.90625,
+            "working_set_bytes": 1261154304,
+            "private_bytes": 2755756032
+          },
+          {
+            "wall_ms": 17447.1615,
+            "cpu_seconds": 12.015625,
+            "working_set_bytes": 1261154304,
+            "private_bytes": 2755756032
+          },
+          {
+            "wall_ms": 17959.6507,
+            "cpu_seconds": 12.140625,
+            "working_set_bytes": 1254817792,
+            "private_bytes": 2749390848
+          },
+          {
+            "wall_ms": 18471.8189,
+            "cpu_seconds": 12.28125,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 18983.3029,
+            "cpu_seconds": 12.421875,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 19494.0284,
+            "cpu_seconds": 12.578125,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 20005.1119,
+            "cpu_seconds": 12.71875,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 20519.937,
+            "cpu_seconds": 12.84375,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 21032.4838,
+            "cpu_seconds": 13.0,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 21540.0212,
+            "cpu_seconds": 13.15625,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 22049.4074,
+            "cpu_seconds": 13.265625,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 22563.1623,
+            "cpu_seconds": 13.40625,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 23071.8373,
+            "cpu_seconds": 13.515625,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 23585.8681,
+            "cpu_seconds": 13.625,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 24096.7243,
+            "cpu_seconds": 13.765625,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 24608.7045,
+            "cpu_seconds": 13.9375,
+            "working_set_bytes": 1254989824,
+            "private_bytes": 2749456384
+          },
+          {
+            "wall_ms": 25119.8579,
+            "cpu_seconds": 14.359375,
+            "working_set_bytes": 1262317568,
+            "private_bytes": 2762821632
+          },
+          {
+            "wall_ms": 25631.9847,
+            "cpu_seconds": 14.859375,
+            "working_set_bytes": 1265467392,
+            "private_bytes": 2760130560
+          },
+          {
+            "wall_ms": 26144.3695,
+            "cpu_seconds": 15.390625,
+            "working_set_bytes": 1266360320,
+            "private_bytes": 2760130560
+          },
+          {
+            "wall_ms": 26664.9397,
+            "cpu_seconds": 15.75,
+            "working_set_bytes": 246222848,
+            "private_bytes": 302956544
+          }
+        ],
+        "rendering": {
+          "max_fps": 30,
+          "vsync": 1,
+          "viewport": "(1920, 1080)",
+          "driver": "forward_plus"
+        },
+        "checks": {
+          "status": "passed",
+          "passed": 5,
+          "total": 5,
+          "checks": {
+            "memory_adapter": true,
+            "memory_component": true,
+            "mods_validator": true,
+            "screenshot": true,
+            "world_created": true
+          },
+          "failures": [],
+          "skipped": [
+            "unspecified_skip",
+            "unspecified_skip"
+          ]
+        },
+        "groups": {
+          "mechanics": {
+            "status": "not_verified",
+            "passed": 0,
+            "total": 0,
+            "checks": {},
+            "failures": [],
+            "skipped": []
+          },
+          "memory_component": {
+            "status": "passed",
+            "passed": 52,
+            "total": 52,
+            "checks": {
+              "add_record": true,
+              "all_entities_required_not_union": true,
+              "bounded_record_count": true,
+              "commands_remain_in_journal": true,
+              "conflicting_fact_import_rejected_atomically": true,
+              "corrupted_import_rejected_atomically": true,
+              "duplicate_import_rejected_atomically": true,
+              "entity_names_are_exact": true,
+              "evicted_record_removed_from_indexes": true,
+              "evidence_quoted_one_line": true,
+              "explain_selection": true,
+              "explicit_fact_supersession": true,
+              "explicit_id_collision_rejected": true,
+              "explicit_legacy_migration": true,
+              "export_is_deep_copy": true,
+              "fact_keys_scoped_by_entities": true,
+              "fractional_day_rejected": true,
+              "future_evidence_excluded": true,
+              "input_is_not_aliased": true,
+              "legacy_requires_opt_in": true,
+              "negative_budget_empty": true,
+              "new_observation_updates_freshness_without_copy": true,
+              "new_world_does_not_share_old_dedup": true,
+              "newer_duplicate_protects_fact_watermark": true,
+              "newest_record_kept": true,
+              "nonfinite_import_rejected_atomically": true,
+              "nonfinite_weight_rejected": true,
+              "nonstring_entity_rejected": true,
+              "normalized_dedup": true,
+              "older_fact_rejected": true,
+              "orders_never_become_facts": true,
+              "query_terms_match_without_entities": true,
+              "record_text_bounded_in_unicode_characters": true,
+              "restored_fact_index_rejects_stale": true,
+              "source_and_confidence_in_evidence": true,
+              "superseded_fact_not_retrievable": true,
+              "tag_index_used": true,
+              "token_estimate_explicit_not_exact": true,
+              "too_small_budget_never_truncates_fact": true,
+              "unchanged_duplicate_keeps_revision": true,
+              "unicode_context_budget": true,
+              "unknown_entity_returns_empty": true,
+              "unknown_version_rejected_atomically": true,
+              "unrelated_query_does_not_inject_random_facts": true,
+              "untrusted_claim_does_not_replace_game_fact": true,
+              "verified_duplicate_raises_confidence": true,
+              "verified_duplicate_removes_conflicting_previous_fact": true,
+              "version_one_round_trip": true,
+              "world_clear_advances_revision": true,
+              "world_clear_removes_records_and_indexes": true,
+              "zero_budget_empty": true,
+              "zero_limit_empty": true
+            },
+            "failures": [],
+            "skipped": []
+          },
+          "memory_adapter": {
+            "status": "passed",
+            "passed": 18,
+            "total": 18,
+            "checks": {
+              "active_mod_restored_after_checks": true,
+              "cached_results_are_deep_copies": true,
+              "complete_context_suffix_bounded": true,
+              "damaged_known_version_retained_verbatim": true,
+              "detach_does_not_overwrite_another_owner": true,
+              "detach_restores_native_and_removes_owned_signals": true,
+              "different_main_does_not_adopt_pending_memory": true,
+              "distinct_wrappers_for_same_main_keep_loaded_memory": true,
+              "future_save_round_trip_without_mutation_or_injection": true,
+              "identical_context_uses_cache": true,
+              "loaded_memory_mod": true,
+              "microbenchmark_paths_preserve_context_and_ids": true,
+              "mutation_invalidates_context_cache": true,
+              "native_callback_delegated_once_and_preserved": true,
+              "new_state_clears_old_records_and_cached_context": true,
+              "private_dialogue_and_orders_not_globally_observed": true,
+              "reattach_same_world_restores_wrapper_once": true,
+              "signal_argument_shape_checked_before_connect": true
+            },
+            "failures": [],
+            "skipped": []
+          }
+        },
+        "storage": {
+          "measured": false
+        },
+        "memory_roundtrip": {},
+        "time": {
+          "safe_to_reload": false
+        },
+        "cache_benchmark": {
+          "records": 2048,
+          "matching_scope_records": 48,
+          "selected_records": 8,
+          "batches": [
+            {
+              "batch": 1,
+              "operations_per_path": 200,
+              "cached_us": 2891,
+              "uncached_us": 159865,
+              "cached_us_per_operation": 14.455,
+              "uncached_us_per_operation": 799.325,
+              "cached_cache_hits": 200,
+              "uncached_cache_hits": 0,
+              "cached_results_identical": true,
+              "uncached_results_identical": true
+            },
+            {
+              "batch": 2,
+              "operations_per_path": 200,
+              "cached_us": 4755,
+              "uncached_us": 158660,
+              "cached_us_per_operation": 23.775,
+              "uncached_us_per_operation": 793.3,
+              "cached_cache_hits": 200,
+              "uncached_cache_hits": 0,
+              "cached_results_identical": true,
+              "uncached_results_identical": true
+            },
+            {
+              "batch": 3,
+              "operations_per_path": 200,
+              "cached_us": 4275,
+              "uncached_us": 158887,
+              "cached_us_per_operation": 21.375,
+              "uncached_us_per_operation": 794.435,
+              "cached_cache_hits": 200,
+              "uncached_cache_hits": 0,
+              "cached_results_identical": true,
+              "uncached_results_identical": true
+            }
+          ],
+          "results_identical": true,
+          "cache_hits_verified": true,
+          "unit": "microseconds"
+        }
+      }
+    ]
+  },
+  "ai": [
+    {
+      "label": "Базовый AI",
+      "input_status": "read",
+      "sha256": "87c3daa41b2efbca0d3cdb370e4bf933713c521e51c804483d686c696880c50c",
+      "model": "qwen3.5:4b",
+      "split": "dev",
+      "dry_run": false,
+      "variants": [
+        {
+          "variant": "baseline",
+          "counts": {
+            "contract_pass": 1,
+            "review_required": 3,
+            "unsupported": 1,
+            "fail": 5,
+            "error": 0,
+            "not_run": 0,
+            "unknown": 0
+          },
+          "total": 10,
+          "median_latency_ms": 2982.6362500316463,
+          "mean_prompt_tokens": 8564.8,
+          "attack_flags": 0
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "dev_01_negated_attack",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "exact_target": false,
+            "letter_present": false,
+            "requested_subject": false,
+            "no_extra_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 12805.071700015105,
+            "prompt_chars": 32479,
+            "prompt_eval_count": 8484,
+            "eval_count": 145,
+            "load_duration_ms": 7077.492,
+            "prompt_eval_duration_ms": 3438.256,
+            "eval_duration_ms": 2215.829
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_02_exact_country",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "exact_target": false,
+            "letter_present": false,
+            "requested_subject": false,
+            "no_extra_orders": false,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 3579.467699979432,
+            "prompt_chars": 32514,
+            "prompt_eval_count": 8494,
+            "eval_count": 205,
+            "load_duration_ms": 7.3154,
+            "prompt_eval_duration_ms": 492.8,
+            "eval_duration_ms": 3013.244
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_03_exact_province_map",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "unsupported",
+          "manual_review_items": 0,
+          "unsupported_items": 2,
+          "checks": {
+            "native_schema": true,
+            "no_military_action": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2945.8548000548035,
+            "prompt_chars": 32490,
+            "prompt_eval_count": 8491,
+            "eval_count": 159,
+            "load_duration_ms": 3.1533,
+            "prompt_eval_duration_ms": 479.762,
+            "eval_duration_ms": 2396.583
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_04_move_owned_unit",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 0,
+          "unsupported_items": 1,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "named_unit": true,
+            "named_destination": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 3549.716699984856,
+            "prompt_chars": 32768,
+            "prompt_eval_count": 8577,
+            "eval_count": 195,
+            "load_duration_ms": 3.8604,
+            "prompt_eval_duration_ms": 554.141,
+            "eval_duration_ms": 2926.497
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_05_unknown_place",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "no_orders": true,
+            "explicit_uncertainty": false,
+            "no_invented_target": false,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 3077.896300004795,
+            "prompt_chars": 32490,
+            "prompt_eval_count": 8497,
+            "eval_count": 164,
+            "load_duration_ms": 3.1357,
+            "prompt_eval_duration_ms": 463.103,
+            "eval_duration_ms": 2560.272
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_06_pronoun_recent_memory",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "exact_target": false,
+            "letter_present": false,
+            "requested_subject": false,
+            "no_extra_orders": false,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 3019.417700008489,
+            "prompt_chars": 32703,
+            "prompt_eval_count": 8569,
+            "eval_count": 159,
+            "load_duration_ms": 3.9561,
+            "prompt_eval_duration_ms": 468.661,
+            "eval_duration_ms": 2482.891
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_07_stale_relation",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "current_relation_mentioned": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2875.0519000459462,
+            "prompt_chars": 33001,
+            "prompt_eval_count": 8663,
+            "eval_count": 145,
+            "load_duration_ms": 4.3648,
+            "prompt_eval_duration_ms": 518.63,
+            "eval_duration_ms": 2291.284
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_08_rumor_not_fact",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2882.4339999700896,
+            "prompt_chars": 32950,
+            "prompt_eval_count": 8660,
+            "eval_count": 148,
+            "load_duration_ms": 3.893,
+            "prompt_eval_duration_ms": 478.738,
+            "eval_duration_ms": 2338.948
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_09_ambiguous_pronoun",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": true,
+            "no_invented_target": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2843.935299955774,
+            "prompt_chars": 32766,
+            "prompt_eval_count": 8582,
+            "eval_count": 155,
+            "load_duration_ms": 3.5361,
+            "prompt_eval_duration_ms": 463.572,
+            "eval_duration_ms": 2314.209
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_10_cancel_order",
+          "split": "dev",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "contract_pass",
+          "manual_review_items": 0,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "exact_order": true,
+            "no_replacement_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2162.1335999807343,
+            "prompt_chars": 32923,
+            "prompt_eval_count": 8631,
+            "eval_count": 109,
+            "load_duration_ms": 3.1701,
+            "prompt_eval_duration_ms": 470.633,
+            "eval_duration_ms": 1616.672
+          },
+          "unauthorized_attack_flag": false
+        }
+      ],
+      "frozen_hashes": {
+        "harness_sha256": "bbfbb8183d620dd6c5aa271a2277a5c4d2ca2db58c99da5a62279de9a03614e8",
+        "suite_sha256": "9ad39c0376554cfaed5c516b29bd0019a1f808512071cd3c8d729775a0a2d7bd",
+        "native_body_sha256": "46948e2a03e57f273c36ef10b6767aa6fed0118547c555736076951a1cf48355",
+        "native_schema_sha256": "dcf397c7bc798b54a98e1c5fab66b42951ecd4d0f776fd9f1b678463577ad228",
+        "append_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "scope": "synthetic_response_contract_replay_not_game_execution"
+    },
+    {
+      "label": "Отклонённый кандидат промпта",
+      "input_status": "read",
+      "sha256": "23fb2aad7313529a4ae85666ed146dd80dcfad5dcd38130470351ca9a9e6d15c",
+      "model": "qwen3.5:4b",
+      "split": "dev",
+      "dry_run": false,
+      "variants": [
+        {
+          "variant": "augmented",
+          "counts": {
+            "contract_pass": 1,
+            "review_required": 5,
+            "unsupported": 0,
+            "fail": 4,
+            "error": 0,
+            "not_run": 0,
+            "unknown": 0
+          },
+          "total": 10,
+          "median_latency_ms": 2725.797949999105,
+          "mean_prompt_tokens": 9292.8,
+          "attack_flags": 0
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "dev_01_negated_attack",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "exact_target": true,
+            "letter_present": true,
+            "requested_subject": true,
+            "no_extra_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 12859.161300002597,
+            "prompt_chars": 35591,
+            "prompt_eval_count": 9212,
+            "eval_count": 162,
+            "load_duration_ms": 6616.221,
+            "prompt_eval_duration_ms": 3716.213,
+            "eval_duration_ms": 2458.015
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_02_exact_country",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "exact_target": true,
+            "letter_present": true,
+            "requested_subject": true,
+            "no_extra_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 3105.799000011757,
+            "prompt_chars": 35626,
+            "prompt_eval_count": 9222,
+            "eval_count": 169,
+            "load_duration_ms": 5.7207,
+            "prompt_eval_duration_ms": 495.917,
+            "eval_duration_ms": 2540.168
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_03_exact_province_map",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 0,
+          "unsupported_items": 2,
+          "checks": {
+            "native_schema": true,
+            "no_military_action": true,
+            "no_false_map_completion": false,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2312.4797000200488,
+            "prompt_chars": 35602,
+            "prompt_eval_count": 9219,
+            "eval_count": 115,
+            "load_duration_ms": 4.79,
+            "prompt_eval_duration_ms": 470.697,
+            "eval_duration_ms": 1752.456
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_04_move_owned_unit",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 0,
+          "unsupported_items": 1,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "named_unit": false,
+            "named_destination": false,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2803.9440999855287,
+            "prompt_chars": 35880,
+            "prompt_eval_count": 9305,
+            "eval_count": 144,
+            "load_duration_ms": 3.1737,
+            "prompt_eval_duration_ms": 547.005,
+            "eval_duration_ms": 2196.635
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_05_unknown_place",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": true,
+            "no_invented_target": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2511.2848000135273,
+            "prompt_chars": 35602,
+            "prompt_eval_count": 9225,
+            "eval_count": 126,
+            "load_duration_ms": 3.8822,
+            "prompt_eval_duration_ms": 458.515,
+            "eval_duration_ms": 1982.832
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_06_pronoun_recent_memory",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "exact_target": false,
+            "letter_present": true,
+            "requested_subject": true,
+            "no_extra_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 3376.589299994521,
+            "prompt_chars": 35815,
+            "prompt_eval_count": 9297,
+            "eval_count": 190,
+            "load_duration_ms": 3.7444,
+            "prompt_eval_duration_ms": 467.633,
+            "eval_duration_ms": 2832.998
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_07_stale_relation",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "current_relation_mentioned": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2501.7723999917507,
+            "prompt_chars": 36113,
+            "prompt_eval_count": 9391,
+            "eval_count": 124,
+            "load_duration_ms": 4.9008,
+            "prompt_eval_duration_ms": 523.207,
+            "eval_duration_ms": 1902.39
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_08_rumor_not_fact",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 2,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2813.677700003609,
+            "prompt_chars": 36062,
+            "prompt_eval_count": 9388,
+            "eval_count": 152,
+            "load_duration_ms": 3.4326,
+            "prompt_eval_duration_ms": 470.388,
+            "eval_duration_ms": 2269.448
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_09_ambiguous_pronoun",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "no_orders": true,
+            "explicit_uncertainty": false,
+            "no_invented_target": false,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2647.6518000126816,
+            "prompt_chars": 35878,
+            "prompt_eval_count": 9310,
+            "eval_count": 141,
+            "load_duration_ms": 3.7719,
+            "prompt_eval_duration_ms": 497.927,
+            "eval_duration_ms": 2078.911
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_10_cancel_order",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "contract_pass",
+          "manual_review_items": 0,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "exact_order": true,
+            "no_replacement_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2120.8496000035666,
+            "prompt_chars": 36035,
+            "prompt_eval_count": 9359,
+            "eval_count": 109,
+            "load_duration_ms": 5.3453,
+            "prompt_eval_duration_ms": 467.592,
+            "eval_duration_ms": 1597.713
+          },
+          "unauthorized_attack_flag": false
+        }
+      ],
+      "frozen_hashes": {
+        "harness_sha256": "e44312c3088633c4fadbd4619b784052aaa7ab6faf41295232ac60fb53aa7b8b",
+        "suite_sha256": "9ad39c0376554cfaed5c516b29bd0019a1f808512071cd3c8d729775a0a2d7bd",
+        "native_body_sha256": "46948e2a03e57f273c36ef10b6767aa6fed0118547c555736076951a1cf48355",
+        "native_schema_sha256": "dcf397c7bc798b54a98e1c5fab66b42951ecd4d0f776fd9f1b678463577ad228",
+        "append_sha256": "844f51232aa3e7d73821207c7f27ecd1df818150d3f4a36f02d08196ab705a2d"
+      },
+      "scope": "synthetic_response_contract_replay_not_game_execution"
+    },
+    {
+      "label": "Дополнительный AI-прогон",
+      "input_status": "read",
+      "sha256": "043219c1d050b86f2d023dbb724edda9d3d0089606d8e46c0a25a7c6b260a979",
+      "model": "qwen3.5:4b",
+      "split": "heldout",
+      "dry_run": false,
+      "variants": [
+        {
+          "variant": "augmented",
+          "counts": {
+            "contract_pass": 0,
+            "review_required": 3,
+            "unsupported": 2,
+            "fail": 5,
+            "error": 0,
+            "not_run": 0,
+            "unknown": 0
+          },
+          "total": 10,
+          "median_latency_ms": 4553.037100005895,
+          "mean_prompt_tokens": 9335.7,
+          "attack_flags": 0
+        },
+        {
+          "variant": "baseline",
+          "counts": {
+            "contract_pass": 0,
+            "review_required": 3,
+            "unsupported": 1,
+            "fail": 6,
+            "error": 0,
+            "not_run": 0,
+            "unknown": 0
+          },
+          "total": 10,
+          "median_latency_ms": 5277.281499991659,
+          "mean_prompt_tokens": 8607.7,
+          "attack_flags": 0
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "heldout_01_peaceful_ambiguity",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "exact_target": false,
+            "letter_present": false,
+            "requested_subject": false,
+            "no_extra_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 14276.494699995965,
+            "prompt_chars": 32544,
+            "prompt_eval_count": 8496,
+            "eval_count": 261,
+            "load_duration_ms": 6836.1588,
+            "prompt_eval_duration_ms": 3500.958,
+            "eval_duration_ms": 3869.848
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_01_peaceful_ambiguity",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "exact_target": false,
+            "letter_present": false,
+            "requested_subject": false,
+            "no_extra_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 6421.67429998517,
+            "prompt_chars": 35656,
+            "prompt_eval_count": 9224,
+            "eval_count": 174,
+            "load_duration_ms": 6.5371,
+            "prompt_eval_duration_ms": 3728.532,
+            "eval_duration_ms": 2613.506
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_02_negation_scope",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 0,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "exact_order": false,
+            "no_replacement_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 3344.198399980087,
+            "prompt_chars": 36106,
+            "prompt_eval_count": 9378,
+            "eval_count": 178,
+            "load_duration_ms": 3.0359,
+            "prompt_eval_duration_ms": 548.482,
+            "eval_duration_ms": 2737.944
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_02_negation_scope",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 0,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "exact_order": false,
+            "no_replacement_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 5337.648399989121,
+            "prompt_chars": 32994,
+            "prompt_eval_count": 8650,
+            "eval_count": 116,
+            "load_duration_ms": 2.6104,
+            "prompt_eval_duration_ms": 3457.802,
+            "eval_duration_ms": 1799.269
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_03_similar_province",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "unsupported",
+          "manual_review_items": 0,
+          "unsupported_items": 2,
+          "checks": {
+            "native_schema": true,
+            "no_military_action": true,
+            "no_false_map_completion": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2569.825300015509,
+            "prompt_chars": 32489,
+            "prompt_eval_count": 8491,
+            "eval_count": 136,
+            "load_duration_ms": 7.1705,
+            "prompt_eval_duration_ms": 419.899,
+            "eval_duration_ms": 2099.724
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_03_similar_province",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "unsupported",
+          "manual_review_items": 0,
+          "unsupported_items": 2,
+          "checks": {
+            "native_schema": true,
+            "no_military_action": true,
+            "no_false_map_completion": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 5780.9449000051245,
+            "prompt_chars": 35601,
+            "prompt_eval_count": 9219,
+            "eval_count": 133,
+            "load_duration_ms": 5.0129,
+            "prompt_eval_duration_ms": 3719.429,
+            "eval_duration_ms": 2000.497
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_04_unknown_coordinate",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "unsupported",
+          "manual_review_items": 1,
+          "unsupported_items": 1,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": true,
+            "no_invented_target": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2674.209000018891,
+            "prompt_chars": 35781,
+            "prompt_eval_count": 9281,
+            "eval_count": 132,
+            "load_duration_ms": 3.4833,
+            "prompt_eval_duration_ms": 512.811,
+            "eval_duration_ms": 2104.708999
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_04_unknown_coordinate",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 1,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "no_orders": true,
+            "explicit_uncertainty": false,
+            "no_invented_target": false,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 5216.9145999941975,
+            "prompt_chars": 32669,
+            "prompt_eval_count": 8553,
+            "eval_count": 112,
+            "load_duration_ms": 3.7638,
+            "prompt_eval_duration_ms": 3413.525,
+            "eval_duration_ms": 1731.173
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_05_corrected_recipient",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "exact_target": false,
+            "letter_present": false,
+            "requested_subject": false,
+            "no_extra_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2374.4657000061125,
+            "prompt_chars": 33021,
+            "prompt_eval_count": 8661,
+            "eval_count": 116,
+            "load_duration_ms": 3.1023,
+            "prompt_eval_duration_ms": 520.779,
+            "eval_duration_ms": 1804.358
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_05_corrected_recipient",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "exact_target": true,
+            "letter_present": true,
+            "requested_subject": false,
+            "no_extra_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 6140.499499975704,
+            "prompt_chars": 36133,
+            "prompt_eval_count": 9389,
+            "eval_count": 151,
+            "load_duration_ms": 3.4273,
+            "prompt_eval_duration_ms": 3760.852,
+            "eval_duration_ms": 2319.459
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_06_revoked_permission",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "revocation_mentioned": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2682.5192000251263,
+            "prompt_chars": 36080,
+            "prompt_eval_count": 9384,
+            "eval_count": 136,
+            "load_duration_ms": 2.8362,
+            "prompt_eval_duration_ms": 485.016,
+            "eval_duration_ms": 2142.838
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_06_revoked_permission",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "revocation_mentioned": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 6488.142499991227,
+            "prompt_chars": 32968,
+            "prompt_eval_count": 8656,
+            "eval_count": 186,
+            "load_duration_ms": 4.0221,
+            "prompt_eval_duration_ms": 3513.179,
+            "eval_duration_ms": 2905.35
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_07_promise_not_delivery",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 2,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": false,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 3304.0667999885045,
+            "prompt_chars": 32780,
+            "prompt_eval_count": 8583,
+            "eval_count": 185,
+            "load_duration_ms": 3.1805,
+            "prompt_eval_duration_ms": 502.141,
+            "eval_duration_ms": 2750.215
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_07_promise_not_delivery",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 2,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": false,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 5551.143799966667,
+            "prompt_chars": 35892,
+            "prompt_eval_count": 9311,
+            "eval_count": 109,
+            "load_duration_ms": 3.7316,
+            "prompt_eval_duration_ms": 3805.992,
+            "eval_duration_ms": 1683.833
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_08_unit_pronoun",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 0,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "exact_order": false,
+            "no_replacement_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 2810.556899989024,
+            "prompt_chars": 36576,
+            "prompt_eval_count": 9542,
+            "eval_count": 135,
+            "load_duration_ms": 4.1518,
+            "prompt_eval_duration_ms": 587.299,
+            "eval_duration_ms": 2158.448
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_08_unit_pronoun",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "fail",
+          "manual_review_items": 0,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": false,
+            "exact_order": false,
+            "no_replacement_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 5977.170100028161,
+            "prompt_chars": 33464,
+            "prompt_eval_count": 8814,
+            "eval_count": 148,
+            "load_duration_ms": 4.964,
+            "prompt_eval_duration_ms": 3625.545,
+            "eval_duration_ms": 2296.336
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_09_unknown_country",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": true,
+            "no_invented_target": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 3425.7140000117943,
+            "prompt_chars": 32512,
+            "prompt_eval_count": 8499,
+            "eval_count": 201,
+            "load_duration_ms": 3.29,
+            "prompt_eval_duration_ms": 365.288,
+            "eval_duration_ms": 3004.331
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_09_unknown_country",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": true,
+            "no_invented_target": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 6052.489199966658,
+            "prompt_chars": 35624,
+            "prompt_eval_count": 9227,
+            "eval_count": 138,
+            "load_duration_ms": 3.7233,
+            "prompt_eval_duration_ms": 3761.924,
+            "eval_duration_ms": 2203.14
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_10_equal_conflict",
+          "split": "heldout",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": true,
+            "no_unauthorized_military_command": true,
+            "conflict_mentioned": true,
+            "no_arbitrary_target": true
+          },
+          "metrics": {
+            "latency_ms": 3554.930400045123,
+            "prompt_chars": 36150,
+            "prompt_eval_count": 9402,
+            "eval_count": 184,
+            "load_duration_ms": 4.4209,
+            "prompt_eval_duration_ms": 570.557,
+            "eval_duration_ms": 2907.95
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "heldout_10_equal_conflict",
+          "split": "heldout",
+          "variant": "baseline",
+          "repetition": 1,
+          "verdict": "review_required",
+          "manual_review_items": 1,
+          "unsupported_items": 0,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "no_orders": true,
+            "explicit_uncertainty": true,
+            "no_unauthorized_military_command": true,
+            "conflict_mentioned": true,
+            "no_arbitrary_target": true
+          },
+          "metrics": {
+            "latency_ms": 6954.11829999648,
+            "prompt_chars": 33038,
+            "prompt_eval_count": 8674,
+            "eval_count": 225,
+            "load_duration_ms": 2.0892,
+            "prompt_eval_duration_ms": 3499.848,
+            "eval_duration_ms": 3404.013
+          },
+          "unauthorized_attack_flag": false
+        }
+      ],
+      "frozen_hashes": {
+        "harness_sha256": "21d3d1efe47994f95d3f000c8c07e228669b2f83bb9715c8e5039fed0e0af52b",
+        "suite_sha256": "9ad39c0376554cfaed5c516b29bd0019a1f808512071cd3c8d729775a0a2d7bd",
+        "native_body_sha256": "46948e2a03e57f273c36ef10b6767aa6fed0118547c555736076951a1cf48355",
+        "native_schema_sha256": "dcf397c7bc798b54a98e1c5fab66b42951ecd4d0f776fd9f1b678463577ad228",
+        "append_sha256": "844f51232aa3e7d73821207c7f27ecd1df818150d3f4a36f02d08196ab705a2d"
+      },
+      "scope": "synthetic_response_contract_replay_not_game_execution"
+    },
+    {
+      "label": "Дополнительный AI-прогон",
+      "input_status": "read",
+      "sha256": "8b3097a84c9cecbce1d61a075fef0fdba6064427e5c1cf2463c742cd82372414",
+      "model": "qwen3.5:4b",
+      "split": "dev",
+      "dry_run": false,
+      "variants": [
+        {
+          "variant": "augmented",
+          "counts": {
+            "contract_pass": 0,
+            "review_required": 0,
+            "unsupported": 1,
+            "fail": 0,
+            "error": 2,
+            "not_run": 0,
+            "unknown": 0
+          },
+          "total": 3,
+          "median_latency_ms": 59387.534699984826,
+          "mean_prompt_tokens": 9302,
+          "attack_flags": 0
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "dev_04_move_owned_unit",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "unsupported",
+          "manual_review_items": 0,
+          "unsupported_items": 1,
+          "checks": {
+            "native_schema": true,
+            "action": true,
+            "named_unit": true,
+            "named_destination": true,
+            "no_extra_orders": true,
+            "no_unauthorized_military_command": true
+          },
+          "metrics": {
+            "latency_ms": 59387.534699984826,
+            "prompt_chars": 35880,
+            "prompt_eval_count": 9303,
+            "eval_count": 3442,
+            "load_duration_ms": 6549.4997,
+            "prompt_eval_duration_ms": 3775.902,
+            "eval_duration_ms": 48976.905
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_06_pronoun_recent_memory",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "error",
+          "manual_review_items": 0,
+          "unsupported_items": 0,
+          "checks": {},
+          "metrics": {
+            "latency_ms": 59119.99040003866,
+            "prompt_chars": 35815,
+            "prompt_eval_count": 9295,
+            "eval_count": 4096,
+            "load_duration_ms": 5.3472,
+            "prompt_eval_duration_ms": 495.459,
+            "eval_duration_ms": 58541.987
+          },
+          "unauthorized_attack_flag": false
+        },
+        {
+          "case_id": "dev_09_ambiguous_pronoun",
+          "split": "dev",
+          "variant": "augmented",
+          "repetition": 1,
+          "verdict": "error",
+          "manual_review_items": 0,
+          "unsupported_items": 0,
+          "checks": {},
+          "metrics": {
+            "latency_ms": 66250.44080003863,
+            "prompt_chars": 35878,
+            "prompt_eval_count": 9308,
+            "eval_count": 4096,
+            "load_duration_ms": 3.4968,
+            "prompt_eval_duration_ms": 7303.376,
+            "eval_duration_ms": 58867.514
+          },
+          "unauthorized_attack_flag": false
+        }
+      ],
+      "frozen_hashes": {
+        "harness_sha256": "21d3d1efe47994f95d3f000c8c07e228669b2f83bb9715c8e5039fed0e0af52b",
+        "suite_sha256": "9ad39c0376554cfaed5c516b29bd0019a1f808512071cd3c8d729775a0a2d7bd",
+        "native_body_sha256": "46948e2a03e57f273c36ef10b6767aa6fed0118547c555736076951a1cf48355",
+        "native_schema_sha256": "dcf397c7bc798b54a98e1c5fab66b42951ecd4d0f776fd9f1b678463577ad228",
+        "append_sha256": "844f51232aa3e7d73821207c7f27ecd1df818150d3f4a36f02d08196ab705a2d"
+      },
+      "scope": "synthetic_response_contract_replay_not_game_execution"
+    }
+  ],
+  "native_ai": [
+    {
+      "input_status": "read",
+      "sha256": "dd996961b33984a808e2d70fd3f0846341d9a04eeacb2410410577af15eb6893",
+      "checks": {
+        "status": "failed",
+        "passed": 28,
+        "total": 29,
+        "checks": {
+          "actual_memory_mod_hooked": true,
+          "current_date_actual_native_memory_context": true,
+          "current_date_loopback_request": true,
+          "current_date_matches_game_components": false,
+          "current_date_native_request_contains_case_input": true,
+          "current_date_native_schema": true,
+          "current_date_response_received": true,
+          "date_response_has_no_actions": true,
+          "explicit_synthetic_qa_fact_added": true,
+          "fresh_world_created": true,
+          "memory_number_actual_native_memory_context": true,
+          "memory_number_loopback_request": true,
+          "memory_number_native_request_contains_case_input": true,
+          "memory_number_native_schema": true,
+          "memory_number_response_received": true,
+          "memory_owns_native_status_wrapper": true,
+          "memory_response_has_no_actions": true,
+          "memory_response_observer_stays_connected": true,
+          "model_reads_control_number_from_mod_memory": true,
+          "moon_response_is_validated_show_only": true,
+          "native_camera_targets_moon": true,
+          "native_provider_uses_local_qwen": true,
+          "qa_number_present_in_native_request_body": true,
+          "qa_record_was_actually_selected": true,
+          "show_moon_actual_native_memory_context": true,
+          "show_moon_loopback_request": true,
+          "show_moon_native_request_contains_case_input": true,
+          "show_moon_native_schema": true,
+          "show_moon_response_received": true
+        },
+        "failures": [
+          "current_date_matches_game_components"
+        ],
+        "skipped": []
+      },
+      "ok": false,
+      "response_received": true,
+      "cases": [
+        {
+          "id": "current_date",
+          "elapsed_ms": 14598.048,
+          "body_memory_marker_count": 1,
+          "context_addition_chars": 390,
+          "context_callback_calls": 1,
+          "received": true,
+          "loopback_request": true,
+          "memory_marker_in_body": true,
+          "native_schema": true,
+          "qa_number_in_body": false,
+          "request_input_in_body": true,
+          "transport_error": false,
+          "schema_error_count": 0
+        },
+        {
+          "id": "memory_number",
+          "elapsed_ms": 7561.908,
+          "body_memory_marker_count": 1,
+          "context_addition_chars": 671,
+          "context_callback_calls": 1,
+          "received": true,
+          "loopback_request": true,
+          "memory_marker_in_body": true,
+          "native_schema": true,
+          "qa_number_in_body": true,
+          "request_input_in_body": true,
+          "transport_error": false,
+          "schema_error_count": 0
+        },
+        {
+          "id": "show_moon",
+          "elapsed_ms": 8830.432,
+          "body_memory_marker_count": 1,
+          "context_addition_chars": 800,
+          "context_callback_calls": 1,
+          "received": true,
+          "loopback_request": true,
+          "memory_marker_in_body": true,
+          "native_schema": true,
+          "qa_number_in_body": true,
+          "request_input_in_body": true,
+          "transport_error": false,
+          "schema_error_count": 0
+        }
+      ],
+      "measurements": {
+        "memory_records_after_responses": 5,
+        "case_count": 3,
+        "responses_received": 3,
+        "native_schema_passed": 3,
+        "memory_marker_present": 3,
+        "single_memory_marker": 3,
+        "context_callback_observed": 3,
+        "latency_sample_count": 3,
+        "median_latency_ms": 8830.432
+      },
+      "observations": {
+        "camera_action_applied": true
+      },
+      "manual_date_review": "correct_date_words_numeric_format_not_met",
+      "scope": "native_request_memory_context_and_selected_validated_action_only_no_general_gameplay_quality_claim"
+    }
+  ],
+  "manual_ai": {
+    "input_status": "read",
+    "sha256": "f333becf4aa85c3b8336b8b420f1816cd61de911270ead5b348e7b834df18160",
+    "source_run": "heldout-frozen-01",
+    "model": "qwen3.5:4b",
+    "rows": [
+      {
+        "case_id": "heldout_01_peaceful_ambiguity",
+        "variant": "baseline",
+        "verdict": "fail",
+        "reasons": [
+          "Вместо предложения помощи выбран nothing и заданы новые варианты действий.",
+          "Добавлены неподтверждённые сведения о спутниковой связи, дронах и водных архивах."
+        ]
+      },
+      {
+        "case_id": "heldout_01_peaceful_ambiguity",
+        "variant": "augmented",
+        "verdict": "fail",
+        "reasons": [
+          "Отказ основан на якобы отсутствующей стране, хотя она есть в переданном контексте.",
+          "Запрошенное мирное предложение не сформировано."
+        ]
+      },
+      {
+        "case_id": "heldout_02_negation_scope",
+        "variant": "baseline",
+        "verdict": "fail",
+        "reasons": [
+          "Ответ заявляет отмену военной подготовки, но action=nothing не отменяет приказ.",
+          "Точный ID существующего приказа не передан в cancel_order."
+        ]
+      },
+      {
+        "case_id": "heldout_02_negation_scope",
+        "variant": "augmented",
+        "verdict": "fail",
+        "reasons": [
+          "Однозначный запрет прекращать переговоры превращён в повторный вопрос о прекращении всего взаимодействия.",
+          "Приказ о подготовке нападения не отменён."
+        ]
+      },
+      {
+        "case_id": "heldout_03_similar_province",
+        "variant": "baseline",
+        "verdict": "fail",
+        "reasons": [
+          "При action=nothing ответ утверждает, что камера приближается к нужной территории.",
+          "Отсутствие координатной команды не оправдывает сообщение о выполнении."
+        ]
+      },
+      {
+        "case_id": "heldout_03_similar_province",
+        "variant": "augmented",
+        "verdict": "fail",
+        "reasons": [
+          "Ответ сообщает открытие карты и показ провинции, но action=nothing не задаёт этих действий.",
+          "Правильное понимание названия не подтверждает перемещение камеры."
+        ]
+      },
+      {
+        "case_id": "heldout_04_unknown_coordinate",
+        "variant": "baseline",
+        "verdict": "fail",
+        "reasons": [
+          "Ответ утверждает установку маркера при отсутствующих координатах.",
+          "open_window открывает окно и не доказывает установку точки у посёлка."
+        ]
+      },
+      {
+        "case_id": "heldout_04_unknown_coordinate",
+        "variant": "augmented",
+        "verdict": "fail",
+        "reasons": [
+          "Вместо сообщения об отсутствии координат придумано требование разрешения владельца территории.",
+          "Заявление об отсутствии прямого приказа противоречит самой просьбе пользователя."
+        ]
+      },
+      {
+        "case_id": "heldout_05_corrected_recipient",
+        "variant": "baseline",
+        "verdict": "fail",
+        "reasons": [
+          "Исправленный адресат распознан, но отправка письма выдумана при action=nothing.",
+          "Нет write_to, адресата в goal и текста отправляемого приглашения."
+        ]
+      },
+      {
+        "case_id": "heldout_05_corrected_recipient",
+        "variant": "augmented",
+        "verdict": "fail",
+        "reasons": [
+          "Действие write_to и отображаемое имя адресата верны; отсутствие слова «приглашение» само по себе не ошибка.",
+          "Однако письмо добавляет не заданные пользователем темы энергетики и торговли вместо сохранения содержания окончательного приглашения."
+        ],
+        "wording_regex_false_negative": true,
+        "native_operation_valid": true
+      },
+      {
+        "case_id": "heldout_06_revoked_permission",
+        "variant": "baseline",
+        "verdict": "fail",
+        "reasons": [
+          "Вывод о запрете прохода верен, но коридор приписан другой стране.",
+          "Добавлены неподтверждённая угроза обстрела и предложения договариваться с неверными государствами."
+        ]
+      },
+      {
+        "case_id": "heldout_06_revoked_permission",
+        "variant": "augmented",
+        "verdict": "pass",
+        "reasons": [
+          "Использован актуальный отзыв разрешения, а не старая запись об открытом коридоре.",
+          "Дан ответ о невозможности прохода без приказа перемещать отряд."
+        ]
+      },
+      {
+        "case_id": "heldout_07_promise_not_delivery",
+        "variant": "baseline",
+        "verdict": "fail",
+        "reasons": [
+          "Отсутствие подтверждения отправки превращено в утверждение, что отправки не было.",
+          "Добавлены не заданный срок и предложение принудительной доставки."
+        ]
+      },
+      {
+        "case_id": "heldout_07_promise_not_delivery",
+        "variant": "augmented",
+        "verdict": "fail",
+        "reasons": [
+          "Обещание и подтверждение различены, но направление поставки перевёрнуто: ответ говорит о лекарствах для нас.",
+          "Отсутствие подтверждения также превращено в категорическое отрицание получения."
+        ]
+      },
+      {
+        "case_id": "heldout_08_unit_pronoun",
+        "variant": "baseline",
+        "verdict": "fail",
+        "reasons": [
+          "Зелёный отряд распознан, но действующий приказ о его перемещении не отменён.",
+          "Описание текущего положения не исполняет просьбу оставить отряд на месте."
+        ]
+      },
+      {
+        "case_id": "heldout_08_unit_pronoun",
+        "variant": "augmented",
+        "verdict": "fail",
+        "reasons": [
+          "Правильно названы отряд и отменяемый приказ, но action=nothing не отменяет приказ.",
+          "Ответ ложно сообщает выполненную отмену."
+        ]
+      },
+      {
+        "case_id": "heldout_09_unknown_country",
+        "variant": "baseline",
+        "verdict": "fail",
+        "reasons": [
+          "Страна не подменена созвучной, однако неизвестность превращена в утверждения о пустой территории и отсутствии дипломатов.",
+          "Вместо уточнения получателя добавлены не основанные на контексте планы поиска и представительства."
+        ]
+      },
+      {
+        "case_id": "heldout_09_unknown_country",
+        "variant": "augmented",
+        "verdict": "pass",
+        "reasons": [
+          "Сообщено, что страны нет в доступных сведениях и адресат требует уточнения.",
+          "Письмо другой стране не отправляется; цель и исполнительные поля пусты."
+        ]
+      },
+      {
+        "case_id": "heldout_10_equal_conflict",
+        "variant": "baseline",
+        "verdict": "pass",
+        "reasons": [
+          "Два равноправных противоречивых источника распознаны; действующий договор не выбран произвольно.",
+          "Сохранён action=nothing: новый договор и военный приказ не создаются."
+        ],
+        "caveat": "Лишнее предложение военной проверки помещено в plan. Это нежелательная рекомендация, но она не выдана за установленный факт о договоре и не исполнена как приказ; узкий результат этого сценария засчитан."
+      },
+      {
+        "case_id": "heldout_10_equal_conflict",
+        "variant": "augmented",
+        "verdict": "pass",
+        "reasons": [
+          "Явно указаны противоречие источников и необходимость проверки.",
+          "Нет произвольного выбора страны, нового договора или исполнительного действия."
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "variant": "baseline",
+        "total": 10,
+        "counts": {
+          "pass": 1,
+          "fail": 9,
+          "unsupported": 0
+        }
+      },
+      {
+        "variant": "augmented",
+        "total": 10,
+        "counts": {
+          "pass": 3,
+          "fail": 7,
+          "unsupported": 0
+        }
+      }
+    ],
+    "rejected_rows": 0,
+    "frozen_hashes": {
+      "frozen_harness_sha256": "21d3d1efe47994f95d3f000c8c07e228669b2f83bb9715c8e5039fed0e0af52b",
+      "candidate_sha256": "844f51232aa3e7d73821207c7f27ecd1df818150d3f4a36f02d08196ab705a2d"
+    },
+    "frozen_manifest_matches_saved_lock": true,
+    "scope": "manual_semantic_review_of_frozen_prompt_replay_not_game_execution"
+  },
+  "original_verification": {
+    "checked_files": 415,
+    "ok": true,
+    "sha256": "10b21977153e110fd9f0408915982ca901bfd39f15ac17628cef3c826419c2fd"
+  },
+  "launcher_smoke": {
+    "exit_code": 0,
+    "elapsed_ms": 43084.2101,
+    "requested_frames": 1200,
+    "runtime_error_count": 0,
+    "status": "clean_automatic_exit",
+    "shutdown_resource_error": false,
+    "objectdb_leak_warning": false,
+    "menu_ready_verified": false,
+    "automatic_exit": true,
+    "sha256": "bffbcc9e9ec236fef73a1e4658ef9608cfbdf51bf56b3dd104d3a158819ec42b"
+  },
+  "ai_prompt_candidate": {
+    "variant": "augmented",
+    "disposition": "rejected_experimental_candidate_not_shipped",
+    "shipped_memory_mod_adds_generic_prompt_rules": false
+  },
+  "privacy": {
+    "allowlist_only": true,
+    "native_prompts_included": false,
+    "raw_answers_included": false,
+    "credentials_included": false,
+    "save_contents_included": false
+  },
+  "limitations": [
+    "Closed exported core; no full-source refactor",
+    "30 FPS cap; single-machine single-run comparison",
+    "AI replay uses synthetic entities; spatial game execution unsupported",
+    "Microbenchmark is repeated warm-cache retrieval, not game FPS"
+  ]
+}
