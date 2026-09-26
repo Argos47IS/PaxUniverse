@@ -34,6 +34,10 @@ schemas and the game's own `data/*.json` (the source of truth for field names) a
 6. Save state only through `_save_state` → `_game_loaded` (JSON types only: no Vector3, no Objects).
 7. Textures, sounds and models from the mod load at runtime without Godot import: use `texture()`, `sound()`,
    `model()`, `shader()` helpers (or `Pax.texture(path)`), never `load()` for png/jpg/ogg/glb.
+8. The updated game scans all mod scripts before loading. Use `load_resource("relative/literal.gd")` for this
+   mod's scripts and literal `preload("res://mods/pax_interface/…")` paths. Do not use dynamic `load()`,
+   filesystem classes, environment variables, raw game-script paths or scene-management commands.
+   Development tests belong in the repository's `tests/pax_interface/`, outside this installable folder.
 
 ## Verify your work — always
 

@@ -1,11 +1,10 @@
 extends RefCounted
-## Import legacy visual preferences once without changing the legacy mod or loader.
+## Import preferences only through an active legacy mod's public settings API.
 
 const TARGET_ID: String = "earth_atlas"
-const LEGACY_SETTINGS: String = "user://mod_settings/earth_atlas_hd.json"
+const LEGACY_ID: String = "earth_atlas_hd"
 const MIGRATION_MARKER: String = "_migration_earth_atlas_hd_v1"
 const KEYS: Array[String] = ["enabled", "quality", "natural", "political", "urban"]
-const MAX_SETTINGS_BYTES: int = 65536
 
 static func migrate(mod: PaxMod) -> Dictionary:
     var report: Dictionary = {"status": "skipped", "copied": [], "preserved": [], "rejected": []}
@@ -18,48 +17,31 @@ static func migrate(mod: PaxMod) -> Dictionary:
         report.status = "already_complete"
         return report
 
-    var source_result: Dictionary = _read_legacy()
-    report.status = source_result.status
-    if source_result.has("settings"):
-        var source: Dictionary = source_result.settings
-        var absent: RefCounted = RefCounted.new()
-        for key: String in KEYS:
-            if not source.has(key):
-                continue
-            # A private object sentinel distinguishes a missing value from an
-            # existing null/false/zero. Every existing new preference takes priority.
-            var current: Variant = mod.get_setting(key, absent)
-            if not is_same(current, absent):
-                report.preserved.append(key)
-                continue
-            var value: Variant = _validated_value(key, source[key])
-            if value == null:
-                report.rejected.append(key)
-                continue
-            mod.set_setting(key, value)
-            report.copied.append(key)
-
-    # Missing or corrupt legacy settings are also a completed attempt: future
-    # reloads must not suddenly import old values over the new mod's defaults.
+    # The sandbox owns file access. A disabled legacy mod's settings are private;
+    # leave our existing preferences intact and never read another mod's files.
+    var legacy: PaxMod = Pax.get_mod(LEGACY_ID)
+    if not is_instance_valid(legacy):
+        report.status = "legacy_not_active"
+        return report
+    report.status = "migrated"
+    var absent: RefCounted = RefCounted.new()
+    for key: String in KEYS:
+        var source: Variant = legacy.get_setting(key, absent)
+        if is_same(source, absent):
+            continue
+        # Existing new values, including null/false/zero, always take priority.
+        var current: Variant = mod.get_setting(key, absent)
+        if not is_same(current, absent):
+            report.preserved.append(key)
+            continue
+        var value: Variant = _validated_value(key, source)
+        if value == null:
+            report.rejected.append(key)
+            continue
+        mod.set_setting(key, value)
+        report.copied.append(key)
     mod.set_setting(MIGRATION_MARKER, true)
     return report
-
-static func _read_legacy() -> Dictionary:
-    if not FileAccess.file_exists(LEGACY_SETTINGS):
-        return {"status": "legacy_missing"}
-    var file: FileAccess = FileAccess.open(LEGACY_SETTINGS, FileAccess.READ)
-    if file == null:
-        return {"status": "legacy_unreadable"}
-    if file.get_length() > MAX_SETTINGS_BYTES:
-        file.close()
-        return {"status": "legacy_too_large"}
-    var contents: String = file.get_as_text()
-    file.close()
-    var parser: JSON = JSON.new()
-    var parse_error: Error = parser.parse(contents)
-    if parse_error != OK or not parser.data is Dictionary:
-        return {"status": "legacy_invalid"}
-    return {"status": "migrated", "settings": parser.data}
 
 static func _validated_value(key: String, value: Variant) -> Variant:
     if key == "enabled":

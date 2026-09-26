@@ -1,0 +1,136 @@
+{
+	"assertion_count": 71,
+	"checks": {
+		"actual_control_inventory": true,
+		"automatic_world_connection": true,
+		"capture_atlas-disabled.png": true,
+		"capture_atlas-enabled.png": true,
+		"capture_atlas-settings.png": true,
+		"disable_restores_both_native_shaders": true,
+		"disable_saved": true,
+		"elevation_10800x5400": true,
+		"enable_reapplies_both_shaders": true,
+		"enable_saved": true,
+		"four_quality_choices": true,
+		"hot_load_catches_existing_world": true,
+		"hot_load_one_callback": true,
+		"hot_load_restores_atlas": true,
+		"hot_load_settings_remain_saved": true,
+		"mars_exists_for_native_switch": true,
+		"mars_uses_native_shaders": true,
+		"native_quality_doubles_half_resolution": true,
+		"native_switch_selected_mars": true,
+		"natural_callback_updates_shader_and_save": true,
+		"natural_minimum_updates_shader": true,
+		"political_callback_updates_shader_and_save": true,
+		"political_minimum_updates_shader": true,
+		"qa_settings_bytes_restored": true,
+		"quality_0.5_applied_and_saved": true,
+		"quality_0.5_overlay_unchanged": true,
+		"quality_0.5_valid_surface": true,
+		"quality_1.0_applied_and_saved": true,
+		"quality_1.0_overlay_unchanged": true,
+		"quality_1.0_valid_surface": true,
+		"quality_1.5_applied_and_saved": true,
+		"quality_1.5_overlay_unchanged": true,
+		"quality_1.5_valid_surface": true,
+		"quality_2.0_applied_and_saved": true,
+		"quality_2.0_overlay_unchanged": true,
+		"quality_2.0_valid_surface": true,
+		"quality_changes_actual_resolution": true,
+		"real_map_discovered_once": true,
+		"redraw_preserves_elevation": true,
+		"redraw_preserves_native_biomass": true,
+		"redraw_preserves_native_map_albedo": true,
+		"redraw_preserves_native_map_ocean": true,
+		"redraw_preserves_native_radiation": true,
+		"redraw_preserves_native_temperature": true,
+		"redraw_preserves_native_use_map": true,
+		"redraw_preserves_native_use_ocean": true,
+		"redraw_preserves_native_water": true,
+		"repeated_world_ready_keeps_one_record": true,
+		"repeated_world_ready_keeps_same_controls": true,
+		"repeated_world_ready_no_duplicate_callbacks": true,
+		"return_to_earth_reactivates_atlas": true,
+		"runtime_restored_enabled": true,
+		"runtime_restored_natural": true,
+		"runtime_restored_political": true,
+		"runtime_restored_quality": true,
+		"runtime_restored_urban": true,
+		"settings_control_visible_1": true,
+		"settings_control_visible_2": true,
+		"settings_control_visible_4": true,
+		"settings_control_visible_6": true,
+		"settings_control_visible_8": true,
+		"settings_controls_exist": true,
+		"settings_inside_viewport": true,
+		"settings_native_button_closes": true,
+		"settings_native_button_opens": true,
+		"unload_frees_controls": true,
+		"unload_removes_callbacks": true,
+		"unload_restores_native_materials": true,
+		"unload_unregisters_window": true,
+		"urban_callback_updates_shader_and_save": true,
+		"urban_minimum_updates_shader": true
+	},
+	"completed": true,
+	"earth_map_name": "earth",
+	"failures": [],
+	"game_version": "0.15.1",
+	"limitations": "Fresh world on GPU; actual control signals and native map switching. Lifecycle callbacks are invoked by the external QA host, not launcher checkbox clicks. No saved-world loading or long simulation.",
+	"mod_version": "0.2.1",
+	"native_map_inputs": {
+		"map_albedo": {
+			"available": true,
+			"resource_path": "res://maps/earth_albedo.jpg",
+			"size": [
+				8192,
+				4096
+			]
+		},
+		"map_height": {
+			"available": false,
+			"resource_path": "",
+			"size": []
+		},
+		"map_ocean": {
+			"available": true,
+			"resource_path": "res://maps/earth_ocean.jpg",
+			"size": [
+				2048,
+				1024
+			]
+		},
+		"map_tint": null,
+		"use_height": null,
+		"use_map": 1.0,
+		"use_ocean": 1.0
+	},
+	"ok": true,
+	"passed_count": 71,
+	"quality_sizes": {
+		"0.5": [
+			960,
+			540
+		],
+		"1.0": [
+			1920,
+			1080
+		],
+		"1.5": [
+			2880,
+			1620
+		],
+		"2.0": [
+			3840,
+			2160
+		]
+	},
+	"renderer": "NVIDIA GeForce RTX 5050 Laptop GPU",
+	"screenshots": [
+		"atlas-settings.png",
+		"atlas-disabled.png",
+		"atlas-enabled.png"
+	],
+	"stage": "complete"
+}

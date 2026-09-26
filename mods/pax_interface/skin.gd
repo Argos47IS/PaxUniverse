@@ -6,7 +6,7 @@ signal activated(button: BaseButton)
 
 const ACTIVE_STYLES: Array[StringName] = [&"normal", &"hover", &"pressed", &"hover_pressed"]
 const ANIMATED_TEXT_COLORS: Array[StringName] = [&"font_color", &"font_hover_color", &"font_pressed_color", &"font_hover_pressed_color", &"font_focus_color"]
-const RELIEF_SCRIPT: Script = preload("skin/finish.gd")
+const RELIEF_SCRIPT: Script = preload("res://mods/pax_interface/skin/finish.gd")
 const PALETTES: Dictionary = {
 	"graphite": [Color("0c1721"), Color("172635"), Color("384d60")],
 	"midnight": [Color("0b1320"), Color("162337"), Color("344762")],

@@ -1,5 +1,5 @@
 extends RefCounted
-## Full native world; invoked only by --interface-live-test in the isolated QA profile.
+## External full-world QA runner. Called by the host only in the isolated profile.
 
 const COMMANDS: Array[String] = ["orders", "plans", "laws", "objects", "mining", "research"]
 const WINDOWS: Dictionary = {
@@ -27,6 +27,9 @@ func start(mod: Node) -> void:
 		push_error("PAX_UI_TEST_OUTPUT must be an absolute artifact directory")
 		tree.quit(2)
 		return
+	var suite_directory: String = (get_script() as Script).resource_path.get_base_dir()
+	_report["game_version"] = FileAccess.get_file_as_string("res://data/version.txt").strip_edges()
+	_report["runner_mode"] = "External QA script; test scripts are not part of the installable mod"
 	DirAccess.make_dir_recursive_absolute(_output)
 	_had_profile = FileAccess.file_exists(PROFILE_PATH)
 	if _had_profile:
@@ -34,8 +37,8 @@ func start(mod: Node) -> void:
 	var game_settings: FileAccess = FileAccess.open("user://settings.json", FileAccess.WRITE)
 	game_settings.store_string(JSON.stringify({"язык": "ru", "заставка": false, "провайдеры": {"мозг": {"режим": "выкл"}}}))
 	game_settings.close()
-	# The first GPU run already tested automatic activation. Hold this QA-only
-	# adapter until native controls have been snapshotted independently of its backups.
+	# The external host checks automatic activation separately. Hold the adapter
+	# until native controls have been snapshotted independently of its backups.
 	mod.set("_unloaded", true)
 	var main: Node = load("res://scripts/Main.gd").new()
 	main.set("слот", "interface_qa_" + str(Time.get_ticks_msec()))
@@ -53,7 +56,7 @@ func start(mod: Node) -> void:
 	var native_snapshot: Dictionary = _snapshot_native(main)
 	mod.set("_unloaded", false)
 	mod.call("_world_ready", Pax.game)
-	_report["activation_mode"] = "Explicit world_ready after independent native snapshot; automatic activation covered by first GPU run"
+	_report["activation_mode"] = "Explicit world_ready after independent native snapshot; automatic activation must be verified separately by the host"
 	Pax.game.set_speed(0)
 	main.call("_открыть_карту_тела", int(main.get("индекс_земли")))
 	var map: CanvasLayer = main.get("полит_карта") as CanvasLayer
@@ -310,12 +313,12 @@ func start(mod: Node) -> void:
 			var tween: Tween = record.get("tween") as Tween
 			_check("motion_off_is_immediate", tween == null or not tween.is_running())
 	probe.hide()
-	var motion_runner: RefCounted = load(str(mod.call("path", "dev/motion_test.gd"))).new()
+	var motion_runner: RefCounted = load(suite_directory.path_join("motion_test.gd")).new()
 	var motion_report: Dictionary = await motion_runner.run(mod)
 	_report["motion_audio_input"] = motion_report
 	for key: String in motion_report.get("checks", {}):
 		_check("motion_audio_" + key, bool(motion_report.checks[key]))
-	var concept_runner: RefCounted = load(str(mod.call("path", "dev/concept_test.gd"))).new()
+	var concept_runner: RefCounted = load(suite_directory.path_join("concept_test.gd")).new()
 	var concept_report: Dictionary = await concept_runner.run(mod, _output)
 	_report["concept"] = concept_report
 	for key: String in concept_report.get("checks", {}):
@@ -338,7 +341,7 @@ func start(mod: Node) -> void:
 	await _screenshot(tree, "unloaded-native-1920.png")
 	if is_instance_valid(probe):
 		probe.queue_free()
-	var roles_runner: RefCounted = load(str(mod.call("path", "dev/roles_test.gd"))).new()
+	var roles_runner: RefCounted = load(suite_directory.path_join("roles_test.gd")).new()
 	var roles_report: Dictionary = await roles_runner.run(mod, _output)
 	_report["roles"] = roles_report
 	for key: String in roles_report.get("checks", {}):

@@ -13,7 +13,7 @@ import struct
 import wave
 
 RATE = 44_100
-OUT = Path(__file__).resolve().parents[1] / "sounds"
+OUT = Path(__file__).resolve().parents[2] / "mods" / "pax_interface" / "sounds"
 
 
 def make_tap(name: str, duration: float, peak: float,

@@ -20,16 +20,19 @@ var _unloaded: bool = false
 func _mod_loaded() -> void:
     _unloaded = false
     set_process(true)
-    var migration_script: Script = load(path("settings_migration.gd"))
+    var migration_script: Script = load_resource("settings_migration.gd") as Script
     migration_script.migrate(self)
     _enabled = bool(get_setting("enabled", true))
     _quality = clampf(float(get_setting("quality", 1.0)), 0.5, 2.0)
     _natural = clampf(float(get_setting("natural", 0.80)), 0.0, 1.0)
     _political = clampf(float(get_setting("political", 0.25)), 0.0, 0.6)
     _urban = clampf(float(get_setting("urban", 0.08)), 0.0, 1.0)
-    var builder_script: Script = load(path("shader_builder.gd"))
+    var builder_script: Script = load_resource("shader_builder.gd") as Script
     var builder: RefCounted = builder_script.new()
-    _shaders = builder.build()
+    _shaders = builder.build({
+        "common": Pax.text("res://shaders/planet_surface.gdshaderinc"),
+        "surface": Pax.text("res://shaders/map_surface.gdshader"),
+        "political": Pax.text("res://shaders/map.gdshader")})
     if _shaders.is_empty():
         for error: String in builder.errors:
             log_error(error)
@@ -42,30 +45,7 @@ func _mod_loaded() -> void:
     if is_instance_valid(legacy):
         _observe_legacy(legacy)
     call_deferred("_catch_up")
-    if OS.get_cmdline_user_args().has("--atlas-render-test"):
-        call_deferred("_render_test")
-    if OS.get_cmdline_user_args().has("--atlas-live-test") or OS.get_cmdline_user_args().has("--atlas-coexist-live-test"):
-        call_deferred("_live_test")
-    if OS.get_cmdline_user_args().has("--atlas-lifecycle-test"):
-        call_deferred("_lifecycle_test")
-    if OS.get_cmdline_user_args().has("--atlas-distribution-test"):
-        call_deferred("_distribution_test")
     log_info("Earth Atlas shaders prepared; map-only visual changes.")
-
-func _live_test() -> void:
-    if get_tree().root.has_meta("earth_atlas_live_test_running"):
-        return
-    get_tree().root.set_meta("earth_atlas_live_test_running", true)
-    var runner: RefCounted = load(path("dev/live_test.gd")).new()
-    await runner.start(self)
-
-func _distribution_test() -> void:
-    if get_tree().root.has_meta("atlas_distribution_test_running"):
-        return
-    get_tree().root.set_meta("atlas_distribution_test_running", true)
-    var runner: Node = load(path("dev/distribution_test.gd")).new()
-    get_tree().root.add_child(runner)
-    runner.start(self, OS.get_environment("PAX_ATLAS_TEST_OUTPUT"))
 
 func _legacy_alive() -> bool:
     var legacy: Node = _legacy.get_ref() as Node if _legacy != null else null
@@ -93,11 +73,6 @@ func _yield_to_legacy() -> void:
         _game = null
         _legacy_waiting = true
         log_info("Legacy Atlas HD is active; waiting to avoid duplicate map adapters.")
-
-func _lifecycle_test() -> void:
-    var runner: RefCounted = load(path("dev/lifecycle_test.gd")).new()
-    var report: Dictionary = await runner.start(self, OS.get_environment("PAX_ATLAS_TEST_OUTPUT"))
-    get_tree().quit(0 if bool(report.get("ok", false)) else 1)
 
 func _world_ready(game: PaxGame) -> void:
     if _unloaded:
@@ -374,26 +349,3 @@ func _remove_settings() -> void:
         _settings_button.queue_free()
     _settings_window = null
     _settings_button = null
-
-func _render_test() -> void:
-    var test_path: String = path("dev/render_test.gd")
-    if not FileAccess.file_exists(test_path):
-        log_error("Development render harness is not installed.")
-        get_tree().quit(1)
-        return
-    var script: Script = load(test_path)
-    var runner: RefCounted = script.new()
-    var output_dir: String = OS.get_environment("PAX_ATLAS_TEST_OUTPUT")
-    if output_dir.is_empty():
-        output_dir = ProjectSettings.globalize_path("user://mod_tests/earth_atlas")
-    var thumbnail := Image.new()
-    if thumbnail.load_svg_from_string(FileAccess.get_file_as_string(path("thumbnail.svg"))) == OK:
-        thumbnail.save_png(output_dir.path_join("thumbnail.png"))
-    var adapter_script: Script = load(path("dev/adapter_test.gd"))
-    var adapter_runner: RefCounted = adapter_script.new()
-    var adapter: Dictionary = await adapter_runner.start(self, output_dir)
-    print("ATLAS_ADAPTER_SUMMARY ", JSON.stringify(adapter))
-    var report: Dictionary = await runner.start(self, _shaders, output_dir)
-    print("ATLAS_RENDER_RESULT ", JSON.stringify(report))
-    get_tree().quit(0 if bool(report.get("ok", false)) and bool(adapter.get("ok", false)) else 1)
-

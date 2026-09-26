@@ -2,7 +2,7 @@
 
 Оригинальные звуки синтезированы для Pax Interface. Записей, чужих семплов,
 заимствованной музыки и сетевых источников нет. Воспроизводимый генератор:
-`../dev/generate_sounds.py` (Python, только стандартная библиотека).
+`tests/pax_interface/generate_sounds.py` в репозитории (Python, только стандартная библиотека).
 
 Original synthesized sounds for Pax Interface. No recordings, third-party
 samples or music are used. The generator uses the Python standard library only.

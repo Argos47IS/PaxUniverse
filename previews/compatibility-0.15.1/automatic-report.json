@@ -1,0 +1,21 @@
+{
+	"checks": {
+		"atlas_automatic_shader": true,
+		"atlas_automatic_world_ready": true,
+		"atlas_loaded": true,
+		"automatic_screenshot": true,
+		"earth_atlas_files_checked": true,
+		"hud_automatic_controls": true,
+		"hud_automatic_world_ready": true,
+		"interface_loaded": true,
+		"pax_interface_files_checked": true,
+		"validator_no_errors": true,
+		"world_created": true
+	},
+	"failures": [],
+	"loader_version": "0.13.2",
+	"ok": true,
+	"problems": "No problems.",
+	"validation": "OK      [earth_atlas] checked 16 files, 4 JSON\nOK      [pax_interface] tip: add thumbnail.png (square, 256×256) — it is shown in the launcher.\nOK      [pax_interface] checked 23 files, 3 JSON\n\n0 error(s), 0 warning(s)",
+	"version": "0.15.1"
+}

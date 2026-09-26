@@ -1,5 +1,5 @@
 extends PaxMod
-## UI adapter for Main 0.14.1. Native callbacks and game windows remain authoritative.
+## UI adapter for Main 0.15.1. Native callbacks and game windows remain authoritative.
 
 const IDS: Array[String] = ["orders", "plans", "laws", "objects", "mining", "research"]
 const WINDOW_PROPERTIES: Array[String] = ["окно_приказов", "окно_проектов", "окно_законов", "окно_спецпроектов", "окно_добычи", "окно_науки"]
@@ -74,14 +74,14 @@ var _layers_button: Button
 func _mod_loaded() -> void:
 	_unloaded = false
 	_prefs = _sanitize(get_setting("appearance", DEFAULTS))
-	var icon_script: Script = load(path("icons.gd"))
+	var icon_script: Script = load_resource("icons.gd") as Script
 	for key: String in IDS + ["settings", "atlas", "pause", "assistant", "relations", "state", "generic", "clock", "observe", "layers", "mail", "diplomacy", "person", "organization", "business", "principles", "charter", "development", "resources", "goals", "history", "market"]:
 		_icons[key] = icon_script.make(key)
-	_skin = load(path("skin.gd")).new()
-	_audio = load(path("ui_audio.gd")).new()
-	_motion = load(path("window_motion.gd")).new()
-	_region = load(path("region_card.gd")).new()
-	_role_windows = load(path("role_windows.gd")).new()
+	_skin = (load_resource("skin.gd") as Script).new()
+	_audio = (load_resource("ui_audio.gd") as Script).new()
+	_motion = (load_resource("window_motion.gd") as Script).new()
+	_region = (load_resource("region_card.gd") as Script).new()
+	_role_windows = (load_resource("role_windows.gd") as Script).new()
 	add_child(_skin)
 	add_child(_audio)
 	add_child(_motion)
@@ -95,15 +95,6 @@ func _mod_loaded() -> void:
 	if not get_tree().node_added.is_connected(_node_added):
 		get_tree().node_added.connect(_node_added)
 	call_deferred("_catch_up")
-	if OS.get_cmdline_user_args().has("--interface-live-test"):
-		call_deferred("_run_test")
-
-func _run_test() -> void:
-	if get_tree().root.has_meta("pax_interface_test"):
-		return
-	get_tree().root.set_meta("pax_interface_test", true)
-	var runner: RefCounted = load(path("dev/live_test.gd")).new()
-	await runner.start(self)
 
 func _sanitize(input: Variant) -> Dictionary:
 	var data: Dictionary = input if input is Dictionary else {}
@@ -204,7 +195,7 @@ func _world_ready(game: PaxGame) -> void:
 	_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	layer.add_child(_root)
 	for child: Node in layer.get_children():
-		if child is Control and child != _root:
+		if child is Control and child != _root and not child.is_queued_for_deletion():
 			_move(child as Control, _root)
 	_save_property(_native_bar, "visible")
 	_native_bar.hide()
@@ -220,7 +211,7 @@ func _world_ready(game: PaxGame) -> void:
 		_tag(_context_tabs, "chrome")
 	_region.call("setup", self, game, _root)
 	_role_windows.call("setup", self, main)
-	_panel = load(path("settings_panel.gd")).new()
+	_panel = (load_resource("settings_panel.gd") as Script).new()
 	_root.add_child(_panel)
 	_panel.hide()
 	_panel.set_meta("pax_interface_role", "card")
@@ -325,7 +316,7 @@ func _build_header(main: Node) -> void:
 	_native_header_button(main, "кнопка_связей", "relations", _nav_group)
 	_native_header_button(main, "кнопка_державы", "state", _nav_group)
 	_stars = main.get("звёзды_ряд") as Control
-	_metrics = load(path("header_metrics.gd")).new()
+	_metrics = (load_resource("header_metrics.gd") as Script).new()
 	_metrics.name = "SocietyRatings"
 	_metrics.call("setup", _stars)
 	_top_nav.add_child(_metrics)
@@ -401,7 +392,7 @@ func _build_dock() -> void:
 	_dock.add_theme_constant_override("separation", 0)
 	_dock_row.add_child(_dock)
 	for key: String in IDS:
-		var button: Button = load(path("dock_button.gd")).new()
+		var button: Button = (load_resource("dock_button.gd") as Script).new()
 		button.name = "Command_" + key
 		button.set("command_id", key)
 		button.set_meta("pax_interface_role", "command")
@@ -1070,6 +1061,10 @@ func _detach() -> void:
 			node.queue_free()
 	_owned.clear()
 	if is_instance_valid(_root):
+		# F6 can build the replacement before queue_free is flushed. Detach the
+		# empty old wrapper now so the new adapter cannot adopt it as native UI.
+		if _root.get_parent() != null:
+			_root.get_parent().remove_child(_root)
 		_root.queue_free()
 	_root = null
 	_panel = null

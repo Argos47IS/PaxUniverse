@@ -10,11 +10,14 @@ func _replace(source: String, before: String, after: String) -> String:
 		return source
 	return source.replace(before, after)
 
-func build() -> Dictionary:
+func build(sources: Dictionary) -> Dictionary:
 	errors.clear()
-	var common: String = FileAccess.get_file_as_string("res://shaders/planet_surface.gdshaderinc")
-	var surface: String = FileAccess.get_file_as_string("res://shaders/map_surface.gdshader")
-	var political: String = FileAccess.get_file_as_string("res://shaders/map.gdshader")
+	var common: String = str(sources.get("common", ""))
+	var surface: String = str(sources.get("surface", ""))
+	var political: String = str(sources.get("political", ""))
+	if common.is_empty() or surface.is_empty() or political.is_empty():
+		errors.append("Game map shader sources are unavailable; original map retained.")
+		return {}
 	common = "uniform float atlas_natural = 0.80;\nuniform float atlas_urban = 0.08;\n" + common
 	common = _replace(common,
 		"float k_tint = map_tint * (1.0 - (use_regions > 0.5 ? reg_dev * reg_owned : our_dev) * 0.85) * (1.0 - burn) * (1.0 - B * 0.9);",

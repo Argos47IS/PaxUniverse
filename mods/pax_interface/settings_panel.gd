@@ -38,7 +38,7 @@ var _order_generation: int = 0
 func setup(mod: PaxMod, initial: Dictionary, commands: Array[Dictionary]) -> void:
 	_mod = mod
 	_commands = commands.duplicate(true)
-	_row_script = load(_mod.path("drag_row.gd")) as Script
+	_row_script = _mod.load_resource("drag_row.gd") as Script
 	if not _built:
 		_build()
 	begin(initial)
