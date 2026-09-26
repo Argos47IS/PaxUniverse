@@ -2,6 +2,8 @@ param(
     [ValidateSet('automatic','atlas','interface','reload','validate')]
     [string]$Stage = 'automatic',
     [string]$GameDirectory = (Join-Path $env:LOCALAPPDATA 'Programs/Pax Universe'),
+    # Test the actual unpacked installations, retaining their physical folder names.
+    [string]$FolderModsDirectory,
     [switch]$UseLocalLicense
 )
 $ErrorActionPreference = 'Stop'
@@ -9,6 +11,7 @@ $workspace = Split-Path -Parent $PSScriptRoot
 $game = (Resolve-Path -LiteralPath $GameDirectory).Path
 $patch = Join-Path $game 'PaxUniverse.patch.pck'
 $signature = (Get-FileHash -LiteralPath $patch).Hash.Substring(0,12).ToLowerInvariant()
+if ($FolderModsDirectory) { $signature += '-folders' }
 $qa = Join-Path $workspace ('.local/compat-game-' + $signature)
 $output = Join-Path $workspace ('previews/compatibility-' + $signature + '/' + $Stage)
 $profile = Join-Path $env:APPDATA 'Pax Universe Atlas QA'
@@ -22,15 +25,36 @@ foreach ($name in @('PaxUniverse.exe','PaxUniverse.pck','PaxUniverse.patch.pck',
         throw "Snapshot changed: $target. Preserve this QA directory and start a fresh snapshot."
     }
 }
+$ids = @('earth_atlas','pax_interface')
 $packages = @()
-foreach ($id in @('earth_atlas','pax_interface')) {
-    $manifest = Get-Content -LiteralPath (Join-Path $workspace "mods/$id/mod.json") -Raw | ConvertFrom-Json
-    $package = Join-Path $workspace ("dist/$id/$id-" + $manifest.version + '.zip')
-    if (!(Test-Path -LiteralPath $package)) { throw "Build package first: $package" }
-    $packages += Split-Path -Leaf $package
-    Copy-Item -LiteralPath $package -Destination (Join-Path $qa 'mods') -Force
+$folderSources = @{}
+$profileMods = Join-Path $profile 'mods'
+if (Test-Path -LiteralPath $profileMods) {
+    throw 'QA profile already has a mods directory; preserve it before running an isolated test.'
 }
-$extra = Get-ChildItem -LiteralPath (Join-Path $qa 'mods') -File | Where-Object { $_.Name -notin $packages }
+if ($FolderModsDirectory) {
+    $folderRoot = (Resolve-Path -LiteralPath $FolderModsDirectory).Path
+    foreach ($folder in Get-ChildItem -LiteralPath $folderRoot -Directory) {
+        $manifestPath = Join-Path $folder.FullName 'mod.json'
+        if (!(Test-Path -LiteralPath $manifestPath)) { continue }
+        $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+        if ($manifest.id -notin $ids) { continue }
+        if ($folderSources.ContainsKey($manifest.id)) { throw "Duplicate installed ID: $($manifest.id)" }
+        $folderSources[$manifest.id] = $folder.FullName
+    }
+    foreach ($id in $ids) {
+        if (!$folderSources.ContainsKey($id)) { throw "Missing installed folder: $id" }
+    }
+} else {
+    foreach ($id in $ids) {
+        $manifest = Get-Content -LiteralPath (Join-Path $workspace "mods/$id/mod.json") -Raw | ConvertFrom-Json
+        $package = Join-Path $workspace ("dist/$id/$id-" + $manifest.version + '.zip')
+        if (!(Test-Path -LiteralPath $package)) { throw "Build package first: $package" }
+        $packages += Split-Path -Leaf $package
+        Copy-Item -LiteralPath $package -Destination (Join-Path $qa 'mods') -Force
+    }
+}
+$extra = Get-ChildItem -LiteralPath (Join-Path $qa 'mods') -Force | Where-Object { $_.Name -notin $packages }
 if ($extra) { throw 'QA mods directory contains additional packages; use a clean snapshot.' }
 $hostScript = (Join-Path $PSScriptRoot 'compatibility_host.gd').Replace('\','/')
 $configuration = @"
@@ -53,7 +77,20 @@ foreach ($name in @('mods.json','settings.json')) {
 }
 $license = Join-Path $profile 'license.json'
 $copiedLicense = $false
+$copiedFolders = $false
 try {
+    if ($FolderModsDirectory) {
+        New-Item -ItemType Directory -Path $profileMods | Out-Null
+        $copiedFolders = $true
+        $installations = @()
+        foreach ($id in $ids) {
+            $source = $folderSources[$id]
+            $name = Split-Path -Leaf $source
+            Copy-Item -LiteralPath $source -Destination (Join-Path $profileMods $name) -Recurse
+            $installations += @{ id = $id; folder = $name; location = 'user://mods'; format = 'folder' }
+        }
+        $installations | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $output 'installations.json') -Encoding utf8
+    }
     if (!(Test-Path -LiteralPath $license)) {
         if (!$UseLocalLicense) { throw 'QA needs a valid license. Use -UseLocalLicense to copy your existing local license on this computer; it is removed afterward.' }
         Copy-Item -LiteralPath (Join-Path $env:APPDATA 'Pax Universe/license.json') -Destination $license
@@ -84,4 +121,13 @@ try {
         elseif (Test-Path -LiteralPath $path) { Remove-Item -LiteralPath $path }
     }
     if ($copiedLicense -and (Test-Path -LiteralPath $license)) { Remove-Item -LiteralPath $license }
+    if ($copiedFolders -and (Test-Path -LiteralPath $profileMods)) {
+        # Only the temporary directory created above may be removed, never source installations.
+        $resolvedMods = (Resolve-Path -LiteralPath $profileMods).Path
+        $expectedMods = [IO.Path]::GetFullPath((Join-Path $env:APPDATA 'Pax Universe Atlas QA/mods'))
+        if ($resolvedMods -ne $expectedMods -or $resolvedMods -eq $folderRoot) {
+            throw 'Unexpected QA mods path; temporary copies preserved.'
+        }
+        Remove-Item -LiteralPath $resolvedMods -Recurse
+    }
 }

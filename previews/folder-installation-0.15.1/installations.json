@@ -1,0 +1,14 @@
+[
+  {
+    "folder": "earthatlas",
+    "format": "folder",
+    "location": "user://mods",
+    "id": "earth_atlas"
+  },
+  {
+    "folder": "paxinterface",
+    "format": "folder",
+    "location": "user://mods",
+    "id": "pax_interface"
+  }
+]
