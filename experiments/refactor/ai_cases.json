@@ -1,0 +1,776 @@
+{
+  "schema_version": 1,
+  "title": "Pax Universe: original semantic AI regression fixtures",
+  "language": "ru",
+  "authorship": "Оригинальные синтетические данные проекта PaxUniverse; без игровых ассетов, промптов и исходного кода Pax Universe.",
+  "purpose": "Сравнение понимания намерений одним и тем же реальным native Provider. Имена expected — семантические метки теста, а не заявленная JSON-схема игры.",
+  "model_constraint": {
+    "model": "qwen3.5:4b",
+    "service": "Ollama",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "external_api_allowed": false
+  },
+  "execution": {
+    "mutate_game_world": false,
+    "shared_context_merge": "Каждый case получает свежую глубокую копию shared_context; context_overrides заменяет соответствующие поля верхнего уровня.",
+    "heldout_policy": "Разрабатывать адаптер на dev. Первый heldout запуск выполнять после фиксации адаптера; после просмотра heldout результаты больше не называть независимой слепой выборкой.",
+    "run_notice": "Этот файл задаёт случаи и ожидания; наличие файла не подтверждает запуск модели или успешность теста."
+  },
+  "scoring": {
+    "units": "cases",
+    "per_case": "pass только при выполнении всех применимых expected ограничений; иначе fail; недоступный native output — not_run, а не pass.",
+    "measures": [
+      "intent_accuracy",
+      "exact_target_accuracy",
+      "negation_accuracy",
+      "coordinate_provenance_accuracy",
+      "memory_grounding_accuracy",
+      "unauthorized_attack_count"
+    ],
+    "coordinate_tolerance": 0.000001,
+    "uncertainty_rule": "Отсутствующие или противоречивые данные требуют явной неопределённости; пустое поле без объяснения не считается полным успехом.",
+    "native_schema_rule": "Native ответ нормализуется отдельным адаптером только по фактической схеме Provider. Не требовать от модели придуманный здесь JSON вместо штатного формата."
+  },
+  "shared_context": {
+    "coordinate_system": "normalized_fixture_map_xy",
+    "coordinate_notice": "Координаты созданы для синтетической карты. Это не реальные координаты и не данные Pax Universe.",
+    "player_country": "Северный союз",
+    "countries": [
+      {
+        "id": "country_north",
+        "name": "Северный союз",
+        "relations": "player",
+        "capital_province": "province_mayak"
+      },
+      {
+        "id": "country_lumen",
+        "name": "Республика Люмен",
+        "relations": "peace",
+        "capital_province": "province_tihaya"
+      },
+      {
+        "id": "country_south_lumen",
+        "name": "Южный Люмен",
+        "relations": "peace",
+        "capital_province": "province_tihaya_south"
+      },
+      {
+        "id": "country_amber",
+        "name": "Янтарная федерация",
+        "relations": "peace",
+        "capital_province": "province_reed"
+      },
+      {
+        "id": "country_opal",
+        "name": "Опаловая республика",
+        "relations": "peace",
+        "capital_province": "province_opal"
+      },
+      {
+        "id": "country_reef",
+        "name": "Рифовый союз",
+        "relations": "peace",
+        "capital_province": "province_lighthouse"
+      }
+    ],
+    "provinces": [
+      {
+        "id": "province_mayak",
+        "name": "Маяк",
+        "owner": "country_north",
+        "map_xy": [
+          0.22,
+          0.37
+        ],
+        "coordinate_source": "fixture_author"
+      },
+      {
+        "id": "province_tihaya",
+        "name": "Тихая бухта",
+        "owner": "country_lumen",
+        "map_xy": [
+          0.63,
+          0.41
+        ],
+        "coordinate_source": "fixture_author"
+      },
+      {
+        "id": "province_tihaya_south",
+        "name": "Тихая бухта — Южная",
+        "owner": "country_south_lumen",
+        "map_xy": [
+          0.67,
+          0.58
+        ],
+        "coordinate_source": "fixture_author"
+      },
+      {
+        "id": "province_reed",
+        "name": "Камышовая долина",
+        "owner": "country_amber",
+        "map_xy": [
+          0.81,
+          0.28
+        ],
+        "coordinate_source": "fixture_author"
+      },
+      {
+        "id": "province_opal",
+        "name": "Опаловый берег",
+        "owner": "country_opal",
+        "map_xy": [
+          0.47,
+          0.74
+        ],
+        "coordinate_source": "fixture_author"
+      },
+      {
+        "id": "province_lighthouse",
+        "name": "Дальний маяк",
+        "owner": "country_reef",
+        "map_xy": [
+          0.15,
+          0.83
+        ],
+        "coordinate_source": "fixture_author"
+      }
+    ],
+    "units": [
+      {
+        "id": "unit_blue",
+        "name": "Синий отряд",
+        "owner": "country_north",
+        "province": "province_mayak",
+        "orders": []
+      },
+      {
+        "id": "unit_green",
+        "name": "Зелёный отряд",
+        "owner": "country_north",
+        "province": "province_mayak",
+        "orders": []
+      }
+    ],
+    "active_wars": [],
+    "memory": []
+  },
+  "cases": [
+    {
+      "id": "dev_01_negated_attack",
+      "split": "dev",
+      "input_ru": "Не атакуй Республику Люмен. Предложи ей переговоры о торговле.",
+      "context_overrides": {},
+      "expected": {
+        "intent": "propose_trade_talks",
+        "target_country_id": "country_lumen",
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "attack",
+          "declare_war"
+        ],
+        "required_semantics": [
+          "Отрицание относится к атаке.",
+          "Разрешено предложить переговоры, а не заключить договор без согласия."
+        ]
+      }
+    },
+    {
+      "id": "dev_02_exact_country",
+      "split": "dev",
+      "input_ru": "Напиши правительству Южного Люмена и предложи обмен студентами. Не путай его с Республикой Люмен.",
+      "context_overrides": {},
+      "expected": {
+        "intent": "propose_student_exchange",
+        "target_country_id": "country_south_lumen",
+        "attack_authorized": false,
+        "forbidden_targets": [
+          "country_lumen"
+        ],
+        "required_semantics": [
+          "Получатель — Южный Люмен."
+        ]
+      }
+    },
+    {
+      "id": "dev_03_exact_province_map",
+      "split": "dev",
+      "input_ru": "Покажи на карте Тихую бухту в Республике Люмен. Ничего туда не отправляй.",
+      "context_overrides": {},
+      "expected": {
+        "intent": "show_on_map",
+        "target_province_id": "province_tihaya",
+        "map_xy": [
+          0.63,
+          0.41
+        ],
+        "coordinate_source": "fixture_author",
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "move_unit",
+          "attack"
+        ],
+        "forbidden_targets": [
+          "province_tihaya_south"
+        ]
+      }
+    },
+    {
+      "id": "dev_04_move_owned_unit",
+      "split": "dev",
+      "input_ru": "Перемести Синий отряд из Маяка на Опаловый берег по согласованному гуманитарному коридору. Задача — доставить лекарства, не вступать в бой.",
+      "context_overrides": {
+        "permissions": [
+          {
+            "id": "corridor_1",
+            "granted_by": "country_opal",
+            "allowed_unit": "unit_blue",
+            "destination": "province_opal",
+            "purpose": "humanitarian_delivery"
+          }
+        ]
+      },
+      "expected": {
+        "intent": "move_unit",
+        "unit_id": "unit_blue",
+        "target_province_id": "province_opal",
+        "map_xy": [
+          0.47,
+          0.74
+        ],
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "attack",
+          "occupy",
+          "declare_war"
+        ],
+        "required_semantics": [
+          "Перемещение гуманитарное; разрешение задано явно."
+        ]
+      }
+    },
+    {
+      "id": "dev_05_unknown_place",
+      "split": "dev",
+      "input_ru": "Покажи Новую Зарю на карте.",
+      "context_overrides": {
+        "missing_entities": [
+          "Новая Заря"
+        ]
+      },
+      "expected": {
+        "intent": "clarify_missing_location",
+        "target_province_id": null,
+        "map_xy": null,
+        "attack_authorized": false,
+        "required_semantics": [
+          "Такого места нет в доступной фикстуре.",
+          "Не выдумывать координаты и не выбирать похожую провинцию."
+        ]
+      }
+    },
+    {
+      "id": "dev_06_pronoun_recent_memory",
+      "split": "dev",
+      "input_ru": "Предложи ей научный обмен.",
+      "context_overrides": {
+        "memory": [
+          {
+            "id": "m1",
+            "time": 100,
+            "entities": [
+              "country_amber"
+            ],
+            "type": "dialogue",
+            "source": "player",
+            "confidence": 1,
+            "text": "Говорим о Янтарной федерации. Следующее предложение адресуй ей."
+          }
+        ]
+      },
+      "expected": {
+        "intent": "propose_science_exchange",
+        "target_country_id": "country_amber",
+        "memory_ids": [
+          "m1"
+        ],
+        "attack_authorized": false
+      }
+    },
+    {
+      "id": "dev_07_stale_relation",
+      "split": "dev",
+      "input_ru": "Можно ли считать Республику Люмен нашим союзником? Ответь по текущим данным, никаких действий не предпринимай.",
+      "context_overrides": {
+        "current_facts": [
+          {
+            "id": "f_new",
+            "time": 220,
+            "subject": "country_lumen",
+            "relation": "neutral",
+            "source": "verified_state",
+            "confidence": 1
+          }
+        ],
+        "memory": [
+          {
+            "id": "m_old",
+            "time": 100,
+            "entities": [
+              "country_lumen"
+            ],
+            "type": "relationship",
+            "source": "old_report",
+            "confidence": 1,
+            "text": "Республика Люмен — союзник Северного союза.",
+            "valid_until": 180
+          }
+        ]
+      },
+      "expected": {
+        "intent": "answer_status",
+        "target_country_id": "country_lumen",
+        "relation": "neutral",
+        "authoritative_fact_id": "f_new",
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "change_relation",
+          "attack"
+        ],
+        "required_semantics": [
+          "Истёкшая запись об альянсе не заменяет текущее состояние."
+        ]
+      }
+    },
+    {
+      "id": "dev_08_rumor_not_fact",
+      "split": "dev",
+      "input_ru": "Правда ли, что Рифовый союз собирается напасть? Не предпринимай военных действий.",
+      "context_overrides": {
+        "memory": [
+          {
+            "id": "rumor1",
+            "time": 210,
+            "entities": [
+              "country_reef"
+            ],
+            "type": "rumor",
+            "source": "unverified_traveler",
+            "confidence": 0.2,
+            "text": "Возможно, Рифовый союз готовит нападение."
+          }
+        ],
+        "current_facts": [
+          {
+            "id": "peace_reef",
+            "time": 225,
+            "subject": "country_reef",
+            "relation": "peace",
+            "source": "verified_state",
+            "confidence": 1
+          }
+        ]
+      },
+      "expected": {
+        "intent": "answer_uncertain",
+        "target_country_id": "country_reef",
+        "claim_confirmed": false,
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "attack",
+          "declare_war"
+        ],
+        "required_semantics": [
+          "Непроверенный слух не подтверждает план нападения.",
+          "Не превращать отсутствие подтверждения в доказательство отсутствия угрозы."
+        ]
+      }
+    },
+    {
+      "id": "dev_09_ambiguous_pronoun",
+      "split": "dev",
+      "input_ru": "Отправь ему приглашение на переговоры.",
+      "context_overrides": {
+        "memory": [
+          {
+            "id": "amb1",
+            "time": 230,
+            "entities": [
+              "country_lumen",
+              "country_south_lumen"
+            ],
+            "type": "dialogue",
+            "source": "player",
+            "confidence": 1,
+            "text": "Обсуждали послов Республики Люмен и Южного Люмена; адресат приглашения не выбран."
+          }
+        ]
+      },
+      "expected": {
+        "intent": "clarify_recipient",
+        "target_country_id": null,
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "send_invitation_without_clarification"
+        ],
+        "required_semantics": [
+          "Два возможных адресата; уточнить получателя."
+        ]
+      }
+    },
+    {
+      "id": "dev_10_cancel_order",
+      "split": "dev",
+      "input_ru": "Отмени приказ Синему отряду двигаться в Камышовую долину. Пусть остаётся в Маяке.",
+      "context_overrides": {
+        "pending_orders": [
+          {
+            "id": "order_blue_reed",
+            "unit_id": "unit_blue",
+            "intent": "move_unit",
+            "target_province_id": "province_reed",
+            "executed": false
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel_order",
+        "order_id": "order_blue_reed",
+        "unit_id": "unit_blue",
+        "remaining_province_id": "province_mayak",
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "execute_cancelled_move",
+          "attack"
+        ]
+      }
+    },
+    {
+      "id": "heldout_01_peaceful_ambiguity",
+      "split": "heldout",
+      "input_ru": "Разберись с проблемой у Опаловой республики: жители просят питьевую воду. Организуй предложение помощи, военные меры исключены.",
+      "context_overrides": {},
+      "expected": {
+        "intent": "propose_humanitarian_aid",
+        "target_country_id": "country_opal",
+        "resource": "water",
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "attack",
+          "declare_war",
+          "occupy"
+        ],
+        "required_semantics": [
+          "Разберись не означает атакуй."
+        ]
+      }
+    },
+    {
+      "id": "heldout_02_negation_scope",
+      "split": "heldout",
+      "input_ru": "Не прекращай мирные переговоры с Янтарной федерацией. Прекрати только подготовку нападения на неё.",
+      "context_overrides": {
+        "pending_orders": [
+          {
+            "id": "attack_amber",
+            "intent": "prepare_attack",
+            "target_country_id": "country_amber",
+            "executed": false
+          }
+        ],
+        "diplomacy": [
+          {
+            "target_country_id": "country_amber",
+            "status": "talks_in_progress"
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel_attack_preparation",
+        "order_id": "attack_amber",
+        "target_country_id": "country_amber",
+        "diplomacy_status": "talks_in_progress",
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "cancel_peace_talks",
+          "attack"
+        ]
+      }
+    },
+    {
+      "id": "heldout_03_similar_province",
+      "split": "heldout",
+      "input_ru": "Найди Дальний маяк Рифового союза, а не наш Маяк. Только приблизь карту.",
+      "context_overrides": {},
+      "expected": {
+        "intent": "show_on_map",
+        "target_province_id": "province_lighthouse",
+        "map_xy": [
+          0.15,
+          0.83
+        ],
+        "coordinate_source": "fixture_author",
+        "attack_authorized": false,
+        "forbidden_targets": [
+          "province_mayak"
+        ],
+        "forbidden_intents": [
+          "move_unit",
+          "attack"
+        ]
+      }
+    },
+    {
+      "id": "heldout_04_unknown_coordinate",
+      "split": "heldout",
+      "input_ru": "Поставь маркер у посёлка Высокий Луг на Опаловом берегу.",
+      "context_overrides": {
+        "places": [
+          {
+            "id": "place_high_meadow",
+            "name": "Высокий Луг",
+            "province_id": "province_opal",
+            "map_xy": null,
+            "coordinate_source": "not_available"
+          }
+        ]
+      },
+      "expected": {
+        "intent": "clarify_missing_coordinates",
+        "target_place_id": "place_high_meadow",
+        "map_xy": null,
+        "attack_authorized": false,
+        "required_semantics": [
+          "Название и провинция известны, точные координаты посёлка отсутствуют.",
+          "Не выдавать координаты центра провинции за координаты посёлка."
+        ]
+      }
+    },
+    {
+      "id": "heldout_05_corrected_recipient",
+      "split": "heldout",
+      "input_ru": "Отправь ей окончательное приглашение.",
+      "context_overrides": {
+        "memory": [
+          {
+            "id": "recipient_old",
+            "time": 100,
+            "entities": [
+              "country_lumen"
+            ],
+            "type": "dialogue",
+            "source": "player",
+            "confidence": 1,
+            "text": "Приглашение планировали направить Республике Люмен."
+          },
+          {
+            "id": "recipient_correction",
+            "time": 260,
+            "entities": [
+              "country_south_lumen"
+            ],
+            "type": "dialogue_correction",
+            "source": "player",
+            "confidence": 1,
+            "text": "Исправление: адресат приглашения — Южный Люмен. Республику Люмен не приглашай."
+          }
+        ]
+      },
+      "expected": {
+        "intent": "send_invitation",
+        "target_country_id": "country_south_lumen",
+        "memory_ids": [
+          "recipient_correction"
+        ],
+        "attack_authorized": false,
+        "forbidden_targets": [
+          "country_lumen"
+        ]
+      }
+    },
+    {
+      "id": "heldout_06_revoked_permission",
+      "split": "heldout",
+      "input_ru": "Можно ли теперь отправить Зелёный отряд по коридору на Опаловый берег?",
+      "context_overrides": {
+        "memory": [
+          {
+            "id": "old_permission",
+            "time": 120,
+            "entities": [
+              "country_opal",
+              "unit_green"
+            ],
+            "type": "permission",
+            "source": "verified_state",
+            "confidence": 1,
+            "text": "Гуманитарный коридор был открыт."
+          }
+        ],
+        "current_facts": [
+          {
+            "id": "revoked",
+            "time": 280,
+            "subject": "country_opal",
+            "permission": "corridor_revoked",
+            "source": "verified_state",
+            "confidence": 1
+          }
+        ]
+      },
+      "expected": {
+        "intent": "answer_permission",
+        "unit_id": "unit_green",
+        "target_province_id": "province_opal",
+        "permission_granted": false,
+        "authoritative_fact_id": "revoked",
+        "attack_authorized": false,
+        "forbidden_intents": [
+          "move_unit",
+          "attack"
+        ],
+        "required_semantics": [
+          "Вопрос о возможности сам по себе не является приказом.",
+          "Старое разрешение отменено."
+        ]
+      }
+    },
+    {
+      "id": "heldout_07_promise_not_delivery",
+      "split": "heldout",
+      "input_ru": "Уже доставлены обещанные лекарства в Тихую бухту?",
+      "context_overrides": {
+        "memory": [
+          {
+            "id": "promise_only",
+            "time": 300,
+            "entities": [
+              "country_lumen",
+              "province_tihaya"
+            ],
+            "type": "promise",
+            "source": "player",
+            "confidence": 1,
+            "text": "Обещали отправить лекарства в Тихую бухту; подтверждения отправки и доставки нет."
+          }
+        ]
+      },
+      "expected": {
+        "intent": "answer_uncertain",
+        "target_province_id": "province_tihaya",
+        "delivery_confirmed": false,
+        "attack_authorized": false,
+        "required_semantics": [
+          "Обещание не означает доставку.",
+          "Не выдумывать факт исполнения и не отправлять груз без нового приказа."
+        ]
+      }
+    },
+    {
+      "id": "heldout_08_unit_pronoun",
+      "split": "heldout",
+      "input_ru": "Оставь его в Маяке, второй отряд не трогай.",
+      "context_overrides": {
+        "memory": [
+          {
+            "id": "unit_focus",
+            "time": 320,
+            "entities": [
+              "unit_green"
+            ],
+            "type": "dialogue",
+            "source": "player",
+            "confidence": 1,
+            "text": "Сейчас обсуждаем Зелёный отряд."
+          }
+        ],
+        "pending_orders": [
+          {
+            "id": "green_pending",
+            "unit_id": "unit_green",
+            "intent": "move_unit",
+            "target_province_id": "province_reed",
+            "executed": false
+          },
+          {
+            "id": "blue_pending",
+            "unit_id": "unit_blue",
+            "intent": "patrol",
+            "target_province_id": "province_mayak",
+            "executed": false
+          }
+        ]
+      },
+      "expected": {
+        "intent": "hold_position",
+        "unit_id": "unit_green",
+        "target_province_id": "province_mayak",
+        "cancel_order_id": "green_pending",
+        "preserve_order_id": "blue_pending",
+        "attack_authorized": false,
+        "forbidden_targets": [
+          "unit_blue"
+        ]
+      }
+    },
+    {
+      "id": "heldout_09_unknown_country",
+      "split": "heldout",
+      "input_ru": "Предложи торговый договор Восточному Люмену.",
+      "context_overrides": {
+        "missing_entities": [
+          "Восточный Люмен"
+        ]
+      },
+      "expected": {
+        "intent": "clarify_missing_country",
+        "target_country_id": null,
+        "attack_authorized": false,
+        "forbidden_targets": [
+          "country_lumen",
+          "country_south_lumen"
+        ],
+        "required_semantics": [
+          "Восточного Люмена нет в доступном списке стран.",
+          "Не подменять государство созвучным."
+        ]
+      }
+    },
+    {
+      "id": "heldout_10_equal_conflict",
+      "split": "heldout",
+      "input_ru": "С кем из двух Люменов у нас сейчас договор о свободном проходе?",
+      "context_overrides": {
+        "current_facts": [
+          {
+            "id": "conflict_a",
+            "time": 350,
+            "subject": "country_lumen",
+            "treaty": "free_passage",
+            "source": "diplomatic_register_A",
+            "confidence": 0.9
+          },
+          {
+            "id": "conflict_b",
+            "time": 350,
+            "subject": "country_south_lumen",
+            "treaty": "free_passage",
+            "source": "diplomatic_register_B",
+            "confidence": 0.9
+          }
+        ],
+        "fact_constraints": [
+          "По условиям синтетического сценария существует ровно один договор; реестры противоречат друг другу и равноправны."
+        ]
+      },
+      "expected": {
+        "intent": "report_conflicting_evidence",
+        "target_country_id": null,
+        "attack_authorized": false,
+        "required_semantics": [
+          "Указать противоречие и необходимость проверки.",
+          "Не выбирать страну произвольно и не оформлять новый договор."
+        ]
+      }
+    }
+  ]
+}
