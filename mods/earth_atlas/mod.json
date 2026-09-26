@@ -1,0 +1,14 @@
+{
+  "id": "earth_atlas",
+  "name": {"ru": "Земля: Атлас HD", "en": "Earth: Atlas HD"},
+  "version": "0.2.0",
+  "api": 1,
+  "game_version": ">=0.13.0",
+  "authors": ["usarg"],
+  "description": {
+    "ru": "Чёткая карта Земли: реальный рельеф NASA/GEBCO 10800×5400, спокойная поверхность, мягкие политические цвета и настройка качества.",
+    "en": "A clearer Earth map: real NASA/GEBCO relief at 10800×5400, calm terrain, subtle political colors and adjustable render quality."
+  },
+  "tags": ["planet", "shader", "ui"],
+  "entry": "main.gd"
+}

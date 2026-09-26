@@ -1,0 +1,16 @@
+{
+  "source_page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/topography-bathymetry-maps/",
+  "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/topography/gebco_08_rev_elev_21600x10800.tif",
+  "usage_guidelines": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "credit": "NASA Earth Observatory / GEBCO",
+  "source_encoding": "8-bit grayscale, 0..255 = 0..6400 meters; elevations above 6400 m clip",
+  "output_encoding": "16-bit grayscale, 0..65535 = 0..6400 meters; 2x2 arithmetic mean",
+  "projection": "EPSG:4326, longitude -180..180, latitude 90..-90, equirectangular",
+  "purpose": "visual shaded relief only; not a replacement for game terrain/ocean masks",
+  "output_size": [
+    10800,
+    5400
+  ],
+  "source_sha256": "d74416ee4de4b9b2cbc20f25f8975e213a4148f6810d1d60e104a4ed6150dbcf",
+  "output_sha256": "3b0adcd4ff9beba137d981398ec6dd8e490165ea41d14316d6a7d36674127fe9"
+}

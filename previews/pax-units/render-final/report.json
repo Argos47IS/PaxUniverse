@@ -1,0 +1,28 @@
+{
+	"checks": {
+		"adaptive_scale_zoom_13": true,
+		"adaptive_scale_zoom_26": true,
+		"adaptive_scale_zoom_7": true,
+		"automatic_attach": true,
+		"automatic_reattach": true,
+		"catalog_loaded": true,
+		"custom_tanks_built": true,
+		"forward_axis_is_native_positive_x": true,
+		"glb_loaded_by_game": true,
+		"models_reused_between_frames": true,
+		"native_renderer_replaced": true,
+		"native_selection_zoom_13": true,
+		"native_selection_zoom_26": true,
+		"native_selection_zoom_7": true,
+		"original_restored": true,
+		"original_texture_restored": true,
+		"screenshot_map-before.png": true,
+		"screenshot_map-zoom-13.png": true,
+		"screenshot_map-zoom-26.png": true,
+		"screenshot_map-zoom-7.png": true,
+		"screenshot_tank-render.png": true,
+		"second_unload_restored": true
+	},
+	"ok": true,
+	"scope": "Fresh native game map with three visual-only tank fixtures; no player save or simulation unit modified"
+}

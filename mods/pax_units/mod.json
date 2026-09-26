@@ -1,0 +1,11 @@
+{
+  "id": "pax_units",
+  "name": {"ru": "Pax Units — прототип танка", "en": "Pax Units — tank prototype"},
+  "description": {"ru": "Первый рабочий образец новой модели и масштаба танка на карте.", "en": "First working tank model and map scale prototype."},
+  "version": "0.0.1",
+  "game_version": ">=0.13.2",
+  "entry": "main.gd",
+  "authors": ["Pax mod project"],
+  "tags": ["visual", "units"],
+  "load_after": ["earth_atlas", "pax_interface"]
+}

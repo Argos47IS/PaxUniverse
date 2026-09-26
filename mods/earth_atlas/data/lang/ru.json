@@ -1,0 +1,12 @@
+{
+  "earth_atlas_button": "Атлас HD",
+  "earth_atlas_description": "Карта Земли с реальным рельефом. Повышенное качество увеличивает нагрузку при движении карты.",
+  "earth_atlas_enabled": "Новый вид карты Земли",
+  "earth_atlas_quality_half": "Экономичный — 50% разрешения",
+  "earth_atlas_quality_native": "Чёткий — 100% разрешения",
+  "earth_atlas_quality_high": "Высокий — 150% разрешения",
+  "earth_atlas_quality_ultra": "Максимальный — 200% (до 4096 px)",
+  "earth_atlas_natural": "Естественные цвета ландшафта",
+  "earth_atlas_political": "Заливка территорий",
+  "earth_atlas_urban": "Видимость кварталов и полей"
+}

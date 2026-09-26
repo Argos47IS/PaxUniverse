@@ -1,0 +1,36 @@
+{
+  "asset": "atlas_mbt.glb",
+  "stage": "original procedural blockout+; no textures or animation clips",
+  "axes": {
+    "up": "+Y",
+    "forward": "-Z",
+    "units": "metres"
+  },
+  "vertices": 25264,
+  "triangles": 13416,
+  "materials": 5,
+  "draw_primitives": 11,
+  "nodes": [
+    "Atlas MBT",
+    "Hull",
+    "Turret",
+    "Gun"
+  ],
+  "bounds_min": [
+    -1.8875000000000002,
+    0.0,
+    -6.023
+  ],
+  "bounds_max": [
+    1.8875000000000002,
+    3.2578017356532083,
+    3.46
+  ],
+  "bytes": 775440,
+  "sha256": "a66cc4211d6f60196f222fb2c92fa2786688dea59a4762b5d6123f153114e7a2",
+  "dimensions_m": [
+    3.7750000000000004,
+    3.2578017356532083,
+    9.483
+  ]
+}

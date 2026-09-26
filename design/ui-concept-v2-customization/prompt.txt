@@ -1,0 +1,37 @@
+Use case: ui-mockup / precise-object-edit
+Asset type: a single finished 16:9 desktop game UI mockup.
+Input image: the approved Pax Universe interface concept is the EDIT TARGET.
+Primary request: add a convincing, compact interface customization drawer to this approved game UI. This is a focused iteration, not a redesign of the approved screen.
+
+Invariants: preserve the exact map, geography, camera framing, country labels, units, military numbers, top HUD, date, bottom navigation, fonts, dark graphite design language and teal accent of the input. Do not repaint the terrain or invent new gameplay content. Keep the original existing UI everywhere except the two changes below. Output one seamless straight-on screen, without presentation borders, annotations, watermark or illustration framing.
+
+CHANGE 1 — customization entry:
+Extend the small lower-left map-tools capsule ('Границы', 'Слои', 'Атлас HD') with a modest gear icon and a new labelled action 'Интерфейс'. This action is subtly active in teal in this screenshot. Preserve all three existing map tools.
+
+CHANGE 2 — opened settings drawer:
+Replace the upper-right province information card with one taller floating customization panel, anchored on the right, approximately 440px wide in a 1920px-wide image and ending clearly ABOVE the bottom navigation. The province card is closed while this drawer is open; do not show both cards or duplicate panels. The map remains visible over most of the screen.
+The panel should look like part of the same polished playable game: charcoal opaque background, thin blue-grey outline, slight shadow, 8px corners, crisp off-white Russian text, high-contrast labels, subtle separators, restrained teal focus. Match the existing font and icon style exactly.
+
+Panel content, top to bottom. Typeset the following Russian text correctly. Use a comfortable vertical rhythm and align controls precisely:
+- Header 'Настройка интерфейса' with a close X at the far right.
+- Small section title 'Оформление'.
+- A labelled theme dropdown: 'Тема' and selected value 'Графит'.
+- 'Цвет акцента': a neat row of six small swatches (teal selected, blue, violet, warm amber, coral, pale grey), followed by a small custom color control. Optional compact HEX text '#279CAB' if it fits cleanly.
+- Label 'Прозрачность панелей' with right-aligned value '15%' and a modern slim slider, handle near the low end. This means 15% transparent panel backgrounds; all text and icons stay solid and readable.
+- Label 'Масштаб интерфейса' with right-aligned value '100%' and a slim slider.
+- A compact text-size control labelled 'Размер текста' with three choices 'Малый', 'Обычный', 'Крупный'; middle choice selected.
+
+- Fine divider, then section title 'Расположение'.
+- A compact switch row 'Режим перестановки', switch ON in teal.
+- Smaller helper line 'Перетащите кнопки в нужном порядке'.
+- Six compact draggable button chips, arranged in a two-column, three-row grid with consistent dot-grip handles:
+  row 1: 'Приказы' | 'Планы'
+  row 2: 'Законы' | 'Объекты'
+  row 3: 'Добыча' | 'Исследования'
+  Each chip has its existing recognizable line icon and enough room for the full text. Do not truncate Russian labels.
+- One neat switch row 'Подписи кнопок', switch ON.
+- Footer with quiet text action 'Сбросить', secondary button 'Отмена', primary teal button 'Применить'. Footer is fully visible above the bottom dock.
+
+To make the layout-edit mode understandable, add subtle small dot-grip handles to the existing six bottom navigation items without changing their positions or texts. Keep the bottom bar calm; no flashing borders, no giant drag overlays. Keep pause, time controls and the settings entry available.
+
+Avoid: extra invented resource meters, charts, tutorial speech bubbles, excessive transparency, glass/neon effects, ornate borders, duplicated words, tiny unreadable text, English setting labels, changes to the map. The result must clearly communicate color customization, panel transparency, interface scale, text size and button reordering in one organized panel.

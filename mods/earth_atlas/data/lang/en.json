@@ -1,0 +1,12 @@
+{
+  "earth_atlas_button": "Atlas HD",
+  "earth_atlas_description": "Earth map with real relief. Higher quality increases GPU load while moving the map.",
+  "earth_atlas_enabled": "New Earth map style",
+  "earth_atlas_quality_half": "Economy — 50% resolution",
+  "earth_atlas_quality_native": "Sharp — 100% resolution",
+  "earth_atlas_quality_high": "High — 150% resolution",
+  "earth_atlas_quality_ultra": "Ultra — 200% (up to 4096 px)",
+  "earth_atlas_natural": "Natural terrain colors",
+  "earth_atlas_political": "Territory color strength",
+  "earth_atlas_urban": "Visibility of blocks and fields"
+}

@@ -1,0 +1,27 @@
+.local/
+__pycache__/
+
+# Engine binaries, generated state and local credentials.
+.godot/
+*.exe
+*.dll
+*.pck
+*.log
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.pyc
+
+# Historical mod, local documentation copy and development captures.
+/mods/earth_atlas_hd/
+/docs/modding-reference/
+/docs/modding-guide-ru.md
+/previews/
+/dist/*.zip
+/tools/inspect_pck.py
+/tools/enable-atlas-hd.ps1
+/tools/probe_*.gd
+/tools/map_*_test.gd

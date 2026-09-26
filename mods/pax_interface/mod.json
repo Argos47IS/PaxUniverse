@@ -1,0 +1,24 @@
+{
+  "id": "pax_interface",
+  "name": {
+    "ru": "Pax Interface — интерфейс",
+    "en": "Pax Interface"
+  },
+  "version": "0.3.0",
+  "api": 1,
+  "game_version": ">=0.13.2",
+  "authors": [
+    "usarg"
+  ],
+  "description": {
+    "ru": "Графитовый интерфейс с плавным откликом, тихими звуками и настройкой цвета, прозрачности, масштаба и порядка команд.",
+    "en": "A graphite interface with smooth feedback, gentle sounds and customizable colors, opacity, scale and command order."
+  },
+  "tags": [
+    "ui"
+  ],
+  "load_after": [
+    "earth_atlas"
+  ],
+  "entry": "main.gd"
+}
