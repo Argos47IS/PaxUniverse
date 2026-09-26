@@ -1,0 +1,12 @@
+{
+  "id": "pax_memory",
+  "name": {"ru": "Pax Memory — экспериментальная память AI", "en": "Pax Memory — experimental AI memory"},
+  "version": "0.1.0",
+  "api": 1,
+  "game_version": ">=0.13.2",
+  "authors": ["usarg"],
+  "description": {"ru": "Ограниченная структурированная память, подключённая к штатному AI-контексту. Эксперимент для отдельной копии игры 0.15.1.", "en": "Bounded structured memory connected to the native AI context. Experiment for a separate copy of game 0.15.1."},
+  "entry": "main.gd",
+  "load_after": ["earth_atlas", "pax_interface"],
+  "tags": ["ai", "experimental"]
+}
