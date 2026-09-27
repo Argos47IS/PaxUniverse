@@ -1,6 +1,6 @@
-# Pax Interface 0.3.1
+# Pax Interface 0.3.2
 
-Настраиваемый интерфейс для Pax Universe 0.14.1: графитовые панели, линейные значки, читаемые команды, подсветка и плавный отклик кнопок, мягкие звуки наведения и нажатия.
+Настраиваемый интерфейс для Pax Universe 0.16.2: графитовые панели, линейные значки, читаемые команды, подсветка и плавный отклик кнопок, мягкие звуки наведения и нажатия.
 
 Шапка собрана в одну строку: разделы игры, шесть шкал общества, дата и управление временем. Внизу — общий блок команд со счётчиками, карта и масштабирование. Справа открывается компактная карточка региона или панель оформления; они не перекрывают друг друга. Кнопки имеют градиент, фаски, мягкую подсветку и отклик на нажатие. Мод сохраняет штатную логику игровых команд и окон.
 
@@ -8,14 +8,16 @@
 
 В версии 0.3.1 загрузка компонентов переведена на `PaxMod.load_resource()` для обновлённой песочницы модов. Тестовые сценарии вынесены из устанавливаемого мода в `tests/pax_interface/` репозитория; мод больше не обращается к аргументам запуска и не запускает диагностику самостоятельно. Настройки `appearance` и оформление сохранены.
 
+Версия 0.3.2 исправляет совместимость с дополнительными кнопками других модов, у которых нет привязанного окна (например, Cosmic Expansion в игре 0.16.2). HUD больше не читает отсутствующую метку "win" на каждом обновлении и не засоряет журнал ошибками. Нажатие по-прежнему вызывает исходный обработчик; если окно привязано позднее или отвязано, подсветка обновляется автоматически. Настройки оформления сохранены. Декоративные подложки и снимки анимаций теперь внутренние узлы: они не подменяют первый дочерний элемент окна при перестроении его содержимого. Это возвращает кнопку бестиария Cosmic Expansion, которая зависела от штатного порядка содержимого.
+
 ## Установка
 
 1. Закройте игру.
-2. Положите `pax_interface-0.3.1.zip` в папку `mods` рядом с `PaxUniverse.exe`. Распаковывать ZIP не нужно.
+2. Откройте пользовательскую папку модов `%APPDATA%/Pax Universe/mods` и положите туда `pax_interface-0.3.2.zip`. Распаковывать ZIP не нужно. Если мод уже установлен из магазина как `store_pax-interface.zip`, замените этот файл новым пакетом, сохранив имя `store_pax-interface.zip`.
 3. Откройте лаунчер и проверьте, что **Pax Interface** включён в списке модов. При изменении списка перезапустите игру.
 4. Загрузите партию или начните новую. Нажмите **«Интерфейс»** в нижней части экрана.
 
-При обновлении заменяйте прежний ZIP этого мода, чтобы в `mods` оставалась одна версия `pax_interface`.
+При обновлении заменяйте существующую установку, а не добавляйте вторую. Во всех папках, которые читает игра, должна оставаться только одна версия с ID `pax_interface` — без старых ZIP и распакованных дубликатов. Папка `mods` рядом с `PaxUniverse.exe` также поддерживается, но помещать мод именно туда не обязательно. Если используете уже установленную распакованную папку, обновляйте её содержимое без добавления ZIP-дубликата.
 
 «Земля: Атлас HD» устанавливается отдельно. Pax Interface работает и без него; если установлен мод с ID `earth_atlas`, интерфейс загружается после него. Это порядок загрузки, а не обязательная зависимость.
 
@@ -59,19 +61,23 @@
 
 ## Совместимость
 
-Этот выпуск предназначен для **Pax Universe 0.15.1**. Значение `game_version` в манифесте учитывает устаревшую внутреннюю версию загрузчика игры — 0.13.2; оно не означает поддержку старых игр без нового `load_resource`. Основной HUD масштабируется, а игровые диалоги продолжают использовать собственную логику и ограничения размера. Мод адаптирует внутренние узлы `Main`, поэтому после обновления игры требуется проверка совместимости, даже если лаунчер допускает загрузку.
+Этот выпуск предназначен для **Pax Universe 0.16.2**. Значение `game_version` в манифесте учитывает устаревшую внутреннюю версию загрузчика игры — 0.13.2; оно не означает поддержку старых игр без нового `load_resource`. Основной HUD масштабируется, а игровые диалоги продолжают использовать собственную логику и ограничения размера. Мод адаптирует внутренние узлы `Main`, поэтому после обновления игры требуется проверка совместимости, даже если лаунчер допускает загрузку.
 
 Для разработчиков: оригинальные кнопки и их обработчики сохраняются; новые основные кнопки передают им команды. При выгрузке адаптер восстанавливает изменённые свойства и расположение штатных узлов. Встроенные системные меню и отдельные составные элементы Godot сохраняют собственное поведение; единая анимация мода не подменяет все внутренние переходы `PopupMenu` и вкладок.
 
 ## English
 
-**Pax Interface 0.3.1** is a customizable interface for **Pax Universe 0.15.1**. It adds graphite panels, clear command icons, hover feedback, transitions and gentle interface sounds while keeping native game commands and window logic. The manifest accommodates the game's stale internal loader version (0.13.2); older games without the new resource API are not supported by this release.
+**Pax Interface 0.3.2** is a customizable interface for **Pax Universe 0.16.2**. It adds graphite panels, clear command icons, hover feedback, transitions and gentle interface sounds while keeping native game commands and window logic. The manifest accommodates the game's stale internal loader version (0.13.2); older games without the new resource API are not supported by this release.
 
 Version 0.3.0 supports country, person and organization roles, including Dossier, Principles, Charter and the new Work and Business window. Native command names, icons, targets and availability stay synchronized with the game and the reorder panel.
 
 Version 0.3.1 loads its components through `PaxMod.load_resource()` for the updated mod sandbox. Development tests live in the repository's `tests/pax_interface/` directory, outside the installable mod. The mod no longer reads launch arguments or starts diagnostics itself. Existing appearance preferences are preserved.
 
-Close the game, place `pax_interface-0.3.1.zip` in the `mods` folder beside `PaxUniverse.exe`, and leave the ZIP packed. Enable **Pax Interface** in the launcher, restart the game, then open **Interface** near the bottom of the screen. Keep only one installed version of this mod. **Earth Atlas HD** is optional; `load_after: earth_atlas` sets order only.
+Version 0.3.2 supports extra mod buttons without a linked window, including Cosmic Expansion on game 0.16.2. Missing optional window metadata no longer produces repeated log errors. Native callbacks and later window assignment/removal remain supported; appearance settings are preserved. Decorative relief and transition snapshots are internal nodes, so rebuilding native window content keeps the expected first child and preserves the Cosmic Expansion bestiary button.
+
+Close the game and place `pax_interface-0.3.2.zip` in `%APPDATA%/Pax Universe/mods`, leaving the ZIP packed. If the store installation is named `store_pax-interface.zip`, replace that file with the new package while keeping the name `store_pax-interface.zip`. Enable **Pax Interface** in the launcher, restart the game, then open **Interface** near the bottom of the screen.
+
+Keep exactly one installation with ID `pax_interface` across all mod folders; remove old ZIPs and extracted duplicates when replacing an installation. The `mods` folder beside `PaxUniverse.exe` also works but is not required. If your existing installation is an extracted folder, update its contents without adding a duplicate ZIP. **Earth Atlas HD** is optional; `load_after: earth_atlas` sets order only.
 
 Choose Graphite, Midnight or Slate, set a custom accent, panel transparency from 0–50% (50–100% opacity), HUD scale from 80–125%, text size 12/14/16, command labels, motion and sound volume. Use **Preview sound** to choose a comfortable volume with your usual game audio.
 

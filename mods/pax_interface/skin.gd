@@ -673,7 +673,8 @@ func _decorate(control: Control, record: Dictionary, style: StyleBoxFlat, blend:
 	if not is_instance_valid(relief):
 		relief = RELIEF_SCRIPT.new() as Node2D
 		record["relief"] = relief
-		control.add_child(relief)
+		# Decoration must not displace native content accessed through get_child(0).
+		control.add_child(relief, false, Node.INTERNAL_MODE_BACK)
 		relief.call("setup", control)
 	# The native StyleBox retains borders, shadows, padding and focus. Its centre
 	# is rendered by the child BEHIND it, so gradients never wash over text/icons.
