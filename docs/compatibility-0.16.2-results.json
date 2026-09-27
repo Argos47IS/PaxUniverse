@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-27",
+  "runtime": "0.16.2",
+  "loader": "0.13.2",
+  "atlas_version": "0.2.1",
+  "hud_version": "0.3.2",
+  "release_sha256": "2a6a8ada65222f36cf631b5fde44f54d7fcacfcbd9aba5a4cf559f54147dc78f",
+  "release_bytes": 70017,
+  "clean_suites": [
+    {
+      "name": "Карта Atlas",
+      "passed": 71,
+      "total": 71
+    },
+    {
+      "name": "Основной HUD",
+      "passed": 505,
+      "total": 505
+    },
+    {
+      "name": "Кнопки без окна",
+      "passed": 23,
+      "total": 23
+    },
+    {
+      "name": "Перестройка окон",
+      "passed": 22,
+      "total": 22
+    },
+    {
+      "name": "Перезагрузка модов",
+      "passed": 209,
+      "total": 209
+    }
+  ],
+  "coexist": {
+    "functional_passed": 74,
+    "functional_total": 74,
+    "runtime_errors": 4,
+    "runtime_warnings": 1,
+    "process_exit_code": 0,
+    "overall": "FAIL: errors reproduced without HUD"
+  },
+  "native_control_without_hud": {
+    "headless": true,
+    "functional_passed": 29,
+    "runtime_errors": 4,
+    "overall": "FAIL: runtime errors"
+  },
+  "installed_automatic": {
+    "checks": 11,
+    "process_exit_code": 0,
+    "runtime_errors": 0
+  },
+  "validation": {
+    "owned_mods_errors": 0,
+    "owned_mods_warnings": 0,
+    "all_four_mods_errors": 4,
+    "all_four_mods_warnings": 1
+  },
+  "installation": {
+    "sha256": "2a6a8ada65222f36cf631b5fde44f54d7fcacfcbd9aba5a4cf559f54147dc78f",
+    "protected_files_unchanged": true,
+    "version": "0.3.2",
+    "backup_created": true,
+    "package_match": true,
+    "protected_file_count": 6
+  },
+  "limits": [
+    "Counts are assertions, not unique features or performance measurements.",
+    "Fresh isolated worlds; existing user saves and long campaigns not tested.",
+    "Coexistence invokes native button signals without unlocking research; bestiary visibility remains controlled by the game.",
+    "Only README changed between interface-final2 and final release; GDScript unchanged. Final archive covered by reload, coexist and installed automatic test."
+  ],
+  "mod_code_sha256": {
+    "dock_button.gd": "6fd272318f5f3d62fdd4247dba9ef43da37818ca11d983c07904418008dbb278",
+    "drag_row.gd": "b58a292ff8b5add27f1879d064a5a899540b4b0ad6997ae13e05b941deabdd8b",
+    "header_metrics.gd": "fda047f1253f9042bd47c76eef70a053a2669929c26c3fa51033785460cdf1e1",
+    "icons.gd": "5af8a5a14e34987e9fec484925bced355a6b3df8b7f38d8d94992e9856d5055f",
+    "main.gd": "002730c8e4952e12d4ec9530630342dc20f95f0b7569b8cc9c91a958dd7d6912",
+    "region_card.gd": "107d201ede8f56d0a064616e7c76167e3d8617fbd6a4257e59f23c7e980d4d6f",
+    "role_windows.gd": "e8c203e986817d5c57646c928c176ab6bb84791424954159a37aeb2f33520b77",
+    "settings_panel.gd": "d23d3e2727b540949ea5a87d0e507427f002a7b9daec4f8b8acd1260a4679dd4",
+    "skin.gd": "491dde76c788f5a642801e5f5e3eeaf952e858f3762d84e3ea26e69835f043c0",
+    "ui_audio.gd": "3022a42d9a32de906300cc151d09784a4ca485da6c5087ec693a30ed0710ac64",
+    "window_motion.gd": "4a53968ad43fb4e6113899fc3b54755f62f950c5bc9a7d8d81f7a0abd9e8efce"
+  }
+}

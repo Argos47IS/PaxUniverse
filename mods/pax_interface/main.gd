@@ -1,5 +1,5 @@
 extends PaxMod
-## UI adapter for Main 0.15.1. Native callbacks and game windows remain authoritative.
+## UI adapter for Main 0.16.2. Native callbacks and game windows remain authoritative.
 
 const IDS: Array[String] = ["orders", "plans", "laws", "objects", "mining", "research"]
 const WINDOW_PROPERTIES: Array[String] = ["окно_приказов", "окно_проектов", "окно_законов", "окно_спецпроектов", "окно_добычи", "окно_науки"]
@@ -179,7 +179,7 @@ func _world_ready(game: PaxGame) -> void:
 		if not is_instance_valid(window):
 			continue
 		for child: Node in _native_buttons.get_children():
-			if child is Button and child.get_meta("win", null) == window:
+			if child is Button and child.has_meta("win") and child.get_meta("win") == window:
 				_native[IDS[index]] = child
 				break
 	if _native.size() != IDS.size():
@@ -399,7 +399,9 @@ func _build_dock() -> void:
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		button.custom_minimum_size = Vector2(56, 38)
 		button.clip_text = true
-		button.set_meta("win", (_native[key] as Button).get_meta("win"))
+		var native: Button = _native[key] as Button
+		if native.has_meta("win"):
+			button.set_meta("win", native.get_meta("win"))
 		button.call("build_content", _icons[key])
 		button.pressed.connect(_activate.bind(key))
 		button.connect("move_requested", _move_command)
@@ -522,9 +524,9 @@ func _sync_commands() -> void:
 		_layout_signature = ""
 
 func _sync_window_binding(native: Button, proxy: Button) -> void:
-	var candidate: Variant = native.get_meta("win", null)
+	var candidate: Variant = native.get_meta("win") if native.has_meta("win") else null
 	var window: Control = candidate as Control if candidate is Control and is_instance_valid(candidate) else null
-	var previous: Variant = proxy.get_meta("win", null)
+	var previous: Variant = proxy.get_meta("win") if proxy.has_meta("win") else null
 	if window == null:
 		if not proxy.has_meta("win"):
 			return
@@ -604,7 +606,7 @@ func _discover_extras() -> void:
 		_tools.add_child(proxy)
 		_tools.move_child(proxy, 0)
 		_extras[native.get_instance_id()] = {"native": native, "proxy": proxy}
-		var window: Variant = native.get_meta("win", null)
+		var window: Variant = native.get_meta("win") if native.has_meta("win") else null
 		if window is Control:
 			proxy.set_meta("win", window)
 			_motion.call("watch", window)

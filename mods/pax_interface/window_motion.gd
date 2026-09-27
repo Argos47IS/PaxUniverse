@@ -167,7 +167,8 @@ func _close(key: int, record: Dictionary) -> void:
 	layer.name = "InterfaceWindowExit"
 	layer.layer = _canvas_layer(window) + 1
 	layer.process_mode = Node.PROCESS_MODE_ALWAYS
-	window.get_parent().add_child(layer)
+	# The transient visual overlay is not a native sibling window or content node.
+	window.get_parent().add_child(layer, false, Node.INTERNAL_MODE_BACK)
 	var ghost: TextureRect = TextureRect.new()
 	ghost.name = "WindowSnapshot"
 	ghost.mouse_filter = Control.MOUSE_FILTER_IGNORE
